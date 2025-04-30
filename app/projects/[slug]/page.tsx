@@ -203,6 +203,18 @@ function getProjectData(slug: string) {
   return projects[slug as keyof typeof projects] || projects.default
 }
 
+// Add generateStaticParams to tell Next.js which slugs to generate at build time
+export async function generateStaticParams() {
+  // Return an array of objects with the slug parameter
+  return [
+    { slug: "health-app" },
+    { slug: "ecommerce" },
+    { slug: "finance-dashboard" },
+    { slug: "travel-platform" },
+    { slug: "education-app" }
+  ];
+}
+
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = getProjectData(params.slug)
 
