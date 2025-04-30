@@ -9,11 +9,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Only apply these settings when building for production
+  output: 'export',
+  // These settings are only applied in production builds
   ...(process.env.NODE_ENV === 'production' ? {
-    output: 'export',
-    basePath: '/portfolio_frontend',
-    assetPrefix: '/portfolio_frontend/',
+    // The basePath should be empty for GitHub Pages root deployment
+    basePath: '',
+    // The assetPrefix needs a leading slash for Next.js fonts to work
+    assetPrefix: '/',
     trailingSlash: true,
   } : {})
 }
