@@ -12,8 +12,8 @@ const nextConfig = {
   // Only apply these settings when building for production
   ...(process.env.NODE_ENV === 'production' ? {
     output: 'export',
-    basePath: '/portfolio',
-    assetPrefix: '/portfolio',
+    basePath: '/portfolio_frontend',
+    assetPrefix: '/portfolio_frontend/',
     trailingSlash: true,
   } : {})
 }
