@@ -12,6 +12,7 @@ const nextConfig = {
     unoptimized: true,
   },
   assetPrefix: '/portfolio',
+  trailingSlash: true,
 }
 
 export default nextConfig
