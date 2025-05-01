@@ -6,6 +6,8 @@ import { PrimaryButton } from "@/components/ui/primary-button"
 import { GradientBackground } from "@/components/gradient-background"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Header } from "@/components/header"
+import { getImagePath } from "@/lib/utils"
+
 // This is a mock function to simulate fetching project data
 // In a real application, you would fetch this data from a CMS or API
 function getProjectData(slug: string) {
@@ -132,9 +134,9 @@ function getProjectData(slug: string) {
       outcome:
         "The redesigned booking process reduced abandonment rates by 42% and increased overall bookings by 35%. Customer satisfaction scores for the booking experience improved from 3.4/5 to 4.6/5, and the average booking completion time decreased from 12 minutes to 7 minutes.",
       images: [
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
       ],
     },
     "education-app": {
@@ -165,9 +167,9 @@ function getProjectData(slug: string) {
       outcome:
         "The educational app achieved 100% WCAG 2.1 AA compliance and received certification from educational accessibility organizations. Student engagement increased across all learning ability levels, with 94% of teachers reporting improved class participation. Learning outcomes showed a 27% improvement compared to previous digital learning tools.",
       images: [
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
       ],
     },
     // Default fallback for any other slug
@@ -193,9 +195,9 @@ function getProjectData(slug: string) {
       ],
       outcome: "The project resulted in improved user satisfaction and business metrics.",
       images: [
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
       ],
     },
   }
@@ -226,7 +228,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="relative">
           <div className="absolute inset-0 bg-black/40 z-10"></div>
           <img
-            src={project.images[0] || "/placeholder.svg"}
+            src={getImagePath(project.images[0] || "/placeholder.svg")}
             alt={project.title}
             className="w-full h-[50vh] object-cover"
           />
@@ -286,7 +288,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     {project.images.slice(1).map((image, index) => (
                       <div key={index} className="overflow-hidden">
                         <img
-                          src={image || "/placeholder.svg"}
+                          src={getImagePath(image)}
                           alt={`${project.title} - Process ${index + 1}`}
                           className="w-full h-full object-cover"
                         />
@@ -330,7 +332,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src="/placeholder.svg?height=64&width=64"
+                            src={getImagePath("/placeholder.svg?height=64&width=64")}
                             alt="Health App"
                             className="w-full h-full object-cover"
                           />
@@ -346,7 +348,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src="/placeholder.svg?height=64&width=64"
+                            src={getImagePath("/placeholder.svg?height=64&width=64")}
                             alt="E-commerce"
                             className="w-full h-full object-cover"
                           />
@@ -362,7 +364,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src="/placeholder.svg?height=64&width=64"
+                            src={getImagePath("/placeholder.svg?height=64&width=64")}
                             alt="Finance Dashboard"
                             className="w-full h-full object-cover"
                           />
@@ -378,7 +380,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src="/placeholder.svg?height=64&width=64"
+                            src={getImagePath("/placeholder.svg?height=64&width=64")}
                             alt="Travel Platform"
                             className="w-full h-full object-cover"
                           />
@@ -394,7 +396,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src="/placeholder.svg?height=64&width=64"
+                            src={getImagePath("/placeholder.svg?height=64&width=64")}
                             alt="Educational App"
                             className="w-full h-full object-cover"
                           />

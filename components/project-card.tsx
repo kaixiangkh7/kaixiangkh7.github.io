@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
+import { getImagePath } from "@/lib/utils"
 
 interface ProjectCardProps {
   title: string
@@ -15,7 +16,7 @@ export function ProjectCard({ title, description, image, tags, link }: ProjectCa
       <Link href={link} className="block">
         <div className="relative overflow-hidden h-64">
           <img
-            src={image || "/placeholder.svg"}
+            src={getImagePath(image || "/placeholder.svg")}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />

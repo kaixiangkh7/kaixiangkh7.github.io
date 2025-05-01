@@ -7,6 +7,7 @@ import { SkillBadge } from "@/components/skill-badge"
 import { GradientBackground } from "@/components/gradient-background"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Header } from "@/components/header"
+import { getImagePath } from "@/lib/utils"
 
 export default function Home() {
   return (
@@ -54,7 +55,7 @@ export default function Home() {
                 <div className="relative">
                   <div className="w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-2xl shadow-xl">
                     <img
-                      src="/placeholder.svg?height=400&width=400"
+                      src={getImagePath("/placeholder.svg?height=400&width=400")}
                       alt="Portrait"
                       className="w-full h-full object-cover"
                     />

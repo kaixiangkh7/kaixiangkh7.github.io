@@ -1,5 +1,12 @@
 import type { Config } from "tailwindcss"
 
+// Helper function for image paths in Tailwind config
+function getConfigImagePath(path: string): string {
+  return process.env.NODE_ENV === 'production'
+    ? `/portfolio${path}`
+    : path;
+}
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -88,7 +95,7 @@ const config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-pattern": 'url("/placeholder.svg?height=1080&width=1920")',
+        "hero-pattern": `url("${getConfigImagePath('/placeholder.svg?height=1080&width=1920')}")`,
         "dots-pattern": "radial-gradient(circle, #0284c7 1px, transparent 1px)",
       },
       boxShadow: {
