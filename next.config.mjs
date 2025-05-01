@@ -10,10 +10,17 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  // Apply these settings for static export
-  basePath: '/portfolio',
-  assetPrefix: '/portfolio/',
-  trailingSlash: true,
+  // Only apply GitHub Pages settings in production builds
+  ...(process.env.NODE_ENV === 'production' ? {
+    basePath: '/portfolio',
+    assetPrefix: '/portfolio/',
+    trailingSlash: true,
+  } : {
+    // For local development
+    basePath: '',
+    assetPrefix: '',
+    trailingSlash: true,
+  })
 }
 
 export default nextConfig
