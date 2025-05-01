@@ -12,10 +12,10 @@ const nextConfig = {
   output: 'export',
   // These settings are only applied in production builds
   ...(process.env.NODE_ENV === 'production' ? {
-    // The basePath should be empty for GitHub Pages root deployment
-    basePath: '',
-    // The assetPrefix needs a leading slash for Next.js fonts to work
-    assetPrefix: '/',
+    // Set basePath to the repository name for GitHub Pages
+    basePath: '/portfolio_frontend',
+    // Set assetPrefix to match basePath for GitHub Pages
+    assetPrefix: '/portfolio_frontend/',
     trailingSlash: true,
   } : {})
 }
