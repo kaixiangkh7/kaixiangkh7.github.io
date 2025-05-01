@@ -12,8 +12,8 @@ const nextConfig = {
   output: 'export',
   // Only apply GitHub Pages settings in production builds
   ...(process.env.NODE_ENV === 'production' ? {
-    basePath: '/portfolio',
-    assetPrefix: '/portfolio/',
+    basePath: '/kaixiangkh7.github.io',
+    assetPrefix: '/kaixiangkh7.github.io/',
     trailingSlash: true,
   } : {
     // For local development

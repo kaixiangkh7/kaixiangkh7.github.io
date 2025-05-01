@@ -134,9 +134,9 @@ function getProjectData(slug: string) {
       outcome:
         "The redesigned booking process reduced abandonment rates by 42% and increased overall bookings by 35%. Customer satisfaction scores for the booking experience improved from 3.4/5 to 4.6/5, and the average booking completion time decreased from 12 minutes to 7 minutes.",
       images: [
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
       ],
     },
     "education-app": {
@@ -167,9 +167,9 @@ function getProjectData(slug: string) {
       outcome:
         "The educational app achieved 100% WCAG 2.1 AA compliance and received certification from educational accessibility organizations. Student engagement increased across all learning ability levels, with 94% of teachers reporting improved class participation. Learning outcomes showed a 27% improvement compared to previous digital learning tools.",
       images: [
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
       ],
     },
     // Default fallback for any other slug
@@ -195,9 +195,9 @@ function getProjectData(slug: string) {
       ],
       outcome: "The project resulted in improved user satisfaction and business metrics.",
       images: [
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/portfolio/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
       ],
     },
   }

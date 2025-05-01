@@ -6,9 +6,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Gets the correct image path with the portfolio prefix in production
- * @param path The image path without the portfolio prefix
- * @returns The image path with the portfolio prefix in production
+ * Gets the correct image path with the repository prefix in production
+ * @param path The image path without the repository prefix
+ * @returns The image path with the repository prefix in production
  */
 export function getImagePath(path: string): string {
   // If path is already absolute URL or data URL, return as is
@@ -16,8 +16,8 @@ export function getImagePath(path: string): string {
     return path;
   }
   
-  // Add the portfolio prefix in production
+  // Add the repository prefix in production
   return process.env.NODE_ENV === 'production' 
-    ? `/portfolio${path.startsWith('/') ? path : `/${path}`}` 
+    ? `/kaixiangkh7.github.io${path.startsWith('/') ? path : `/${path}`}` 
     : path;
 }
