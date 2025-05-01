@@ -23,7 +23,7 @@ export default function Home() {
             <div className="max-w-2xl text-white">
               <h1 className="text-5xl md:text-7xl mb-6"> 
                 <span className="font-light">Creating <br/></span>
-                <span className="font-bold">user-centered</span> <br/> 
+                <span className="font-bold">user centered</span> <br/> 
                 <span className="font-light">digital experiences</span>
               </h1>
               <p className="text-xl text-white/80 mb-8 font-light">
