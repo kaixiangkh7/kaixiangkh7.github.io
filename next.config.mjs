@@ -10,10 +10,9 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  // Keep assetPrefix for GitHub Pages subpath
-  assetPrefix: '/portfolio_frontend/',
-  // Remove basePath, let GitHub Pages handle subpath serving
-  basePath: '',
+  // Apply these settings for static export
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
   trailingSlash: true,
 }
 
