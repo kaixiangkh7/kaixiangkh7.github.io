@@ -35,5 +35,6 @@ jobs:
           folder: out
           branch: gh-pages
           clean: true
+          single-commit: true
 
 # Automatically remove deleted files from the deploy branch 
