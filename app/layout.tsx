@@ -11,9 +11,13 @@ const nunito = Nunito({
 })
 
 export const metadata: Metadata = {
-  title: "UX Portfolio",
-  description: "A portfolio showcasing UX design work",
-  generator: 'v0.dev'
+  title: "Kaixiang Huang - UX Portfolio",
+  description: "A portfolio showcasing UX design work by Kaixiang Huang",
+  generator: 'v0.dev',
+  metadataBase: new URL('https://www.kaixianghuang.com'),
+  icons: {
+    icon: '/icon.svg',
+  },
 }
 
 export default function RootLayout({
