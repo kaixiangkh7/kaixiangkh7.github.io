@@ -107,7 +107,7 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-12">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
-                title="Revive - Fitness App"
+                title="EliteFit - Fitness App"
                 description="Improved user engagement by 40% through a complete UX overhaul of a health tracking application."
                 image="/images/fitness/thumbnail.jpg"
                 tags={["Mobile App", "Healthcare", "UI/UX"]}
@@ -128,7 +128,7 @@ export default function Home() {
                 link="/projects/finance-dashboard"
               />
               <ProjectCard
-                title="WanderWise - Travel Booking Platform"
+                title="Revive - Travel App"
                 description="Redesigned booking experience that reduced abandonment rates by 42% and improved mobile conversions by 58%."
                 image="/images/travel/Thumbnail.jpg"
                 tags={["Travel", "Booking Platform", "Mobile First"]}

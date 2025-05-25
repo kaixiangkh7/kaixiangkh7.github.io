@@ -12,7 +12,7 @@ import { getImagePath } from "@/lib/utils"
 function getProjectData(slug: string) {
   const projects = {
     "health-app": {
-      title: "Revive - Fitness App",
+      title: "EliteFit - Fitness App",
       client: "Stealth Startup",
       date: "January 2023",
       tags: ["Mobile App", "Healthcare", "UI/UX", "User Research"],
@@ -107,7 +107,7 @@ function getProjectData(slug: string) {
       ],
     },
     "travel-platform": {
-      title: "WanderWise - Travel Booking Platform",
+      title: "Revive - Travel App",
       client: "WanderWise Travel",
       date: "August 2023",
       tags: ["Travel", "Booking Platform", "Mobile First", "User Experience", "Conversion Optimization"],
@@ -382,7 +382,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Revive - Fitness App</p>
+                          <p className="font-light group-hover:text-primary transition-colors">EliteFit - Fitness App</p>
                           <p className="text-sm text-muted-foreground">Mobile App, Healthcare</p>
                         </div>
                       </div>
@@ -430,7 +430,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">WanderWise - Travel Booking Platform</p>
+                          <p className="font-light group-hover:text-primary transition-colors">Revive - Travel App</p>
                           <p className="text-sm text-muted-foreground">Travel, Mobile First</p>
                         </div>
                       </div>
