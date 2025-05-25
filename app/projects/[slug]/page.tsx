@@ -108,35 +108,41 @@ function getProjectData(slug: string) {
       ],
     },
     "travel-platform": {
-      title: "Travel Booking Platform",
+      title: "WanderWise - Travel Booking Platform",
       client: "WanderWise Travel",
       date: "August 2023",
-      tags: ["Travel", "Booking", "Mobile First", "User Experience"],
-      overview: "A redesigned booking experience for a travel platform focusing on reducing abandonment rates and streamlining the booking process.",
+      tags: ["Travel", "Booking Platform", "Mobile First", "User Experience", "Conversion Optimization"],
+      overview: "A comprehensive redesign of a travel booking platform that transformed a frustrating booking experience into an intuitive, transparent, and engaging journey for travelers.",
       challenge: 
-        "The client's existing booking platform had a high abandonment rate of 78% during the booking process. Users found the multi-step process confusing, and the platform lacked transparency about fees and booking details until late in the process.",
+        "WanderWise Travel's existing booking platform suffered from a staggering 78% abandonment rate during the booking process. User research revealed that travelers found the multi-step process confusing, lacked trust due to hidden fees that appeared late in the process, and felt overwhelmed by complex itinerary management. The platform was also not optimized for mobile users, who represented 65% of their traffic.",
       process: [
-        "Analyzed booking funnel data to identify key drop-off points",
-        "Conducted user interviews with 20 travelers to understand pain points in travel booking",
-        "Created journey maps highlighting emotional high and low points during booking",
-        "Developed a simplified booking flow that reduced steps while maintaining clarity",
-        "Designed a transparent fee structure visible throughout the booking process",
-        "Created and tested prototypes with real users through task completion studies",
-        "Implemented a persistent booking summary that updated in real-time"
+        "Conducted comprehensive booking funnel analysis to identify critical drop-off points and user behavior patterns",
+        "Performed in-depth user interviews with 20 recent travelers across different demographics and travel types",
+        "Created detailed user journey maps highlighting emotional peaks and valleys throughout the booking experience",
+        "Developed user personas representing leisure travelers, business travelers, and group planners",
+        "Designed and tested a simplified booking flow that reduced steps from 12 to 6 while maintaining comprehensive information gathering",
+        "Implemented transparent fee disclosure architecture visible throughout the entire booking process",
+        "Created and validated interactive prototypes through task completion studies with 45+ users",
+        "Developed a persistent booking summary component that updates in real-time across all booking steps"
       ],
       features: [
-        "Transparent pricing with no hidden fees throughout the booking process",
-        "Persistent booking summary that updates in real-time",
-        "Simplified multi-destination trip planning with drag-and-drop interface",
-        "Smart date selection with price prediction calendar",
-        "One-click saved preferences for returning users"
+        "Transparent pricing architecture with real-time fee calculation and no hidden costs",
+        "Persistent smart booking summary that tracks selections and updates pricing dynamically",
+        "Intuitive multi-destination trip planning with visual drag-and-drop interface and route optimization",
+        "AI-powered smart date selection with price prediction calendar and flexible date options",
+        "One-click booking preferences for returning users with saved payment and travel details",
+        "Mobile-first responsive design optimized for on-the-go booking scenarios",
+        "Visual itinerary builder with timeline view and interactive map integration"
       ],
       outcome:
-        "The redesigned booking process reduced abandonment rates by 42% and increased overall bookings by 35%. Customer satisfaction scores for the booking experience improved from 3.4/5 to 4.6/5, and the average booking completion time decreased from 12 minutes to 7 minutes.",
+        "The redesigned booking platform delivered remarkable results: abandonment rates dropped by 42% (from 78% to 36%), overall bookings increased by 35%, and mobile conversions improved by 58%. Customer satisfaction scores for the booking experience jumped from 3.4/5 to 4.6/5, while average booking completion time decreased from 12 minutes to 7 minutes. The platform also saw a 28% increase in multi-destination bookings due to the improved itinerary planning tools.",
       images: [
-        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        "/images/travel/hero.png",
+        "/images/travel/iphone_browsing.png",
+        "/images/travel/iphone_iternary.png",
+        "/images/travel/iphone_your_trip.png",
+        "/images/travel/mac_selection.png",
+        "/images/travel/web_search.jpg",
       ],
     },
     "education-app": {
@@ -226,7 +232,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <Header />
       <main className="flex-1">
         <div className="relative">
-          <div className="absolute inset-0 bg-black/40 z-10"></div>
+          <div className="absolute inset-0 bg-black/70 z-10"></div>
           <img
             src={getImagePath(project.images[0] || "/placeholder.svg")}
             alt={project.title}
@@ -284,17 +290,56 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </ul>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {project.images.slice(1).map((image, index) => (
-                      <div key={index} className="overflow-hidden">
-                        <img
-                          src={getImagePath(image)}
-                          alt={`${project.title} - Process ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
+                  {/* Mobile Screenshots - Horizontal Layout */}
+                  {params.slug === 'travel-platform' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">Mobile Experience</h2>
+                      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                        {project.images.slice(1, 4).map((image, index) => (
+                          <div key={index} className="overflow-hidden rounded-lg max-w-md mx-auto">
+                            <img
+                              src={getImagePath(image)}
+                              alt={`${project.title} - Mobile ${index + 1}`}
+                              className="w-full h-[550px] object-cover shadow-lg"
+                            />
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  )}
+
+                  {/* Web Screenshots - Standard Layout */}
+                  {params.slug === 'travel-platform' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">Web Platform</h2>
+                      <div className="space-y-6">
+                        {project.images.slice(4).map((image, index) => (
+                          <div key={index} className="overflow-hidden rounded-lg">
+                            <img
+                              src={getImagePath(image)}
+                              alt={`${project.title} - Web ${index + 1}`}
+                              className="w-full h-auto object-contain shadow-lg"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Default Layout for Other Projects */}
+                  {params.slug !== 'travel-platform' && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {project.images.slice(1).map((image, index) => (
+                        <div key={index} className="overflow-hidden">
+                          <img
+                            src={getImagePath(image)}
+                            alt={`${project.title} - Process ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
                   <div>
                     <h2 className="text-2xl font-light mb-4 text-primary">Outcome & Results</h2>
@@ -380,13 +425,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src={getImagePath("/placeholder.svg?height=64&width=64")}
+                            src={getImagePath("/images/travel/Thumbnail.jpg")}
                             alt="Travel Platform"
                             className="w-full h-full object-cover"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Travel Booking Platform</p>
+                          <p className="font-light group-hover:text-primary transition-colors">WanderWise - Travel Booking Platform</p>
                           <p className="text-sm text-muted-foreground">Travel, Mobile First</p>
                         </div>
                       </div>

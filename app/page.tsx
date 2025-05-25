@@ -129,10 +129,10 @@ export default function Home() {
                 link="/projects/finance-dashboard"
               />
               <ProjectCard
-                title="Travel Booking Platform"
-                description="Streamlined the booking process, reducing abandonment rates and improving overall satisfaction."
-                image="/placeholder.svg?height=400&width=600"
-                tags={["Travel", "Booking", "Mobile First"]}
+                title="WanderWise - Travel Booking Platform"
+                description="Redesigned booking experience that reduced abandonment rates by 42% and improved mobile conversions by 58%."
+                image="/images/travel/Thumbnail.jpg"
+                tags={["Travel", "Booking Platform", "Mobile First"]}
                 link="/projects/travel-platform"
               />
               <ProjectCard
