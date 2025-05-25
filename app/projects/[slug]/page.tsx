@@ -146,10 +146,10 @@ function getProjectData(slug: string) {
     },
     "project-5": {
       title: "FlexIt - Online Fitness Training Platform",
-      client: "FlexIt Fitness",
+      client: "FlexIt Fitness (now Echelon Coach)",
       date: "November 2023",
       tags: ["Web App", "Fitness", "UI/UX Redesign", "Responsive Design", "User Experience"],
-      overview: "A complete redesign of an online fitness training platform to create a more engaging, intuitive, and motivating experience for users seeking personalized workout programs and virtual training sessions.",
+      overview: "A complete redesign of an online fitness training platform to create a more engaging, intuitive, and motivating experience for users seeking personalized workout programs and virtual training sessions. The platform is now live as Echelon Coach's virtual personal training service.",
       challenge:
         "The existing FlexIt platform suffered from poor user engagement and high bounce rates. Users found the interface outdated and confusing, with difficult navigation between workout programs, trainer profiles, and progress tracking. The booking system for live sessions was cumbersome, and the overall experience felt disconnected from modern fitness app standards. Mobile responsiveness was also lacking, despite 70% of users accessing the platform via mobile devices.",
       process: [
@@ -174,7 +174,7 @@ function getProjectData(slug: string) {
         "Social features including workout sharing and community challenges"
       ],
       outcome:
-        "The redesigned FlexIt platform achieved remarkable improvements: user engagement increased by 65%, session booking rates improved by 45%, and mobile user retention increased by 52%. The new design reduced user onboarding time from 8 minutes to 3 minutes, while overall user satisfaction scores jumped from 3.1/5 to 4.8/5. The platform also saw a 38% increase in premium subscription conversions due to the improved user experience.",
+        "The redesigned FlexIt platform achieved remarkable improvements: user engagement increased by 65%, session booking rates improved by 45%, and mobile user retention increased by 52%. The new design reduced user onboarding time from 8 minutes to 3 minutes, while overall user satisfaction scores jumped from 3.1/5 to 4.8/5. The platform also saw a 38% increase in premium subscription conversions due to the improved user experience. The platform is now successfully live as Echelon Coach's virtual personal training service, serving thousands of users with live 1-on-1 fitness and wellness sessions. View the live platform at: https://echeloncoach.com/virtualpt/",
       images: [
         "/images/flexit/flexit-hero.jpg",
         "/images/flexit/web_mainpage.gif",
@@ -387,6 +387,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         <p className="text-muted-foreground">{project.date}</p>
                       </div>
                     </div>
+                    {params.slug === 'project-5' && (
+                      <div className="pt-4">
+                        <Button asChild className="w-full">
+                          <Link href="https://echeloncoach.com/virtualpt/" target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            View Live Project
+                          </Link>
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
 
