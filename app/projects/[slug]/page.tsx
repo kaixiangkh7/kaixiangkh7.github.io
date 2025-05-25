@@ -45,34 +45,41 @@ function getProjectData(slug: string) {
       ],
     },
     "project-2": {
-      title: "E-commerce Experience",
-      client: "StyleShop",
+      title: "Amazon Student Hire Portal",
+      client: "Amazon (Capstone Project)",
       date: "March 2023",
-      tags: ["E-commerce", "Web Design", "User Research", "Conversion Optimization"],
+      tags: ["Web App", "AI/ML", "Recruitment", "Dashboard", "User Experience"],
       overview:
-        "A redesign of an online fashion retailer's website to improve the shopping experience and increase conversions.",
+        "A comprehensive student hiring portal developed in collaboration with Amazon's recruitment team, featuring an AI-powered agent named Rexa to streamline the hiring process and create personalized experiences for both students and recruiters.",
       challenge:
-        "The client was experiencing high cart abandonment rates and low conversion despite having competitive pricing and quality products. The checkout process was cumbersome and product discovery was difficult.",
+        "Amazon's student hiring process faced significant friction points that resulted in high recruitment costs and suboptimal candidate matching. The existing system lacked personalization, required extensive manual work from recruiters for resume filtering and candidate assessment, and didn't provide students with adequate guidance for role matching. This led to longer hiring cycles, higher operational costs, and missed opportunities for quality candidates.",
       process: [
-        "Analyzed site analytics to identify drop-off points in the user journey",
-        "Conducted competitive analysis of leading e-commerce platforms",
-        "Created wireframes for key user flows: product discovery, product detail, and checkout",
-        "Developed interactive prototypes and conducted A/B testing",
-        "Implemented a streamlined checkout process and improved product filtering",
+        "Conducted stakeholder interviews with Amazon recruiters and recent student hires to understand pain points",
+        "Analyzed the existing hiring workflow to identify automation opportunities and friction points",
+        "Designed user personas for students, recruiters, and hiring managers with different needs and goals",
+        "Developed wireframes for the sign-on flow, student dashboard, and recruiter portal",
+        "Created interactive prototypes incorporating AI agent Rexa for personalized interactions",
+        "Implemented and tested the web application with integrated GenAI capabilities",
+        "Conducted usability testing with both student and recruiter user groups",
+        "Refined the AI agent's conversational flow based on user feedback and interaction patterns"
       ],
       features: [
-        "Smart product filtering with visual attribute selectors",
-        "One-page checkout with progress indicator and guest checkout option",
-        "Personalized product recommendations based on browsing history",
-        "Real-time inventory visibility and size availability indicators",
-        "Streamlined mobile-first navigation with category quick-access"
+        "Intelligent sign-on flow with personalized onboarding guided by AI agent Rexa",
+        "Dynamic student dashboard with AI-powered role recommendations and career guidance",
+        "Comprehensive recruiter portal with automated resume filtering and candidate insights",
+        "AI agent Rexa providing personalized information exchange between students and recruiters",
+        "Automated candidate-role matching using machine learning algorithms",
+        "Real-time communication tools with AI-enhanced conversation suggestions",
+        "Advanced analytics dashboard for recruitment metrics and process optimization"
       ],
       outcome:
-        "The redesigned website achieved a 25% increase in conversion rate and a 30% reduction in cart abandonment. Average order value increased by 15% due to improved product recommendations.",
+        "The Amazon Student Hire Portal successfully demonstrated significant potential for improving recruitment efficiency. Initial testing showed a 45% reduction in manual resume screening time for recruiters, while students reported 60% higher satisfaction with role matching accuracy. The AI agent Rexa facilitated more meaningful interactions, leading to better candidate-role fit and reduced hiring cycle time. The project received positive feedback from Amazon stakeholders and is being considered for broader implementation across their student recruitment programs.",
       images: [
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
+        "/images/amazon/amazon-hero.jpg",
+        "/images/amazon/signon-1.gif",
+        "/images/amazon/signon-2.gif",
+        "/images/amazon/dashboard.gif",
+        "/images/amazon/recruitor.gif",
       ],
     },
     "project-3": {
@@ -347,8 +354,49 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </div>
                   )}
 
+                  {/* Amazon Project - Vertical GIF Layout */}
+                  {params.slug === 'project-2' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">Platform Features</h2>
+                      <div className="space-y-8">
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Sign-On Flow - User Onboarding</h3>
+                          <img
+                            src={getImagePath(project.images[1])}
+                            alt={`${project.title} - Sign-On Flow 1`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Sign-On Flow - Profile Setup</h3>
+                          <img
+                            src={getImagePath(project.images[2])}
+                            alt={`${project.title} - Sign-On Flow 2`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Student Dashboard - AI-Powered Role Matching</h3>
+                          <img
+                            src={getImagePath(project.images[3])}
+                            alt={`${project.title} - Student Dashboard`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Recruiter Portal - Automated Screening with Rexa</h3>
+                          <img
+                            src={getImagePath(project.images[4])}
+                            alt={`${project.title} - Recruiter Portal`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Default Layout for Other Projects */}
-                  {params.slug !== 'project-4' && params.slug !== 'project-5' && (
+                  {params.slug !== 'project-2' && params.slug !== 'project-4' && params.slug !== 'project-5' && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {project.images.slice(1).map((image, index) => (
                         <div key={index} className="overflow-hidden rounded-lg h-[650px]">
@@ -424,14 +472,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src={getImagePath("/placeholder.svg?height=64&width=64")}
-                            alt="E-commerce"
+                            src={getImagePath("/images/amazon/amazon-thumbnail.jpg")}
+                            alt="Amazon Student Hire Portal"
                             className="w-full h-full object-cover"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">E-commerce Experience</p>
-                          <p className="text-sm text-muted-foreground">Web Design, E-commerce</p>
+                          <p className="font-light group-hover:text-primary transition-colors">Amazon Student Hire Portal</p>
+                          <p className="text-sm text-muted-foreground">Web App, AI/ML</p>
                         </div>
                       </div>
                     </Link>

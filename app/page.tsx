@@ -114,10 +114,10 @@ export default function Home() {
                 link="/projects/project-1"
               />
               <ProjectCard
-                title="E-commerce Experience"
-                description="Designed an intuitive shopping experience that increased conversion rates by 25% for an online retailer."
-                image="/placeholder.svg?height=400&width=600"
-                tags={["E-commerce", "Web Design", "User Research"]}
+                title="Amazon Student Hire Portal"
+                description="AI-powered recruitment platform with agent Rexa that reduced manual screening time by 45% and improved role matching accuracy by 60%."
+                image="/images/amazon/amazon-thumbnail.jpg"
+                tags={["Web App", "AI/ML", "Recruitment"]}
                 link="/projects/project-2"
               />
               <ProjectCard
