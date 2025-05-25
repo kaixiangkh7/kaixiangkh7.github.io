@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { ProjectCard } from "@/components/project-card"
 import { SkillBadge } from "@/components/skill-badge"
 import { GradientBackground } from "@/components/gradient-background"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { Header } from "@/components/header"
 import { getImagePath } from "@/lib/utils"
 
@@ -48,7 +47,7 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-32 bg-white dark:bg-gray-900">
+        <section id="about" className="py-32 bg-white">
           <div className="container">
             <div className="flex flex-col md:flex-row gap-16 items-center">
               <div className="w-full md:w-2/5 flex justify-center md:justify-start">
@@ -103,7 +102,7 @@ export default function Home() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-24 relative bg-gray-50 dark:bg-gray-800">
+        <section id="projects" className="py-24 relative bg-gray-50">
           <div className="container">
             <h2 className="text-3xl font-semibold mb-12">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -147,7 +146,7 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="py-24 bg-white dark:bg-gray-900">
+        <section id="skills" className="py-24 bg-white">
           <div className="container">
             <h2 className="text-3xl font-semibold mb-12">Skills & Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

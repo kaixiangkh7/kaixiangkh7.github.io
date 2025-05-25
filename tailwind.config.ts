@@ -8,7 +8,6 @@ function getConfigImagePath(path: string): string {
 }
 
 const config = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",

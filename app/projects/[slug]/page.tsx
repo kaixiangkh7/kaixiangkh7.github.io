@@ -4,7 +4,6 @@ import { ArrowLeft, Calendar, User, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { PrimaryButton } from "@/components/ui/primary-button"
 import { GradientBackground } from "@/components/gradient-background"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { Header } from "@/components/header"
 import { getImagePath } from "@/lib/utils"
 
@@ -250,7 +249,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-900 py-16">
+        <div className="bg-white py-16">
           <div className="container">
             <Button variant="ghost" asChild className="mb-8 group">
               <Link href="/#projects">

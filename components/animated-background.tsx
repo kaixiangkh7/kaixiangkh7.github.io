@@ -1,11 +1,9 @@
 "use client"
 
-import { useTheme } from "@/components/theme-provider"
 import { useEffect, useRef } from "react"
 
 export function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const { theme } = useTheme()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -115,7 +113,7 @@ export function AnimatedBackground() {
       window.removeEventListener("resize", setCanvasDimensions)
       cancelAnimationFrame(animationId)
     }
-  }, [theme]) // Re-initialize when theme changes
+  }, [])
 
   return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full -z-10 opacity-50" aria-hidden="true" />
 }

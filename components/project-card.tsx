@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, image, tags, link }: ProjectCardProps) {
   return (
-    <div className="group relative overflow-hidden bg-white dark:bg-gray-900 border-0 shadow-md">
+    <div className="group relative overflow-hidden bg-white border-0 shadow-md">
       <Link href={link} className="block">
         <div className="relative overflow-hidden h-64">
           <img

@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { PrimaryButton } from "@/components/ui/primary-button"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Header() {
   return (
@@ -25,7 +24,6 @@ export function Header() {
           </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <PrimaryButton asChild rounded="full">
             <Link href="/#contact">Get in touch</Link>
           </PrimaryButton>

@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Nunito } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 
 const nunito = Nunito({ 
   subsets: ["latin"],
@@ -28,12 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={nunito.className} suppressHydrationWarning>
-        <ThemeProvider
-          defaultTheme="system"
-          storageKey="ux-portfolio-theme"
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   )
