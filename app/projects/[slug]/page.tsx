@@ -408,8 +408,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src={getImagePath("/placeholder.svg?height=64&width=64")}
-                            alt="Health App"
+                            src={getImagePath("/images/fitness/thumbnail.jpg")}
+                            alt="EliteFit App"
                             className="w-full h-full object-cover"
                           />
                         </div>
