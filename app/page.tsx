@@ -111,35 +111,35 @@ export default function Home() {
                 description="Improved user engagement by 40% through a complete UX overhaul of a health tracking application."
                 image="/images/fitness/thumbnail.jpg"
                 tags={["Mobile App", "Healthcare", "UI/UX"]}
-                link="/projects/health-app"
+                link="/projects/project-1"
               />
               <ProjectCard
                 title="E-commerce Experience"
                 description="Designed an intuitive shopping experience that increased conversion rates by 25% for an online retailer."
                 image="/placeholder.svg?height=400&width=600"
                 tags={["E-commerce", "Web Design", "User Research"]}
-                link="/projects/ecommerce"
+                link="/projects/project-2"
               />
               <ProjectCard
                 title="Financial Dashboard"
                 description="Created a comprehensive dashboard that simplified complex financial data for non-expert users."
                 image="/placeholder.svg?height=400&width=600"
                 tags={["Dashboard", "Fintech", "Data Visualization"]}
-                link="/projects/finance-dashboard"
+                link="/projects/project-3"
               />
               <ProjectCard
                 title="Revive - Travel App"
                 description="Redesigned booking experience that reduced abandonment rates by 42% and improved mobile conversions by 58%."
                 image="/images/travel/Thumbnail.jpg"
                 tags={["Travel", "Booking Platform", "Mobile First"]}
-                link="/projects/travel-platform"
+                link="/projects/project-4"
               />
               <ProjectCard
-                title="Educational App"
-                description="Designed an engaging learning experience for students with accessibility as a core principle."
-                image="/placeholder.svg?height=400&width=600"
-                tags={["Education", "Accessibility", "Mobile App"]}
-                link="/projects/education-app"
+                title="FlexIt - Online Fitness Training Platform"
+                description="Redesigned an online fitness platform resulting in 65% increased user engagement and 45% improved booking rates."
+                image="/images/flexit/flexit_thumbmail.jpg"
+                tags={["Web App", "Fitness", "UI/UX Redesign"]}
+                link="/projects/project-5"
               />
             </div>
           </div>

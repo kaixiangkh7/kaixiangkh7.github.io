@@ -11,7 +11,7 @@ import { getImagePath } from "@/lib/utils"
 // In a real application, you would fetch this data from a CMS or API
 function getProjectData(slug: string) {
   const projects = {
-    "health-app": {
+    "project-1": {
       title: "EliteFit - Fitness App",
       client: "Stealth Startup",
       date: "January 2023",
@@ -44,7 +44,7 @@ function getProjectData(slug: string) {
         "/images/fitness/elitefit_animation.gif",
       ],
     },
-    ecommerce: {
+    "project-2": {
       title: "E-commerce Experience",
       client: "StyleShop",
       date: "March 2023",
@@ -75,7 +75,7 @@ function getProjectData(slug: string) {
         "/placeholder.svg?height=600&width=800",
       ],
     },
-    "finance-dashboard": {
+    "project-3": {
       title: "Financial Dashboard",
       client: "InvestPro",
       date: "June 2023",
@@ -106,7 +106,7 @@ function getProjectData(slug: string) {
         "/placeholder.svg?height=600&width=800",
       ],
     },
-    "travel-platform": {
+    "project-4": {
       title: "Revive - Travel App",
       client: "WanderWise Travel",
       date: "August 2023",
@@ -144,37 +144,41 @@ function getProjectData(slug: string) {
         "/images/travel/web_search.jpg",
       ],
     },
-    "education-app": {
-      title: "Educational App",
-      client: "LearnSmart Academy",
-      date: "October 2023",
-      tags: ["Education", "Accessibility", "Mobile App", "Inclusive Design"],
-      overview: "An engaging learning experience designed for K-12 students with accessibility as a core principle.",
+    "project-5": {
+      title: "FlexIt - Online Fitness Training Platform",
+      client: "FlexIt Fitness",
+      date: "November 2023",
+      tags: ["Web App", "Fitness", "UI/UX Redesign", "Responsive Design", "User Experience"],
+      overview: "A complete redesign of an online fitness training platform to create a more engaging, intuitive, and motivating experience for users seeking personalized workout programs and virtual training sessions.",
       challenge:
-        "The client needed an educational platform that would engage students of diverse learning abilities and preferences while meeting strict accessibility requirements. The existing solution was visually cluttered, lacked clear navigation, and was not optimized for screen readers or keyboard navigation.",
+        "The existing FlexIt platform suffered from poor user engagement and high bounce rates. Users found the interface outdated and confusing, with difficult navigation between workout programs, trainer profiles, and progress tracking. The booking system for live sessions was cumbersome, and the overall experience felt disconnected from modern fitness app standards. Mobile responsiveness was also lacking, despite 70% of users accessing the platform via mobile devices.",
       process: [
-        "Conducted research with teachers, students, and parents to understand diverse learning needs",
-        "Worked with accessibility specialists to establish WCAG 2.1 AA compliance standards",
-        "Created user personas representing different abilities and learning styles",
-        "Developed a design system with accessible color contrasts, typography, and interactive elements",
-        "Designed content organization that supported multiple learning pathways",
-        "Incorporated audio, visual, and tactile feedback mechanisms",
-        "Tested with students from diverse backgrounds including those with learning disabilities",
-        "Iterated based on feedback from teachers, students, and accessibility specialists"
+        "Conducted comprehensive user research with 25 existing users to understand pain points and frustrations",
+        "Analyzed competitor platforms and identified best practices in fitness web applications",
+        "Created detailed user personas representing different fitness goals and experience levels",
+        "Developed user journey maps for key flows: onboarding, workout selection, trainer booking, and progress tracking",
+        "Designed low-fidelity wireframes focusing on simplified navigation and clear information hierarchy",
+        "Created interactive prototypes with emphasis on mobile-first responsive design",
+        "Conducted usability testing sessions with target users across different devices",
+        "Iterated designs based on feedback and implemented a modern, motivational visual design system",
+        "Collaborated with developers to ensure seamless implementation of interactive elements"
       ],
       features: [
-        "Adaptive learning paths that adjust to student progress",
-        "Multi-format content delivery (text, audio, video, interactive)",
-        "Accessibility features including screen reader support and keyboard navigation",
-        "Gamified learning elements with achievement system",
-        "Parent/teacher dashboard with progress monitoring tools"
+        "Streamlined onboarding flow with personalized fitness goal setting and skill assessment",
+        "Intuitive workout program browser with advanced filtering by difficulty, duration, and equipment",
+        "Enhanced trainer profiles with video introductions, specializations, and real-time availability",
+        "Simplified booking system for live virtual training sessions with calendar integration",
+        "Interactive progress dashboard with visual workout history and achievement tracking",
+        "Mobile-optimized responsive design ensuring seamless experience across all devices",
+        "Integrated video player with workout controls and real-time form feedback",
+        "Social features including workout sharing and community challenges"
       ],
       outcome:
-        "The educational app achieved 100% WCAG 2.1 AA compliance and received certification from educational accessibility organizations. Student engagement increased across all learning ability levels, with 94% of teachers reporting improved class participation. Learning outcomes showed a 27% improvement compared to previous digital learning tools.",
+        "The redesigned FlexIt platform achieved remarkable improvements: user engagement increased by 65%, session booking rates improved by 45%, and mobile user retention increased by 52%. The new design reduced user onboarding time from 8 minutes to 3 minutes, while overall user satisfaction scores jumped from 3.1/5 to 4.8/5. The platform also saw a 38% increase in premium subscription conversions due to the improved user experience.",
       images: [
-        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
-        process.env.NODE_ENV === 'production' ? '/kaixiangkh7.github.io/placeholder.svg?height=600&width=800' : '/placeholder.svg?height=600&width=800',
+        "/images/flexit/flexit-hero.jpg",
+        "/images/flexit/web_mainpage.gif",
+        "/images/flexit/web_mainpage_2.gif",
       ],
     },
     // Default fallback for any other slug
@@ -214,11 +218,11 @@ function getProjectData(slug: string) {
 export async function generateStaticParams() {
   // Return an array of objects with the slug parameter
   return [
-    { slug: "health-app" },
-    { slug: "ecommerce" },
-    { slug: "finance-dashboard" },
-    { slug: "travel-platform" },
-    { slug: "education-app" }
+    { slug: "project-1" },
+    { slug: "project-2" },
+    { slug: "project-3" },
+    { slug: "project-4" },
+    { slug: "project-5" }
   ];
 }
 
@@ -290,7 +294,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   </div>
 
                   {/* Mobile Screenshots - Horizontal Layout */}
-                  {params.slug === 'travel-platform' && (
+                  {params.slug === 'project-4' && (
                     <div className="space-y-6">
                       <h2 className="text-2xl font-light mb-4 text-primary">Mobile Experience</h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -308,7 +312,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   )}
 
                   {/* Web Screenshots - Standard Layout */}
-                  {params.slug === 'travel-platform' && (
+                  {params.slug === 'project-4' && (
                     <div className="space-y-6">
                       <h2 className="text-2xl font-light mb-4 text-primary">Web Platform</h2>
                       <div className="space-y-6">
@@ -325,8 +329,26 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </div>
                   )}
 
+                  {/* FlexIt Platform - Vertical GIF Layout */}
+                  {params.slug === 'project-5' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">Platform Redesign</h2>
+                      <div className="space-y-8">
+                        {project.images.slice(1).map((image, index) => (
+                          <div key={index} className="overflow-hidden rounded-lg">
+                            <img
+                              src={getImagePath(image)}
+                              alt={`${project.title} - Design ${index + 1}`}
+                              className="w-full h-auto object-contain shadow-lg"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {/* Default Layout for Other Projects */}
-                  {params.slug !== 'travel-platform' && (
+                  {params.slug !== 'project-4' && params.slug !== 'project-5' && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {project.images.slice(1).map((image, index) => (
                         <div key={index} className="overflow-hidden rounded-lg h-[650px]">
@@ -372,7 +394,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <div className="border-l-4 border-primary pl-6">
                   <h3 className="text-lg font-light mb-4 text-primary">More Projects</h3>
                   <div className="space-y-4">
-                    <Link href="/projects/health-app" className="block group">
+                    <Link href="/projects/project-1" className="block group">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
@@ -388,7 +410,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/ecommerce" className="block group">
+                    <Link href="/projects/project-2" className="block group">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
@@ -404,7 +426,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/finance-dashboard" className="block group">
+                    <Link href="/projects/project-3" className="block group">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
@@ -420,7 +442,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/travel-platform" className="block group">
+                    <Link href="/projects/project-4" className="block group">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
@@ -436,18 +458,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/education-app" className="block group">
+                    <Link href="/projects/project-5" className="block group">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src={getImagePath("/placeholder.svg?height=64&width=64")}
-                            alt="Educational App"
+                            src={getImagePath("/images/flexit/flexit_thumbmail.jpg")}
+                            alt="FlexIt Platform"
                             className="w-full h-full object-cover"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Educational App</p>
-                          <p className="text-sm text-muted-foreground">Education, Accessibility</p>
+                          <p className="font-light group-hover:text-primary transition-colors">FlexIt - Online Fitness Training Platform</p>
+                          <p className="text-sm text-muted-foreground">Web App, Fitness</p>
                         </div>
                       </div>
                     </Link>
