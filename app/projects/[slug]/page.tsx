@@ -330,11 +330,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   {params.slug !== 'travel-platform' && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {project.images.slice(1).map((image, index) => (
-                        <div key={index} className="overflow-hidden">
+                        <div key={index} className="overflow-hidden rounded-lg h-[650px]">
                           <img
                             src={getImagePath(image)}
                             alt={`${project.title} - Process ${index + 1}`}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                           />
                         </div>
                       ))}
