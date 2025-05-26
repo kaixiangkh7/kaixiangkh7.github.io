@@ -121,10 +121,10 @@ export default function Home() {
                 link="/projects/project-2"
               />
               <ProjectCard
-                title="Financial Dashboard"
-                description="Created a comprehensive dashboard that simplified complex financial data for non-expert users."
-                image="/placeholder.svg?height=400&width=600"
-                tags={["Dashboard", "Fintech", "Data Visualization"]}
+                title="FlexIt AI Coach"
+                description="AI-powered fitness coach using computer vision for real-time form correction and personalized feedback on TV platforms."
+                image="/images/ai_coach/tv-thumbnail.jpg"
+                tags={["AI/ML", "Computer Vision", "Fitness"]}
                 link="/projects/project-3"
               />
               <ProjectCard

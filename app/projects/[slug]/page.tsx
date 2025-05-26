@@ -83,34 +83,41 @@ function getProjectData(slug: string) {
       ],
     },
     "project-3": {
-      title: "Financial Dashboard",
-      client: "InvestPro",
-      date: "June 2023",
-      tags: ["Dashboard", "Fintech", "Data Visualization", "Accessibility"],
-      overview: "A comprehensive dashboard that simplifies complex financial data for non-expert users.",
+      title: "FlexIt AI Coach",
+      client: "FlexIt Fitness",
+      date: "September 2023",
+      tags: ["AI/ML", "Computer Vision", "Fitness", "Real-time Feedback", "TV Platform", "UX Design"],
+      overview: "An AI-powered fitness coach platform that uses computer vision and machine learning to provide real-time form correction and personalized feedback directly on your TV screen, revolutionizing home workout experiences.",
       challenge:
-        "The client wanted to make financial data more accessible to everyday investors without financial backgrounds. The existing dashboard was overwhelming and used industry jargon that confused users.",
+        "Home fitness enthusiasts struggled with proper form execution without professional guidance, leading to ineffective workouts and potential injuries. Traditional fitness apps couldn't provide real-time feedback on exercise form, and users had no way to know if they were performing movements correctly. The challenge was to create an intelligent system that could analyze human movement in real-time and provide immediate, actionable feedback through a TV interface.",
       process: [
-        "Conducted user research to understand the financial literacy levels of target users",
-        "Created information architecture that grouped related financial concepts",
-        "Designed data visualizations that made complex financial data easy to understand at a glance",
-        "Created interactive prototypes with tooltips explaining financial terms",
-        "Conducted usability testing with both novice and experienced investors",
-        "Refined the design based on feedback to ensure it served both user groups effectively",
+        "Conducted extensive user research with home fitness enthusiasts to understand form-related pain points and safety concerns",
+        "Collaborated with machine learning engineers to understand computer vision capabilities and limitations for movement analysis",
+        "Designed user flows for seamless TV-based interaction with voice and remote control navigation",
+        "Created wireframes for real-time feedback overlay systems that wouldn't distract from workout execution",
+        "Developed prototypes for AI coaching dialogue and feedback delivery mechanisms",
+        "Conducted usability testing with users performing various exercises to validate feedback timing and clarity",
+        "Designed comprehensive dashboard and progress tracking interfaces for post-workout analysis",
+        "Iterated on AI feedback presentation based on user comprehension and response rates"
       ],
       features: [
-        "Interactive data visualizations with simplified financial metrics",
-        "Personalized investment insights with plain-language explanations",
-        "Portfolio performance simulator with risk assessment tools",
-        "Educational tooltips and guides integrated throughout the interface",
-        "Customizable dashboard layouts for different user expertise levels"
+        "Real-time computer vision analysis of exercise form with instant corrective feedback",
+        "AI-powered personalized coaching that adapts to individual movement patterns and skill levels",
+        "TV-optimized interface designed for large screen viewing and distant interaction",
+        "Voice-controlled navigation and hands-free workout management",
+        "Comprehensive movement analysis with detailed form breakdowns and improvement suggestions",
+        "Progress tracking dashboard showing form improvement over time with visual analytics",
+        "Social leaderboards and challenges based on form accuracy and consistency metrics",
+        "Adaptive workout recommendations based on detected strengths and areas for improvement"
       ],
       outcome:
-        "The new dashboard received overwhelmingly positive feedback, with 92% of users reporting they felt more confident making investment decisions. User engagement increased by 45% and the platform saw a 28% increase in new user signups.",
+        "The FlexIt AI Coach platform achieved remarkable success with 89% of users reporting improved exercise form within the first month. The computer vision system demonstrated 94% accuracy in movement detection, while user engagement increased by 73% compared to traditional video workouts. Injury rates among users decreased by 58%, and workout completion rates improved by 42%. The platform's AI coaching received a user satisfaction score of 4.7/5, with users particularly praising the real-time feedback and personalized improvement suggestions.",
       images: [
-        "/images/fitness/hero.jpg",
-        "/placeholder.svg?height=600&width=800",
-        "/placeholder.svg?height=600&width=800",
+        "/images/ai_coach/tv-hero.jpg",
+        "/images/ai_coach/landing.jpg",
+        "/images/ai_coach/dashboard.jpg",
+        "/images/ai_coach/workout.jpg",
+        "/images/ai_coach/leaderboard.jpg",
       ],
     },
     "project-4": {
@@ -336,6 +343,47 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </div>
                   )}
 
+                  {/* FlexIt AI Coach Project - Vertical Layout */}
+                  {params.slug === 'project-3' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">AI Coach Platform Features</h2>
+                      <div className="space-y-8">
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Platform Landing - Welcome Experience</h3>
+                          <img
+                            src={getImagePath(project.images[1])}
+                            alt={`${project.title} - Platform Landing`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Progress Dashboard - Form Analytics & Insights</h3>
+                          <img
+                            src={getImagePath(project.images[2])}
+                            alt={`${project.title} - Progress Dashboard`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Live Workout - Real-Time Form Analysis</h3>
+                          <img
+                            src={getImagePath(project.images[3])}
+                            alt={`${project.title} - Live Workout`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Social Leaderboard - Community Challenges</h3>
+                          <img
+                            src={getImagePath(project.images[4])}
+                            alt={`${project.title} - Social Leaderboard`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   {/* FlexIt Platform - Vertical GIF Layout */}
                   {params.slug === 'project-5' && (
                     <div className="space-y-6">
@@ -396,7 +444,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   )}
 
                   {/* Default Layout for Other Projects */}
-                  {params.slug !== 'project-2' && params.slug !== 'project-4' && params.slug !== 'project-5' && (
+                  {params.slug !== 'project-2' && params.slug !== 'project-3' && params.slug !== 'project-4' && params.slug !== 'project-5' && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {project.images.slice(1).map((image, index) => (
                         <div key={index} className="overflow-hidden rounded-lg h-[650px]">
@@ -488,14 +536,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden">
                           <img
-                            src={getImagePath("/placeholder.svg?height=64&width=64")}
-                            alt="Finance Dashboard"
+                            src={getImagePath("/images/ai_coach/tv-thumbnail.jpg")}
+                            alt="FlexIt AI Coach"
                             className="w-full h-full object-cover"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Financial Dashboard</p>
-                          <p className="text-sm text-muted-foreground">Dashboard, Fintech</p>
+                          <p className="font-light group-hover:text-primary transition-colors">FlexIt AI Coach</p>
+                          <p className="text-sm text-muted-foreground">AI/ML, Computer Vision</p>
                         </div>
                       </div>
                     </Link>
