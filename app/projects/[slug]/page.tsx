@@ -12,10 +12,10 @@ import { getImagePath } from "@/lib/utils"
 function getProjectData(slug: string) {
   const projects = {
     "project-1": {
-      title: "EliteFit - Fitness App",
+      title: "EliteFit - Mobile Health & Wellness",
       client: "Stealth Startup",
       date: "January 2023",
-      tags: ["Mobile App", "Healthcare", "UI/UX", "User Research"],
+      tags: ["Mobile App", "Healthcare", "Wellness"],
       overview: "A complete redesign of a health tracking application to improve user engagement and retention.",
       challenge:
         "The original app had a high churn rate with users abandoning the platform after just a few sessions. The interface was cluttered, the information architecture was confusing, and the overall experience felt clinical rather than motivational.",
@@ -45,10 +45,10 @@ function getProjectData(slug: string) {
       ],
     },
     "project-2": {
-      title: "Amazon Student Hire Portal",
+      title: "Amazon Rexa - Enterprise Recruitment AI",
       client: "Amazon (Capstone Project)",
       date: "March 2023",
-      tags: ["Web App", "AI/ML", "Recruitment", "Dashboard", "User Experience"],
+      tags: ["Enterprise AI", "Recruitment", "B2B Platform"],
       overview:
         "A comprehensive student hiring portal developed in collaboration with Amazon's recruitment team, featuring an AI-powered agent named Rexa to streamline the hiring process and create personalized experiences for both students and recruiters.",
       challenge:
@@ -83,10 +83,10 @@ function getProjectData(slug: string) {
       ],
     },
     "project-3": {
-      title: "FlexIt AI Coach",
+      title: "FlexIt Vision - AI Computer Vision Coach",
       client: "FlexIt Fitness",
       date: "September 2023",
-      tags: ["AI/ML", "Computer Vision", "Fitness", "Real-time Feedback", "TV Platform", "UX Design"],
+      tags: ["Computer Vision", "AI Coaching", "TV Platform"],
       overview: "An AI-powered fitness coach platform that uses computer vision and machine learning to provide real-time form correction and personalized feedback directly on your TV screen, revolutionizing home workout experiences.",
       challenge:
         "Home fitness enthusiasts struggled with proper form execution without professional guidance, leading to ineffective workouts and potential injuries. Traditional fitness apps couldn't provide real-time feedback on exercise form, and users had no way to know if they were performing movements correctly. The challenge was to create an intelligent system that could analyze human movement in real-time and provide immediate, actionable feedback through a TV interface.",
@@ -121,10 +121,10 @@ function getProjectData(slug: string) {
       ],
     },
     "project-4": {
-      title: "Revive - Travel App",
+      title: "Revive AI - Travel & Booking Intelligence",
       client: "WanderWise Travel",
       date: "August 2023",
-      tags: ["Travel", "Booking Platform", "Mobile First", "User Experience", "Conversion Optimization"],
+      tags: ["Travel AI", "E-commerce", "Mobile First"],
       overview: "A comprehensive redesign of a travel booking platform that transformed a frustrating booking experience into an intuitive, transparent, and engaging journey for travelers.",
       challenge: 
         "WanderWise Travel's existing booking platform suffered from a staggering 78% abandonment rate during the booking process. User research revealed that travelers found the multi-step process confusing, lacked trust due to hidden fees that appeared late in the process, and felt overwhelmed by complex itinerary management. The platform was also not optimized for mobile users, who represented 65% of their traffic.",
@@ -159,10 +159,10 @@ function getProjectData(slug: string) {
       ],
     },
     "project-5": {
-      title: "FlexIt - Online Fitness Training Platform",
+      title: "FlexIt Platform - Fitness SaaS Solution",
       client: "FlexIt Fitness (now Echelon Coach)",
       date: "November 2023",
-      tags: ["Web App", "Fitness", "UI/UX Redesign", "Responsive Design", "User Experience"],
+      tags: ["SaaS Platform", "Fitness", "Web App"],
       overview: "A complete redesign of an online fitness training platform to create a more engaging, intuitive, and motivating experience for users seeking personalized workout programs and virtual training sessions. The platform is now live as Echelon Coach's virtual personal training service.",
       challenge:
         "The existing FlexIt platform suffered from poor user engagement and high bounce rates. Users found the interface outdated and confusing, with difficult navigation between workout programs, trainer profiles, and progress tracking. The booking system for live sessions was cumbersome, and the overall experience felt disconnected from modern fitness app standards. Mobile responsiveness was also lacking, despite 70% of users accessing the platform via mobile devices.",
@@ -196,10 +196,10 @@ function getProjectData(slug: string) {
       ],
     },
     "project-6": {
-      title: "Athena - Fitness Dating App",
+      title: "Athena AI - Dating & Social Platform",
       client: "FitConnect Inc.",
       date: "December 2023",
-      tags: ["Dating App", "Fitness", "Social Networking", "Mobile App", "Premium Features"],
+      tags: ["AI Matching", "Social Platform", "Dating App"],
       overview: "A revolutionary dating app designed specifically for health and fitness enthusiasts, connecting like-minded individuals through shared workout interests, fitness goals, and healthy lifestyle choices.",
       challenge:
         "Traditional dating apps failed to cater to the specific needs of fitness enthusiasts who prioritize health and wellness in their relationships. Users struggled to find partners who shared their commitment to fitness, leading to mismatched expectations and incompatible lifestyles. The challenge was to create a platform that authentically connects people through their passion for fitness while providing meaningful ways to build relationships beyond just physical attraction.",
@@ -634,89 +634,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <div className="border-l-4 border-primary pl-6">
                   <h3 className="text-lg font-light mb-4 text-primary">More Projects</h3>
                   <div className="space-y-4">
-                    <Link href="/projects/project-1" className="block group">
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden">
-                          <img
-                            src={getImagePath("/images/fitness/thumbnail.jpg")}
-                            alt="EliteFit App"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-light group-hover:text-primary transition-colors">EliteFit - Fitness App</p>
-                          <p className="text-sm text-muted-foreground">Mobile App, Healthcare</p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-2" className="block group">
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden">
-                          <img
-                            src={getImagePath("/images/amazon/amazon-thumbnail.jpg")}
-                            alt="Amazon Student Hire Portal"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Amazon Student Hire Portal</p>
-                          <p className="text-sm text-muted-foreground">Web App, AI/ML</p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-3" className="block group">
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden">
-                          <img
-                            src={getImagePath("/images/ai_coach/tv-thumbnail.jpg")}
-                            alt="FlexIt AI Coach"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-light group-hover:text-primary transition-colors">FlexIt AI Coach</p>
-                          <p className="text-sm text-muted-foreground">AI/ML, Computer Vision</p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-4" className="block group">
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden">
-                          <img
-                            src={getImagePath("/images/travel/Thumbnail.jpg")}
-                            alt="Travel Platform"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Revive - Travel App</p>
-                          <p className="text-sm text-muted-foreground">Travel, Mobile First</p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-5" className="block group">
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden">
-                          <img
-                            src={getImagePath("/images/flexit/flexit_thumbmail.jpg")}
-                            alt="FlexIt Platform"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-light group-hover:text-primary transition-colors">FlexIt - Online Fitness Training Platform</p>
-                          <p className="text-sm text-muted-foreground">Web App, Fitness</p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-px bg-border"></div>
                     <Link href="/projects/project-6" className="block group">
                       <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/athena/athena-thumbnail.jpg")}
                             alt="Athena Dating App"
@@ -724,8 +644,88 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Athena - Fitness Dating App</p>
-                          <p className="text-sm text-muted-foreground">Dating App, Fitness</p>
+                          <p className="font-light group-hover:text-primary transition-colors">Athena AI - Dating & Social Platform</p>
+                          <p className="text-sm text-muted-foreground">AI Matching, Social Platform</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-2" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/amazon/amazon-thumbnail.jpg")}
+                            alt="Amazon Student Hire Portal"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">Amazon Rexa - Enterprise Recruitment AI</p>
+                          <p className="text-sm text-muted-foreground">Enterprise AI, Recruitment</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-5" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/flexit/flexit_thumbmail.jpg")}
+                            alt="FlexIt Platform"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">FlexIt Platform - Fitness SaaS Solution</p>
+                          <p className="text-sm text-muted-foreground">SaaS Platform, Fitness</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-3" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/ai_coach/tv-thumbnail.jpg")}
+                            alt="FlexIt AI Coach"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">FlexIt Vision - AI Computer Vision Coach</p>
+                          <p className="text-sm text-muted-foreground">Computer Vision, AI Coaching</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-1" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/fitness/thumbnail.jpg")}
+                            alt="EliteFit App"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">EliteFit - Mobile Health & Wellness</p>
+                          <p className="text-sm text-muted-foreground">Mobile App, Healthcare</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-4" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/travel/Thumbnail.jpg")}
+                            alt="Travel Platform"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">Revive AI - Travel & Booking Intelligence</p>
+                          <p className="text-sm text-muted-foreground">Travel AI, E-commerce</p>
                         </div>
                       </div>
                     </Link>

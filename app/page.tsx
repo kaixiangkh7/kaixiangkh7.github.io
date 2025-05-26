@@ -107,46 +107,46 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-12">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
-                title="EliteFit - Fitness App"
-                description="Improved user engagement by 40% through a complete UX overhaul of a health tracking application."
-                image="/images/fitness/thumbnail.jpg"
-                tags={["Mobile App", "Healthcare", "UI/UX"]}
-                link="/projects/project-1"
+                title="Athena AI - Dating & Social Platform"
+                description="Revolutionary dating app for fitness enthusiasts with 85% reporting more meaningful connections and 92% premium subscriber retention."
+                image="/images/athena/athena-thumbnail.jpg"
+                tags={["AI Matching", "Social Platform", "Dating App"]}
+                link="/projects/project-6"
               />
               <ProjectCard
-                title="Amazon Student Hire Portal"
+                title="Amazon Rexa - Enterprise Recruitment AI"
                 description="AI-powered recruitment platform with agent Rexa that reduced manual screening time by 45% and improved role matching accuracy by 60%."
                 image="/images/amazon/amazon-thumbnail.jpg"
-                tags={["Web App", "AI/ML", "Recruitment"]}
+                tags={["Enterprise AI", "Recruitment", "B2B Platform"]}
                 link="/projects/project-2"
               />
               <ProjectCard
-                title="FlexIt AI Coach"
-                description="AI-powered fitness coach using computer vision for real-time form correction and personalized feedback on TV platforms."
-                image="/images/ai_coach/tv-thumbnail.jpg"
-                tags={["AI/ML", "Computer Vision", "Fitness"]}
-                link="/projects/project-3"
-              />
-              <ProjectCard
-                title="Revive - Travel App"
-                description="Redesigned booking experience that reduced abandonment rates by 42% and improved mobile conversions by 58%."
-                image="/images/travel/Thumbnail.jpg"
-                tags={["Travel", "Booking Platform", "Mobile First"]}
-                link="/projects/project-4"
-              />
-              <ProjectCard
-                title="FlexIt - Online Fitness Training Platform"
+                title="FlexIt Platform - Fitness SaaS Solution"
                 description="Redesigned an online fitness platform resulting in 65% increased user engagement and 45% improved booking rates."
                 image="/images/flexit/flexit_thumbmail.jpg"
-                tags={["Web App", "Fitness", "UI/UX Redesign"]}
+                tags={["SaaS Platform", "Fitness", "Web App"]}
                 link="/projects/project-5"
               />
               <ProjectCard
-                title="Athena - Fitness Dating App"
-                description="Revolutionary dating app for fitness enthusiasts with 85% reporting more meaningful connections and 92% premium subscriber retention."
-                image="/images/athena/athena-thumbnail.jpg"
-                tags={["Dating App", "Fitness", "Social Networking"]}
-                link="/projects/project-6"
+                title="FlexIt Vision - AI Computer Vision Coach"
+                description="AI-powered fitness coach using computer vision for real-time form correction and personalized feedback on TV platforms."
+                image="/images/ai_coach/tv-thumbnail.jpg"
+                tags={["Computer Vision", "AI Coaching", "TV Platform"]}
+                link="/projects/project-3"
+              />
+              <ProjectCard
+                title="EliteFit - Mobile Health & Wellness"
+                description="Improved user engagement by 40% through a complete UX overhaul of a health tracking application."
+                image="/images/fitness/thumbnail.jpg"
+                tags={["Mobile App", "Healthcare", "Wellness"]}
+                link="/projects/project-1"
+              />
+              <ProjectCard
+                title="Revive AI - Travel & Booking Intelligence"
+                description="Redesigned booking experience that reduced abandonment rates by 42% and improved mobile conversions by 58%."
+                image="/images/travel/Thumbnail.jpg"
+                tags={["Travel AI", "E-commerce", "Mobile First"]}
+                link="/projects/project-4"
               />
             </div>
           </div>
