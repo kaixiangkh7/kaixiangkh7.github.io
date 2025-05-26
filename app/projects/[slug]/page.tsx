@@ -483,6 +483,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         <p className="text-muted-foreground">{project.date}</p>
                       </div>
                     </div>
+                    {params.slug === 'project-3' && (
+                      <div className="pt-4">
+                        <Button asChild className="w-full">
+                          <Link href="https://flexit.fit/TV/" target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            View Live TV App
+                          </Link>
+                        </Button>
+                      </div>
+                    )}
                     {params.slug === 'project-5' && (
                       <div className="pt-4">
                         <Button asChild className="w-full">
