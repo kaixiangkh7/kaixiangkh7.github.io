@@ -16,8 +16,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = getProjectData(params.slug)
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const project = getProjectData(slug)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -85,7 +86,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
                   {/* Project Image Layouts */}
                   <ProjectImageLayout 
-                    projectSlug={params.slug}
+                    projectSlug={slug}
                     images={project.images}
                     projectTitle={project.title}
                   />
@@ -115,7 +116,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         <p className="text-muted-foreground">{project.date}</p>
                       </div>
                     </div>
-                    {params.slug === 'project-3' && (
+                    {slug === 'project-3' && (
                       <div className="pt-4">
                         <Button asChild className="w-full">
                           <Link href="https://flexit.fit/TV/" target="_blank" rel="noopener noreferrer">
@@ -125,7 +126,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         </Button>
                       </div>
                     )}
-                    {params.slug === 'project-5' && (
+                    {slug === 'project-5' && (
                       <div className="pt-4">
                         <Button asChild className="w-full">
                           <Link href="https://echeloncoach.com/virtualpt/" target="_blank" rel="noopener noreferrer">
