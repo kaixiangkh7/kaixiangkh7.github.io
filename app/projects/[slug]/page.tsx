@@ -195,6 +195,46 @@ function getProjectData(slug: string) {
         "/images/flexit/web_mainpage_2.gif",
       ],
     },
+    "project-6": {
+      title: "Athena - Fitness Dating App",
+      client: "FitConnect Inc.",
+      date: "December 2023",
+      tags: ["Dating App", "Fitness", "Social Networking", "Mobile App", "Premium Features"],
+      overview: "A revolutionary dating app designed specifically for health and fitness enthusiasts, connecting like-minded individuals through shared workout interests, fitness goals, and healthy lifestyle choices.",
+      challenge:
+        "Traditional dating apps failed to cater to the specific needs of fitness enthusiasts who prioritize health and wellness in their relationships. Users struggled to find partners who shared their commitment to fitness, leading to mismatched expectations and incompatible lifestyles. The challenge was to create a platform that authentically connects people through their passion for fitness while providing meaningful ways to build relationships beyond just physical attraction.",
+      process: [
+        "Conducted extensive research with 30+ fitness enthusiasts about their dating experiences and relationship priorities",
+        "Analyzed competitor dating apps to identify gaps in serving the fitness community",
+        "Created detailed user personas representing different fitness lifestyles: gym enthusiasts, runners, yoga practitioners, and outdoor adventurers",
+        "Designed user flows for fitness-based matching, workout partner discovery, and relationship building",
+        "Developed wireframes for unique features like workout compatibility scoring and fitness goal alignment",
+        "Created interactive prototypes focusing on community building and premium monetization strategies",
+        "Conducted usability testing with target users across different fitness backgrounds and relationship goals",
+        "Iterated on matching algorithms and premium feature placement based on user feedback"
+      ],
+      features: [
+        "Fitness-based matching algorithm that considers workout preferences, fitness goals, and activity levels",
+        "Workout partner discovery feature for finding training buddies and fitness friends",
+        "Interactive fitness profile builder with workout photos, fitness achievements, and goal tracking",
+        "Community challenges and group fitness events to encourage organic connections",
+        "Premium subscription with advanced matching filters, unlimited likes, and exclusive fitness content",
+        "Integrated fitness tracking that shares workout achievements and progress with matches",
+        "Video chat feature for virtual workout dates and fitness coaching sessions",
+        "Safety features including verified fitness trainer profiles and public workout meetup options"
+      ],
+      outcome:
+        "Athena successfully captured the fitness dating market with 85% of users reporting more meaningful connections compared to traditional dating apps. The app achieved a 92% retention rate among premium subscribers, with users spending an average of 45 minutes daily on the platform. Match success rates increased by 67% when users connected over shared fitness activities, and the app generated significant revenue through premium subscriptions with 35% of users upgrading within the first month.",
+      images: [
+        "/images/athena/athena-hero.jpg",
+        "/images/athena/signon.gif",
+        "/images/athena/scrowing.gif",
+        "/images/athena/matching.gif",
+        "/images/athena/for_you.gif",
+        "/images/athena/community.gif",
+        "/images/athena/subscription.gif",
+      ],
+    },
     // Default fallback for any other slug
     default: {
       title: "Project Details",
@@ -236,7 +276,8 @@ export async function generateStaticParams() {
     { slug: "project-2" },
     { slug: "project-3" },
     { slug: "project-4" },
-    { slug: "project-5" }
+    { slug: "project-5" },
+    { slug: "project-6" }
   ];
 }
 
@@ -402,6 +443,104 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </div>
                   )}
 
+                  {/* Athena Dating App - Vertical Layout */}
+                  {params.slug === 'project-6' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">App Features & User Experience</h2>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Onboarding Flow - Fitness Profile Creation</h3>
+                          <img
+                            src={getImagePath(project.images[1])}
+                            alt={`${project.title} - Sign-On Flow`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Discovery Experience - Browse & Connect</h3>
+                          <img
+                            src={getImagePath(project.images[2])}
+                            alt={`${project.title} - Browsing Experience`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Smart Matching - Workout Compatibility Algorithm</h3>
+                          <img
+                            src={getImagePath(project.images[3])}
+                            alt={`${project.title} - Matching System`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Personalized Feed - AI Recommendations</h3>
+                          <img
+                            src={getImagePath(project.images[4])}
+                            alt={`${project.title} - For You Feed`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Community Features - Fitness Events & Groups</h3>
+                          <img
+                            src={getImagePath(project.images[5])}
+                            alt={`${project.title} - Community Features`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Premium Subscription - Monetization Strategy</h3>
+                          <img
+                            src={getImagePath(project.images[6])}
+                            alt={`${project.title} - Subscription Model`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* EliteFit Fitness App - Grid Layout */}
+                  {params.slug === 'project-1' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">App Features & User Experience</h2>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Fitness Boost - Motivation & Progress</h3>
+                          <img
+                            src={getImagePath(project.images[1])}
+                            alt={`${project.title} - Boost Animation`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Progress Summary - Achievement Tracking</h3>
+                          <img
+                            src={getImagePath(project.images[2])}
+                            alt={`${project.title} - Summary Dashboard`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">Leadership Board - Social Competition</h3>
+                          <img
+                            src={getImagePath(project.images[3])}
+                            alt={`${project.title} - Leadership Board`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800 text-center">EliteFit Platform - Complete Experience</h3>
+                          <img
+                            src={getImagePath(project.images[4])}
+                            alt={`${project.title} - Platform Overview`}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Amazon Project - Vertical GIF Layout */}
                   {params.slug === 'project-2' && (
                     <div className="space-y-6">
@@ -440,21 +579,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                           />
                         </div>
                       </div>
-                    </div>
-                  )}
-
-                  {/* Default Layout for Other Projects */}
-                  {params.slug !== 'project-2' && params.slug !== 'project-3' && params.slug !== 'project-4' && params.slug !== 'project-5' && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {project.images.slice(1).map((image, index) => (
-                        <div key={index} className="overflow-hidden rounded-lg h-[650px]">
-                          <img
-                            src={getImagePath(image)}
-                            alt={`${project.title} - Process ${index + 1}`}
-                            className="w-full h-full object-contain"
-                          />
-                        </div>
-                      ))}
                     </div>
                   )}
 
@@ -586,6 +710,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors">FlexIt - Online Fitness Training Platform</p>
                           <p className="text-sm text-muted-foreground">Web App, Fitness</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-6" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden">
+                          <img
+                            src={getImagePath("/images/athena/athena-thumbnail.jpg")}
+                            alt="Athena Dating App"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">Athena - Fitness Dating App</p>
+                          <p className="text-sm text-muted-foreground">Dating App, Fitness</p>
                         </div>
                       </div>
                     </Link>

@@ -141,6 +141,13 @@ export default function Home() {
                 tags={["Web App", "Fitness", "UI/UX Redesign"]}
                 link="/projects/project-5"
               />
+              <ProjectCard
+                title="Athena - Fitness Dating App"
+                description="Revolutionary dating app for fitness enthusiasts with 85% reporting more meaningful connections and 92% premium subscriber retention."
+                image="/images/athena/athena-thumbnail.jpg"
+                tags={["Dating App", "Fitness", "Social Networking"]}
+                link="/projects/project-6"
+              />
             </div>
           </div>
         </section>
