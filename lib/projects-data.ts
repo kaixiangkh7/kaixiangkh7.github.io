@@ -310,6 +310,45 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/x_club/xclub-thumbnail.jpg",
     ],
   },
+  "project-9": {
+    title: "Prep.cafe - AI Interview Prep Platform",
+    client: "Prep.cafe",
+    date: "March 2024",
+    tags: ["AI Coaching", "SaaS Platform", "Interview Prep", "GenAI"],
+    overview: "An AI-powered interview preparation platform that leverages generative AI to provide personalized interview coaching, allowing users to practice interviews anytime with high-quality AI coaches.",
+    challenge:
+      "Aspiring professionals faced significant barriers in accessing quality interview preparation resources. Traditional interview prep was expensive, limited by scheduling constraints with human coaches, and lacked personalized feedback. Many candidates struggled to find realistic interview practice opportunities and couldn't afford premium coaching services, leading to inadequate preparation for competitive job interviews.",
+    process: [
+      "Originally focused on consulting interviews but pivoted due to GenAI voice API limitations with complex case analysis",
+      "Conducted extensive interviews with 40+ job candidates to understand preparation pain points and budget constraints",
+      "Analyzed existing interview prep solutions to identify gaps in accessibility and personalization",
+      "Collaborated with experienced professionals to understand best practices in interview methodology",
+      "Designed user flows for AI-powered interview coaching sessions with real-time feedback mechanisms",
+      "Created wireframes for personalized learning paths and progress tracking dashboards",
+      "Developed prototypes for AI coach interactions optimized for various interview scenarios",
+      "Conducted usability testing with candidates across different experience levels and industries",
+      "Implemented machine learning algorithms trained on thousands of real interview scenarios"
+    ],
+    features: [
+      "AI-powered interview coach with realistic interview simulations across various industries",
+      "Personalized learning paths that adapt to individual strengths and improvement areas",
+      "Real-time feedback on interview responses, communication style, and industry knowledge",
+      "Comprehensive library of practice questions covering various interview types and scenarios",
+      "Progress tracking dashboard with detailed analytics on interview performance and skill development",
+      "24/7 availability for on-demand practice sessions fitting any schedule",
+      "Mock interview simulator with AI-powered performance analysis",
+      "Community features for peer learning and discussion among job seekers"
+    ],
+    outcome:
+      "Prep.cafe successfully launched as a general interview preparation platform, achieving 91% user satisfaction rates with candidates reporting 3x improvement in interview confidence. Users practicing with Prep.cafe showed 78% higher success rates in actual interviews compared to traditional preparation methods. The AI coach demonstrated 95% accuracy in providing relevant feedback, while the platform's accessibility led to a 400% increase in diverse candidates accessing quality interview preparation resources.",
+    images: [
+      "/images/mocha/mocha-hero.jpg",
+      "/images/mocha/mock_dashboard.gif",
+      "/images/mocha/library.gif",
+      "/images/mocha/dashboard.gif",
+      "/images/mocha/mock.gif",
+    ],
+  },
 }
 
 export const defaultProjectData: ProjectData = {

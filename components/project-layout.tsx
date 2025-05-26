@@ -204,6 +204,61 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
     )
   }
 
+  // X Club - Luxury Spa & Dining Experience
+  if (projectSlug === 'project-8') {
+    const features = [
+      "Landing Experience - Luxury Club Introduction",
+      "Service Pages - Spa & Dining Offerings",
+      "Subscription Platform - Membership Management"
+    ]
+
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-light mb-4 text-primary">Luxury Club Experience</h2>
+        <div className="space-y-8">
+          {images.slice(1, 4).map((image, index) => (
+            <div key={index} className="overflow-hidden rounded-lg">
+              <h3 className="text-lg font-medium mb-3 text-gray-800">{features[index]}</h3>
+              <img
+                src={getImagePath(image)}
+                alt={`${projectTitle} - ${features[index]}`}
+                className="w-full h-auto object-contain shadow-lg"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  // Prep.cafe AI Interview Prep - Vertical GIF Layout
+  if (projectSlug === 'project-9') {
+    const features = [
+      "Mock Interview Dashboard - AI-Powered Practice Sessions",
+      "Question Library - Comprehensive Interview Practice Collection",
+      "Progress Dashboard - Performance Analytics & Skills Insights",
+      "Live Mock Interview - Real-Time AI Interview Coaching"
+    ]
+
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-light mb-4 text-primary">AI Interview Prep Platform</h2>
+        <div className="space-y-8">
+          {images.slice(1).map((image, index) => (
+            <div key={index} className="overflow-hidden rounded-lg">
+              <h3 className="text-lg font-medium mb-3 text-gray-800">{features[index]}</h3>
+              <img
+                src={getImagePath(image)}
+                alt={`${projectTitle} - ${features[index]}`}
+                className="w-full h-auto object-contain shadow-lg"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   // Default layout for other projects
   return (
     <div className="space-y-6">

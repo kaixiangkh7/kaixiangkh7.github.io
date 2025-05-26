@@ -107,6 +107,13 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-12">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
+                title="Prep.cafe - AI Interview Prep Platform"
+                description="AI-powered interview prep platform with 91% user satisfaction and 78% higher success rates in actual interviews."
+                image="/images/mocha/mocha-thumbnail.jpg"
+                tags={["AI Coaching", "SaaS Platform", "Interview Prep", "GenAI"]}
+                link="/projects/project-9"
+              />
+              <ProjectCard
                 title="Athena AI - Dating & Social Platform"
                 description="Revolutionary dating app for fitness enthusiasts with 85% reporting more meaningful connections and 92% premium subscriber retention."
                 image="/images/athena/athena-thumbnail.jpg"
