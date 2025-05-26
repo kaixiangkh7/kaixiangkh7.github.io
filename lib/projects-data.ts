@@ -272,6 +272,44 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/z_lounge/About.jpg",
     ],
   },
+  "project-8": {
+    title: "X Club - Luxury Spa & Dining Experience",
+    client: "X Club",
+    date: "February 2024",
+    tags: ["Luxury Club", "Subscription", "Spa & Dining", "Exclusive Experience"],
+    overview: "An exclusive digital experience for X Club, a premium luxury club featuring world-class spa services, fine dining, and exclusive membership benefits. The platform promotes sophistication and exclusivity while facilitating seamless subscription management for discerning clientele.",
+    challenge:
+      "X Club needed a digital presence that would reflect their ultra-premium positioning in the luxury hospitality market. The challenge was to create an experience that would appeal to high-net-worth individuals seeking exclusive spa and dining experiences, while effectively communicating the club's exclusivity and facilitating membership subscriptions. The platform needed to convey luxury, sophistication, and exclusivity without compromising on functionality or accessibility for the target demographic.",
+    process: [
+      "Conducted research on luxury club industry standards and high-end hospitality digital experiences",
+      "Analyzed premium spa and dining establishments to understand client expectations and service standards",
+      "Developed user personas representing ultra-high-net-worth individuals seeking exclusive lifestyle experiences",
+      "Created user journey maps focusing on discovery, membership inquiry, and subscription conversion",
+      "Designed wireframes emphasizing visual hierarchy, premium typography, and sophisticated imagery",
+      "Developed interactive prototypes with focus on seamless subscription flow and member portal experience",
+      "Conducted usability testing with target demographic to ensure luxury positioning resonated appropriately",
+      "Refined design language to maximize exclusivity appeal while maintaining conversion optimization"
+    ],
+    features: [
+      "Sophisticated landing page showcasing exclusive spa treatments, fine dining experiences, and luxury amenities",
+      "Premium membership tiers with detailed benefits breakdown and exclusive service offerings",
+      "Seamless subscription management system with secure payment processing and member portal access",
+      "Interactive spa service booking system with personalized treatment recommendations",
+      "Exclusive dining reservation platform with chef's table and private dining options",
+      "Member-only content areas featuring behind-the-scenes experiences and exclusive events",
+      "Concierge service integration for personalized lifestyle management and special requests",
+      "Sophisticated visual design language emphasizing luxury, exclusivity, and refined aesthetics"
+    ],
+    outcome:
+      "The X Club platform successfully established a commanding digital presence in the luxury club market, resulting in a 92% increase in membership inquiries and an 85% subscription conversion rate among qualified prospects. The sophisticated design approach resonated strongly with the target demographic, with 94% of users spending over 5 minutes exploring membership benefits. The platform's emphasis on exclusivity and luxury positioning led to premium membership tier uptake of 78%, significantly exceeding industry standards. Member satisfaction scores reached 4.9/5, with particular praise for the seamless subscription experience and intuitive spa booking system.",
+    images: [
+      "/images/x_club/xclub-hero.jpg",
+      "/images/x_club/landing.gif",
+      "/images/x_club/page.gif",
+      "/images/x_club/subscription.gif",
+      "/images/x_club/xclub-thumbnail.jpg",
+    ],
+  },
 }
 
 export const defaultProjectData: ProjectData = {

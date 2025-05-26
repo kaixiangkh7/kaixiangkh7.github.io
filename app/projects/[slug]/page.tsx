@@ -143,6 +143,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <div className="border-l-4 border-primary pl-6">
                   <h3 className="text-lg font-light mb-4 text-primary">More Projects</h3>
                   <div className="space-y-4">
+                    <Link href="/projects/project-8" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/x_club/xclub-thumbnail.jpg")}
+                            alt="X Club Luxury Experience"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">X Club - Luxury Spa & Dining Experience</p>
+                          <p className="text-sm text-muted-foreground">Luxury Club, Subscription</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
                     <Link href="/projects/project-7" className="block group">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">

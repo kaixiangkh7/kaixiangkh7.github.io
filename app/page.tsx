@@ -155,6 +155,13 @@ export default function Home() {
                 tags={["Luxury Design", "Waitlist", "Web Design"]}
                 link="/projects/project-7"
               />
+              <ProjectCard
+                title="X Club - Luxury Spa & Dining Experience"
+                description="Exclusive digital experience for premium luxury club featuring world-class spa services, fine dining, and seamless subscription management for discerning clientele."
+                image="/images/x_club/xclub-thumbnail.jpg"
+                tags={["Luxury Club", "Subscription", "Spa & Dining"]}
+                link="/projects/project-8"
+              />
             </div>
           </div>
         </section>
