@@ -148,6 +148,13 @@ export default function Home() {
                 tags={["Travel AI", "E-commerce", "Mobile First"]}
                 link="/projects/project-4"
               />
+              <ProjectCard
+                title="Z Lounge - Luxury Waitlist Experience"
+                description="Exclusive waitlist design featuring minimalist elegance and sophisticated aesthetics that increased sign-ups by 78%."
+                image="/images/z_lounge/zlounge-thumbnail.jpg"
+                tags={["Luxury Design", "Waitlist", "Web Design"]}
+                link="/projects/project-7"
+              />
             </div>
           </div>
         </section>

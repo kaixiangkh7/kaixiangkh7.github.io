@@ -235,6 +235,42 @@ function getProjectData(slug: string) {
         "/images/athena/subscription.gif",
       ],
     },
+    "project-7": {
+      title: "Z Lounge - Luxury Waitlist Experience",
+      client: "Z Lounge",
+      date: "January 2024",
+      tags: ["Luxury Design", "Waitlist", "Web Design", "Exclusive Experience"],
+      overview: "An exclusive waitlist landing page design for Z Lounge, a premium luxury lounge focused on creating mystery, exclusivity, and sophistication through minimalist design principles and elegant typography.",
+      challenge:
+        "Z Lounge required a waitlist page that would embody the essence of luxury and exclusivity while maintaining an air of mystery. The challenge was to create a design that would appeal to high-end clientele without revealing too much, using visual restraint to build anticipation and desire. The page needed to feel sophisticated and exclusive enough to justify the premium positioning while encouraging sign-ups for the waitlist.",
+      process: [
+        "Conducted research on luxury brand aesthetics and exclusive club marketing strategies",
+        "Analyzed competitor luxury venues and their digital presence to identify design opportunities",
+        "Developed a minimalist design philosophy centered on elegance, mystery, and exclusivity",
+        "Created wireframes focusing on strategic use of white space and premium typography",
+        "Designed a monochromatic color palette to emphasize sophistication and timelessness",
+        "Developed interactive prototypes with subtle animations to enhance the premium feel",
+        "Tested the design with target demographic to ensure it conveyed the intended luxury positioning",
+        "Refined typography and layout to maximize impact while maintaining simplicity"
+      ],
+      features: [
+        "Minimalist design with strategic use of negative space to create elegance and sophistication",
+        "Monochromatic color scheme emphasizing mystery and exclusivity",
+        "Premium typography selection with elegant font pairings for luxurious aesthetic",
+        "Subtle micro-interactions and animations that enhance the exclusive experience",
+        "Strategic content revelation that maintains mystery while building anticipation",
+        "Mobile-responsive design optimized for high-end mobile devices",
+        "Exclusive waitlist form with premium user experience and validation",
+        "Sophisticated loading states and transitions that reinforce the luxury brand"
+      ],
+      outcome:
+        "The Z Lounge waitlist page successfully captured the essence of luxury and exclusivity, resulting in a 78% increase in waitlist sign-ups compared to their previous landing page. The minimalist design approach resonated strongly with the target demographic, with 92% of users spending more than 2 minutes engaging with the page content. The sophisticated aesthetic helped establish Z Lounge's premium brand positioning, leading to higher-quality leads and increased anticipation for the lounge opening. The design became a reference point for luxury hospitality digital experiences.",
+      images: [
+        "/images/z_lounge/zlounge-hero.jpg",
+        "/images/z_lounge/waitlist.gif",
+        "/images/z_lounge/About.jpg",
+      ],
+    },
     // Default fallback for any other slug
     default: {
       title: "Project Details",
@@ -277,7 +313,8 @@ export async function generateStaticParams() {
     { slug: "project-3" },
     { slug: "project-4" },
     { slug: "project-5" },
-    { slug: "project-6" }
+    { slug: "project-6" },
+    { slug: "project-7" }
   ];
 }
 
@@ -290,7 +327,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <Header />
       <main className="flex-1">
         <div className="relative">
-          <div className="absolute inset-0 bg-black/70 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/100 z-10"></div>
           <img
             src={getImagePath(project.images[0] || "/placeholder.svg")}
             alt={project.title}
@@ -500,6 +537,31 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </div>
                   )}
 
+                  {/* Z Lounge - Luxury Waitlist Design */}
+                  {params.slug === 'project-7' && (
+                    <div className="space-y-6">
+                      <h2 className="text-2xl font-light mb-4 text-primary">Luxury Waitlist Experience</h2>
+                      <div className="space-y-8">
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">Interactive Waitlist - Elegant Onboarding Experience</h3>
+                          <img
+                            src={getImagePath(project.images[1])}
+                            alt={`${project.title} - Waitlist Experience`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <h3 className="text-lg font-medium mb-3 text-gray-800">About Experience - Mysterious & Exclusive Content</h3>
+                          <img
+                            src={getImagePath(project.images[2])}
+                            alt={`${project.title} - About Page`}
+                            className="w-full h-auto object-contain shadow-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   {/* EliteFit Fitness App - Grid Layout */}
                   {params.slug === 'project-1' && (
                     <div className="space-y-6">
@@ -634,6 +696,22 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <div className="border-l-4 border-primary pl-6">
                   <h3 className="text-lg font-light mb-4 text-primary">More Projects</h3>
                   <div className="space-y-4">
+                    <Link href="/projects/project-7" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/z_lounge/zlounge-thumbnail.jpg")}
+                            alt="Z Lounge Waitlist"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">Z Lounge - Luxury Waitlist Experience</p>
+                          <p className="text-sm text-muted-foreground">Luxury Design, Waitlist</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
                     <Link href="/projects/project-6" className="block group">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
