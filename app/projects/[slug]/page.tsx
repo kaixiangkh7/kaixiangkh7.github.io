@@ -76,6 +76,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   <div>
+                    <h2 className="text-2xl font-light mb-4 text-primary">Job To Be Done</h2>
+                    <p className="text-muted-foreground">{project.jobToBeDone}</p>
+                  </div>
+
+                  <div>
                     <h2 className="text-2xl font-light mb-4 text-primary">Key Features</h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.features.map((feature, index) => (
