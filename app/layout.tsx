@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Nunito } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
-import { ReCaptchaProvider } from "@/components/recaptcha-provider"
+// import { ReCaptchaProvider } from "@/components/recaptcha-provider"
 
 const nunito = Nunito({ 
   subsets: ["latin"],
@@ -29,11 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={nunito.className} suppressHydrationWarning>
-        <ReCaptchaProvider>
+        {/* <ReCaptchaProvider> */}
           {children}
-        </ReCaptchaProvider>
+        {/* </ReCaptchaProvider> */}
         <Toaster />
-        <div id="recaptcha-container"></div>
+        {/* <div id="recaptcha-container"></div> */}
       </body>
     </html>
   )

@@ -8,8 +8,7 @@ const contactFormSchema = z.object({
   message: z.string().min(10),
   // Honeypot field - should be empty
   website: z.string().optional(),
-  // reCAPTCHA token
-  recaptchaToken: z.string().optional(),
+  // recaptchaToken: z.string().optional(), // Removed
 })
 
 // Simple in-memory rate limiting (use Redis in production)
@@ -66,39 +65,38 @@ function validateOrigin(request: NextRequest): boolean {
   return allowedOrigins.some(allowed => requestOrigin.startsWith(allowed))
 }
 
-async function verifyRecaptcha(token: string): Promise<{ success: boolean; score?: number }> {
-  try {
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY
-    
-    if (!secretKey || secretKey === 'REPLACE_WITH_YOUR_SECRET_KEY') {
-      console.log('reCAPTCHA secret key not configured, skipping verification')
-      return { success: true }
-    }
-
-    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: `secret=${secretKey}&response=${token}`,
-    })
-
-    const data = await response.json()
-    console.log('reCAPTCHA verification result:', data)
-
-    // For v3, also check the score (0.0 = bot, 1.0 = human)
-    const minScore = 0.5 // Adjust this threshold as needed
-    const isValidScore = !data.score || data.score >= minScore
-
-    return {
-      success: data.success && isValidScore,
-      score: data.score,
-    }
-  } catch (error) {
-    console.error('reCAPTCHA verification error:', error)
-    return { success: false }
-  }
-}
+// async function verifyRecaptcha(token: string): Promise<{ success: boolean; score?: number }> { // Removed
+// try {
+// const secretKey = process.env.RECAPTCHA_SECRET_KEY
+// 
+// if (!secretKey || secretKey === 'REPLACE_WITH_YOUR_SECRET_KEY') {
+// console.log('reCAPTCHA secret key not configured, skipping verification')
+// return { success: true }
+// }
+// 
+// const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+// method: 'POST',
+// headers: {
+// 'Content-Type': 'application/x-www-form-urlencoded',
+// },
+// body: `secret=${secretKey}&response=${token}`,
+// })
+// 
+// const data = await response.json()
+// console.log('reCAPTCHA verification result:', data)
+// 
+// const minScore = 0.5
+// const isValidScore = !data.score || data.score >= minScore
+// 
+// return {
+// success: data.success && isValidScore,
+// score: data.score,
+// }
+// } catch (error) {
+// console.error('reCAPTCHA verification error:', error)
+// return { success: false }
+// }
+// }
 
 export async function POST(request: NextRequest) {
   try {
@@ -129,20 +127,20 @@ export async function POST(request: NextRequest) {
 
     // 3. Parse and validate request body
     const body = await request.json()
-    const { name, email, subject, message, website, recaptchaToken } = contactFormSchema.parse(body)
+    const { name, email, subject, message, website } = contactFormSchema.parse(body) // Removed recaptchaToken
 
-    // 4. reCAPTCHA Verification
-    if (recaptchaToken) {
-      const recaptchaResult = await verifyRecaptcha(recaptchaToken)
-      if (!recaptchaResult.success) {
-        console.log('reCAPTCHA verification failed:', { score: recaptchaResult.score })
-        return NextResponse.json(
-          { success: false, message: 'Security verification failed' },
-          { status: 403 }
-        )
-      }
-      console.log('reCAPTCHA verification passed:', { score: recaptchaResult.score })
-    }
+    // 4. reCAPTCHA Verification - Removed
+    // if (recaptchaToken) { 
+    //   const recaptchaResult = await verifyRecaptcha(recaptchaToken)
+    //   if (!recaptchaResult.success) {
+    //     console.log('reCAPTCHA verification failed:', { score: recaptchaResult.score })
+    //     return NextResponse.json(
+    //       { success: false, message: 'Security verification failed' },
+    //       { status: 403 }
+    //     )
+    //   }
+    //   console.log('reCAPTCHA verification passed:', { score: recaptchaResult.score })
+    // }
 
     // 5. Honeypot check (if website field is filled, it's likely a bot)
     if (website && website.trim() !== '') {
@@ -203,7 +201,6 @@ export async function POST(request: NextRequest) {
           <p><strong>Message:</strong></p>
           <p>${message.replace(/\n/g, '<br>')}</p>
           ${isSuspicious ? '<p><strong>⚠️ FLAGGED AS SUSPICIOUS</strong></p>' : ''}
-          ${recaptchaToken ? '<p><strong>✅ reCAPTCHA VERIFIED</strong></p>' : ''}
         `,
         replyTo: email,
       })
@@ -218,7 +215,7 @@ export async function POST(request: NextRequest) {
       const resendPayload = {
         from: process.env.RESEND_FROM || 'onboarding@resend.dev',
         to: [process.env.CONTACT_EMAIL || 'hello@uxportfolio.com'],
-        subject: `Portfolio Contact: ${subject}${isSuspicious ? ' [SUSPICIOUS]' : ''}${recaptchaToken ? ' [VERIFIED]' : ''}`,
+        subject: `Portfolio Contact: ${subject}${isSuspicious ? ' [SUSPICIOUS]' : ''}`,
         html: `
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${name}</p>
@@ -227,7 +224,6 @@ export async function POST(request: NextRequest) {
           <p><strong>Message:</strong></p>
           <p>${message.replace(/\n/g, '<br>')}</p>
           ${isSuspicious ? '<p><strong>⚠️ FLAGGED AS SUSPICIOUS</strong></p>' : ''}
-          ${recaptchaToken ? '<p><strong>✅ reCAPTCHA VERIFIED</strong></p>' : ''}
           <hr>
           <p><small>IP: ${rateLimitKey} | Time: ${new Date().toISOString()}</small></p>
         `,
@@ -284,7 +280,6 @@ export async function POST(request: NextRequest) {
               <p><strong>Message:</strong></p>
               <p>${message.replace(/\n/g, '<br>')}</p>
               ${isSuspicious ? '<p><strong>⚠️ FLAGGED AS SUSPICIOUS</strong></p>' : ''}
-              ${recaptchaToken ? '<p><strong>✅ reCAPTCHA VERIFIED</strong></p>' : ''}
             `,
           }],
           reply_to: { email },

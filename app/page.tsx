@@ -250,26 +250,26 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 group">
                     <Mail className="h-5 w-5 text-primary" />
-                    <a href="mailto:hello@uxportfolio.com" className="hover:text-primary transition-colors">
-                      hello@uxportfolio.com
+                    <a href="mailto:kaixiang.huang@columbia.edu" className="hover:text-primary transition-colors">
+                     kaixiang.huang@columbia.edu
                     </a>
                   </div>
                   <div className="flex items-center gap-3 group">
                     <Linkedin className="h-5 w-5 text-primary" />
-                    <a href="#" className="hover:text-primary transition-colors">
-                      linkedin.com/in/uxdesigner
+                    <a href="https://www.linkedin.com/in/kaixianghuang/" className="hover:text-primary transition-colors">
+                      @Kaixiang Huang
                     </a>
                   </div>
                   <div className="flex items-center gap-3 group">
                     <Twitter className="h-5 w-5 text-primary" />
-                    <a href="#" className="hover:text-primary transition-colors">
-                      @uxdesigner
+                    <a href="https://x.com/kaixiangkh7" className="hover:text-primary transition-colors">
+                      @kaixiangkh7
                     </a>
                   </div>
                   <div className="flex items-center gap-3 group">
                     <Github className="h-5 w-5 text-primary" />
-                    <a href="#" className="hover:text-primary transition-colors">
-                      github.com/uxdesigner
+                    <a href="https://github.com/kaixiangkh7/" className="hover:text-primary transition-colors">
+                      github.com/kaixiangkh7
                     </a>
                   </div>
                 </div>
