@@ -2,6 +2,7 @@ export interface ProjectData {
   title: string
   client: string
   date: string
+  role: string
   tags: string[]
   overview: string
   challenge: string
@@ -17,6 +18,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "EliteFit - Mobile Health & Wellness",
     client: "Stealth Startup",
     date: "January 2023",
+    role: "Lead UX/UI Designer",
     tags: ["Mobile App", "Healthcare", "Wellness"],
     overview: "A complete redesign of a health tracking application to improve user engagement and retention.",
     challenge:
@@ -48,6 +50,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Amazon Rexa - Enterprise Recruitment AI",
     client: "Amazon (Capstone Project)",
     date: "March 2023",
+    role: "Product Designer & UX Researcher",
     tags: ["Enterprise AI", "Recruitment", "B2B Platform"],
     overview:
       "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale.",
@@ -80,6 +83,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "FlexIt Vision - AI Computer Vision Coach",
     client: "FlexIt Fitness",
     date: "September 2023",
+    role: "Senior Product Designer",
     tags: ["Computer Vision", "AI Coaching", "TV Platform"],
     overview: "An AI-powered fitness coach platform that uses computer vision and machine learning to provide real-time form correction and personalized feedback directly on TV screens, revolutionizing home workout experiences.",
     challenge:
@@ -111,6 +115,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Revive AI - Travel & Booking Intelligence",
     client: "WanderWise Travel",
     date: "August 2023",
+    role: "Lead UX/UI Designer",
     tags: ["Travel AI", "E-commerce", "Mobile First"],
     overview: "A comprehensive redesign of a travel booking platform that transformed a frustrating booking experience into an intuitive, transparent, and AI-enhanced journey for travelers.",
     challenge: 
@@ -143,6 +148,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "FlexIt Platform - Fitness SaaS Solution",
     client: "FlexIt Fitness (now Echelon Coach)",
     date: "November 2023",
+    role: "Senior Product Designer",
     tags: ["SaaS Platform", "Fitness", "Web App"],
     overview: "A complete B2B SaaS platform redesign for online fitness training, creating an engaging and scalable solution for virtual personal training services. The platform successfully launched as Echelon Coach's commercial offering.",
     challenge:
@@ -172,6 +178,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Athena AI - Dating & Social Platform",
     client: "FitConnect Inc.",
     date: "December 2023",
+    role: "Lead Product Designer",
     tags: ["AI Matching", "Social Platform", "Dating App"],
     overview: "A revolutionary B2C dating platform designed for health and fitness enthusiasts, leveraging AI-powered matching algorithms to connect like-minded individuals through shared wellness interests and lifestyle compatibility.",
     challenge:
@@ -205,6 +212,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Z Lounge - Luxury Waitlist Experience",
     client: "Z Lounge",
     date: "January 2024",
+    role: "Lead UX/UI Designer",
     tags: ["Luxury Design", "Waitlist", "Web Design", "Exclusive Experience"],
     overview: "An exclusive waitlist landing page design for Z Lounge, a premium luxury venue focused on creating mystery, exclusivity, and sophisticated brand positioning through minimalist design principles.",
     challenge:
@@ -234,6 +242,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "X Club - Luxury Spa & Dining Experience",
     client: "X Club",
     date: "February 2024",
+    role: "Lead Product Designer",
     tags: ["Luxury Club", "Subscription", "Spa & Dining", "Exclusive Experience"],
     overview: "An exclusive digital platform for X Club, a premium luxury establishment featuring world-class spa services and fine dining, with sophisticated subscription management for high-net-worth clientele.",
     challenge:
@@ -265,6 +274,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Prep.cafe - AI Interview Prep Platform",
     client: "Prep.cafe (formerly Mocha)",
     date: "March 2024",
+    role: "Lead Product Designer & Founder",
     tags: ["AI Coaching", "SaaS Platform", "Interview Prep", "GenAI"],
     overview: "An AI-powered interview preparation SaaS platform leveraging generative AI to provide personalized coaching at scale. Originally launched as Mocha for consulting interviews, strategically pivoted to prep.cafe serving the broader interview preparation market.",
     challenge:
@@ -298,6 +308,7 @@ export const defaultProjectData: ProjectData = {
   title: "Project Details",
   client: "Client Name",
   date: "2023",
+  role: "UX Designer",
   tags: ["UX Design", "UI Design", "Research"],
   overview: "This project showcases my UX design process and outcomes.",
   challenge: "The client faced specific challenges that needed to be addressed through thoughtful design.",

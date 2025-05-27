@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, Calendar, User, ExternalLink } from "lucide-react"
+import { ArrowLeft, User, ExternalLink, Briefcase } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { PrimaryButton } from "@/components/ui/primary-button"
@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Header />
       <main className="flex-1">
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/60 to-black/100 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black/100 z-10"></div>
           <img
             src={getImagePath(project.images[0] || "/placeholder.svg")}
             alt={project.title}
@@ -58,17 +58,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <div className="lg:col-span-2">
                 <div className="space-y-12">
                   <div>
-                    <h2 className="text-2xl font-light mb-4 text-primary">Overview</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">Overview</h2>
                     <p className="text-muted-foreground">{project.overview}</p>
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-light mb-4 text-primary">The Challenge</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">The Challenge</h2>
                     <p className="text-muted-foreground">{project.challenge}</p>
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-light mb-4 text-primary">Process & Approach</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">Process & Approach</h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.process.map((step, index) => (
                         <li key={index}>{step}</li>
@@ -77,12 +77,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-light mb-4 text-primary">Job To Be Done</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">Job To Be Done</h2>
                     <p className="text-muted-foreground">{project.jobToBeDone}</p>
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-light mb-4 text-primary">Key Features</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">Key Features</h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.features.map((feature, index) => (
                         <li key={index}>{feature}</li>
@@ -98,7 +98,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   />
 
                   <div>
-                    <h2 className="text-2xl font-light mb-4 text-primary">Outcome & Results</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">Outcome & Results</h2>
                     <p className="text-muted-foreground">{project.outcome}</p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
               <div className="space-y-8">
                 <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-lg font-light mb-4 text-primary">Project Details</h3>
+                  <h3 className="text-lg font-normal mb-4 text-primary">Project Details</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <User className="h-5 w-5 text-primary mt-0.5" />
@@ -116,10 +116,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Calendar className="h-5 w-5 text-primary mt-0.5" />
+                      <Briefcase className="h-5 w-5 text-primary mt-0.5" />
                       <div>
-                        <p className="font-medium">Date</p>
-                        <p className="text-muted-foreground">{project.date}</p>
+                        <p className="font-medium">Role</p>
+                        <p className="text-muted-foreground">{project.role}</p>
                       </div>
                     </div>
                     {slug === 'project-3' && (
@@ -157,7 +157,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
 
                 <div className="border-l-4 border-primary pl-6">
-                  <h3 className="text-lg font-light mb-4 text-primary">More Projects</h3>
+                  <h3 className="text-lg font-normal mb-4 text-primary">More Projects</h3>
                   <div className="space-y-4">
                     <Link href="/projects/project-9" className="block group">
                       <div className="flex items-center gap-3">
@@ -170,39 +170,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         </div>
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors">Prep.cafe - AI Interview Prep Platform</p>
-                          <p className="text-sm text-muted-foreground">AI Coaching, Interview Prep</p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-8" className="block group">
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
-                          <img
-                            src={getImagePath("/images/x_club/xclub-thumbnail.jpg")}
-                            alt="X Club Luxury Experience"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-light group-hover:text-primary transition-colors">X Club - Luxury Spa & Dining Experience</p>
-                          <p className="text-sm text-muted-foreground">Luxury Club, Subscription</p>
-                        </div>
-                      </div>
-                    </Link>
-                    <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-7" className="block group">
-                      <div className="flex items-center gap-3">
-                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
-                          <img
-                            src={getImagePath("/images/z_lounge/zlounge-thumbnail.jpg")}
-                            alt="Z Lounge Waitlist"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Z Lounge - Luxury Waitlist Experience</p>
-                          <p className="text-sm text-muted-foreground">Luxury Design, Waitlist</p>
+                          <p className="text-sm text-muted-foreground">AI Coaching, SaaS Platform</p>
                         </div>
                       </div>
                     </Link>
@@ -299,6 +267,38 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors">Revive AI - Travel & Booking Intelligence</p>
                           <p className="text-sm text-muted-foreground">Travel AI, E-commerce</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-7" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/z_lounge/zlounge-thumbnail.jpg")}
+                            alt="Z Lounge Waitlist"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">Z Lounge - Luxury Waitlist Experience</p>
+                          <p className="text-sm text-muted-foreground">Luxury Design, Waitlist</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-8" className="block group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/x_club/xclub-thumbnail.jpg")}
+                            alt="X Club Luxury Experience"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors">X Club - Luxury Spa & Dining Experience</p>
+                          <p className="text-sm text-muted-foreground">Luxury Club, Subscription</p>
                         </div>
                       </div>
                     </Link>
