@@ -25,7 +25,7 @@ export default function Home() {
             <div className="max-w-2xl text-white">
               <h1 className="text-5xl md:text-7xl mb-6"> 
                 <span className="font-extralight">Data-Driven <br/> Product Manager </span><br/> 
-                <span className="font-extralight">with </span><span className="font-bold">User-Centered</span> <br/> 
+                <span className="font-extralight">with </span><span className="font-semibold">User-Centered</span> <br/> 
                 <span className="font-extralight">Design Expertise</span>
               </h1>
               <p className="text-xl text-white/80 mb-8 font-light">
@@ -56,13 +56,13 @@ export default function Home() {
                 <div className="relative">
                   <div className="w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-2xl shadow-xl">
                     <img
-                      src={getImagePath("/placeholder.svg?height=400&width=400")}
-                      alt="Portrait"
+                      src={getImagePath("/images/profile/profile.jpg")}
+                      alt="Kaixiang Huang - AI Product Manager"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground py-4 px-6 rounded-lg shadow-lg">
-                    <span className="font-medium text-lg">AI Product Manager</span>
+                    <span className="font-medium text-lg">PM | UX | AI</span>
                   </div>
                   <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary rounded-lg opacity-20"></div>
                 </div>
@@ -70,7 +70,7 @@ export default function Home() {
               <div className="w-full md:w-3/5 space-y-6">
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
-                  <h2 className="text-4xl font-bold mb-4 leading-tight">Product Manager with Design DNA & AI Expertise</h2>
+                  <h2 className="text-4xl font-bold mb-4 leading-tight">Product Manager <br/> with UX Design DNA & AI Expertise</h2>
                 </div>
                 <p className="text-muted-foreground text-lg">
                   I'm a <span className="font-medium">product manager with a rare combination</span> — 7 years of design experience, hands-on AI/ML capabilities, and deep business analytics expertise. 
