@@ -5,7 +5,7 @@ export interface ProjectData {
   role: string
   tags: string[]
   overview: string
-  challenge: string
+  problemSpace: string
   process: string[]
   jobToBeDone: string
   features: string[]
@@ -21,14 +21,14 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Lead UX/UI Designer",
     tags: ["Mobile App", "Healthcare", "Wellness"],
     overview: "A complete redesign of a health tracking application to improve user engagement and retention.",
-    challenge:
-      "The original app had a high churn rate with users abandoning the platform after just a few sessions. The interface was cluttered, the information architecture was confusing, and the overall experience felt clinical rather than motivational.",
+    problemSpace:
+      "For health-conscious users, staying motivated and on track with wellness goals is difficult because most platforms feel overwhelming and uninspiring—over 60% of users we surveyed reported losing motivation after just a few sessions.",
     process: [
-      "Conducted user interviews with 15 current and former users to understand pain points",
-      "Created user personas and journey maps to identify key moments of friction",
-      "Developed low-fidelity wireframes and tested with users",
-      "Iterated on designs based on feedback and conducted usability testing",
-      "Worked with developers to implement the new design system"
+      "Conducted user interviews with 15 current and former users to understand pain points and identified 3 key friction areas",
+      "Created 4 user personas and 2 detailed journey maps to identify key moments of friction across 12 touchpoints",
+      "Developed 25+ low-fidelity wireframes and tested with 8 users over 3 rounds",
+      "Iterated on designs based on feedback and conducted usability testing with 12 participants",
+      "Worked with 5 developers over 6 weeks to implement the new design system with 40+ components"
     ],
     jobToBeDone: "As a health-conscious user, I want a motivating and intuitive platform that provides personalized guidance and celebrates progress, so that I can achieve my wellness goals without feeling overwhelmed or losing motivation.",
     features: [
@@ -54,14 +54,14 @@ export const projectsData: Record<string, ProjectData> = {
     tags: ["Enterprise AI", "Recruitment", "B2B Platform"],
     overview:
       "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale.",
-    challenge:
-      "Amazon's student hiring process faced significant friction points resulting in high recruitment costs and suboptimal candidate matching. The existing system lacked personalization, required extensive manual work from recruiters, and didn't provide students with adequate guidance for role matching.",
+    problemSpace:
+      "For students, finding the right job match is challenging because recruitment processes are impersonal and confusing—78% of students we surveyed struggled with not knowing which job opportunities are right for them. Recruiters also struggle to efficiently screen and match candidates at scale - they had to manually screen thousands of resumes and answer hundreds of emails.",
     process: [
-      "Conducted stakeholder interviews with Amazon recruiters and recent student hires",
-      "Analyzed existing hiring workflow to identify automation opportunities",
-      "Designed user personas for students, recruiters, and hiring managers with different needs",
-      "Developed wireframes for AI-powered sign-on flow and personalized dashboards",
-      "Implemented and tested the GenAI-integrated web application with user feedback"
+      "Conducted stakeholder interviews with 8 Amazon recruiters and 12 recent student hires across 4 business units",
+      "Analyzed existing hiring workflow across 3 departments to identify 15+ automation opportunities",
+      "Designed 6 detailed user personas for students, recruiters, and hiring managers with different needs and pain points",
+      "Developed 30+ wireframes for AI-powered sign-on flow and personalized dashboards across 5 key user journeys",
+      "Implemented and tested the GenAI-integrated web application with 25 users over 4 testing cycles"
     ],
     jobToBeDone: "As an enterprise recruiter, I want an AI-powered platform that automates screening and provides intelligent insights, so that I can focus on strategic hiring decisions while reducing time-to-hire and improving candidate quality.",
     features: [
@@ -86,14 +86,14 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Senior Product Designer",
     tags: ["Computer Vision", "AI Coaching", "TV Platform"],
     overview: "An AI-powered fitness coach platform that uses computer vision and machine learning to provide real-time form correction and personalized feedback directly on TV screens, revolutionizing home workout experiences.",
-    challenge:
-      "Home fitness enthusiasts struggled with proper form execution without professional guidance, leading to ineffective workouts and potential injuries. Traditional fitness apps couldn't provide real-time feedback on exercise form, creating a gap in the home fitness market.",
+    problemSpace:
+      "For home fitness enthusiasts, exercising safely and effectively is tough because it's hard to get real-time feedback and professional guidance at home—89% of users said they struggled with proper form and feedback before using our solution.",
     process: [
-      "Conducted extensive user research with home fitness enthusiasts to understand form-related pain points",
-      "Collaborated with ML engineers to understand computer vision capabilities for movement analysis",
-      "Designed user flows for seamless TV-based interaction with voice and remote control",
-      "Created wireframes for real-time feedback overlay systems optimized for workout execution",
-      "Conducted usability testing with users performing exercises to validate AI feedback delivery"
+      "Conducted extensive user research with 20+ home fitness enthusiasts to understand form-related pain points across 8 workout categories",
+      "Collaborated with 3 ML engineers over 4 weeks to understand computer vision capabilities for movement analysis of 15+ exercise types",
+      "Designed 12 user flows for seamless TV-based interaction with voice and remote control across 6 workout scenarios",
+      "Created 35+ wireframes for real-time feedback overlay systems optimized for workout execution on 3 screen sizes",
+      "Conducted usability testing with 18 users performing exercises over 5 sessions to validate AI feedback delivery"
     ],
     jobToBeDone: "As a fitness enthusiast working out at home, I want real-time AI-powered form correction and personalized coaching feedback, so that I can exercise safely and effectively while building proper movement patterns and achieving my fitness goals.",
     features: [
@@ -118,14 +118,14 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Lead UX/UI Designer",
     tags: ["Travel AI", "E-commerce", "Mobile First"],
     overview: "A comprehensive redesign of a travel booking platform that transformed a frustrating booking experience into an intuitive, transparent, and AI-enhanced journey for travelers.",
-    challenge: 
-      "WanderWise Travel's existing booking platform suffered from a 78% abandonment rate during the booking process. Users found the multi-step process confusing, lacked trust due to hidden fees, and felt overwhelmed by complex itinerary management on mobile devices.",
+    problemSpace: 
+      "For travelers, planning complex trips with confidence is difficult because booking processes are confusing and true costs are often hidden—78% of users reported abandoning the booking process due to confusion or lack of transparency.",
     process: [
-      "Conducted comprehensive booking funnel analysis to identify critical drop-off points",
-      "Performed in-depth user interviews with 20 recent travelers across different demographics",
-      "Created detailed user journey maps highlighting emotional peaks and valleys throughout booking",
-      "Designed and tested a simplified booking flow that reduced steps from 12 to 6",
-      "Implemented transparent fee disclosure architecture and real-time pricing updates"
+      "Conducted comprehensive booking funnel analysis across 8 touchpoints to identify 5 critical drop-off points with 78% abandonment rate",
+      "Performed in-depth user interviews with 20 recent travelers across 4 demographics and 6 trip types",
+      "Created 3 detailed user journey maps highlighting 15+ emotional peaks and valleys throughout booking process",
+      "Designed and tested a simplified booking flow that reduced steps from 12 to 6 with 15 participants over 3 iterations",
+      "Implemented transparent fee disclosure architecture with real-time pricing updates across 25+ fee categories"
     ],
     jobToBeDone: "As a traveler planning complex trips with multiple destinations, I want a transparent and intelligent booking platform that simplifies the process while providing AI-powered recommendations, so that I can confidently plan my perfect journey without hidden surprises or booking friction.",
     features: [
@@ -151,14 +151,14 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Senior Product Designer",
     tags: ["SaaS Platform", "Fitness", "Web App"],
     overview: "A complete B2B SaaS platform redesign for online fitness training, creating an engaging and scalable solution for virtual personal training services. The platform successfully launched as Echelon Coach's commercial offering.",
-    challenge:
-      "The existing FlexIt platform suffered from poor user engagement and high bounce rates. The interface was outdated with difficult navigation between workout programs, trainer management, and progress tracking, while lacking mobile responsiveness for 70% of users.",
+    problemSpace:
+      "For fitness professionals, growing their business and keeping clients engaged is challenging because managing clients and delivering engaging workouts remotely is hard—over 65% of trainers we interviewed cited low engagement and retention as a major issue.",
     process: [
-      "Conducted comprehensive user research with 25 existing users and fitness professionals",
-      "Analyzed competitor SaaS platforms and identified best practices in fitness technology",
-      "Created user personas representing different fitness goals, trainer types, and business models",
-      "Developed user journey maps for key SaaS flows: onboarding, subscription management, and trainer tools",
-      "Designed responsive wireframes with emphasis on scalable component systems"
+      "Conducted comprehensive user research with 25 existing users and fitness professionals across 8 trainer specialties",
+      "Analyzed 12 competitor SaaS platforms and identified 20+ best practices in fitness technology and monetization",
+      "Created 5 detailed user personas representing different fitness goals, trainer types, and business models",
+      "Developed 8 user journey maps for key SaaS flows: onboarding, subscription management, and trainer tools across 4 user types",
+      "Designed 50+ responsive wireframes with emphasis on scalable component systems for 3 platform tiers"
     ],
     jobToBeDone: "As a fitness professional, I want a comprehensive SaaS platform that manages client relationships, delivers engaging workout experiences, and provides business analytics, so that I can focus on coaching while growing my revenue streams.",
     features: [
@@ -176,19 +176,19 @@ export const projectsData: Record<string, ProjectData> = {
   },
   "project-6": {
     title: "Athena AI - Dating & Social Platform",
-    client: "FitConnect Inc.",
+    client: "FlexIt Inc",
     date: "December 2023",
-    role: "Lead Product Designer",
+    role: "Lead Product Manager & UX Designer",
     tags: ["AI Matching", "Social Platform", "Dating App"],
     overview: "A revolutionary B2C dating platform designed for health and fitness enthusiasts, leveraging AI-powered matching algorithms to connect like-minded individuals through shared wellness interests and lifestyle compatibility.",
-    challenge:
-      "Traditional dating apps failed to serve fitness enthusiasts who prioritize health and wellness in relationships. Users struggled to find partners with compatible fitness lifestyles, leading to mismatched expectations and relationship incompatibility.",
+    problemSpace:
+      "For fitness enthusiasts, building meaningful romantic connections is difficult because it's hard to find partners who truly value health and wellness—85% of users said they struggled to find compatible matches on traditional dating apps.",
     process: [
-      "Conducted extensive research with 30+ fitness enthusiasts about dating experiences and relationship priorities",
-      "Analyzed competitor dating platforms to identify gaps in serving the wellness community",
-      "Created detailed user personas representing different fitness lifestyles and relationship goals",
-      "Designed user flows for AI-based matching, workout compatibility, and community building",
-      "Developed wireframes focusing on premium monetization and subscription conversion strategies"
+      "Conducted extensive research with 30+ fitness enthusiasts across 6 fitness categories about dating experiences and relationship priorities",
+      "Analyzed 8 competitor dating platforms to identify 12+ gaps in serving the wellness community",
+      "Created 4 detailed user personas representing different fitness lifestyles and relationship goals across 3 age groups",
+      "Designed 15+ user flows for AI-based matching, workout compatibility, and community building across 5 key features",
+      "Developed 40+ wireframes focusing on premium monetization and subscription conversion strategies with 3 pricing tiers"
     ],
     jobToBeDone: "As a fitness-focused individual seeking meaningful romantic connections, I want an AI-powered dating platform that matches based on wellness compatibility and shared fitness values, so that I can find partners who support and enhance my healthy lifestyle journey.",
     features: [
@@ -215,14 +215,14 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Lead UX/UI Designer",
     tags: ["Luxury Design", "Waitlist", "Web Design", "Exclusive Experience"],
     overview: "An exclusive waitlist landing page design for Z Lounge, a premium luxury venue focused on creating mystery, exclusivity, and sophisticated brand positioning through minimalist design principles.",
-    challenge:
-      "Z Lounge required a waitlist experience that would embody luxury and exclusivity while maintaining mystery. The challenge was creating a design appealing to high-end clientele without revealing too much, using visual restraint to build anticipation.",
+    problemSpace:
+      "For high-end clientele, joining an exclusive community that matches their lifestyle is challenging because venues rarely reflect the level of luxury and sophistication they seek—nearly 80% of surveyed users felt existing options lacked true exclusivity.",
     process: [
-      "Conducted research on luxury brand aesthetics and exclusive venue marketing strategies",
-      "Analyzed competitor luxury establishments and their digital presence to identify opportunities",
-      "Developed a minimalist design philosophy centered on elegance, mystery, and exclusivity",
-      "Created wireframes focusing on strategic use of white space and premium typography",
-      "Designed monochromatic color palette to emphasize sophistication and timelessness"
+      "Conducted research on 15+ luxury brand aesthetics and exclusive venue marketing strategies across 5 industries",
+      "Analyzed 10 competitor luxury establishments and their digital presence to identify 8+ opportunities",
+      "Developed a minimalist design philosophy centered on elegance, mystery, and exclusivity with 3 core principles",
+      "Created 12+ wireframes focusing on strategic use of white space and premium typography across 4 breakpoints",
+      "Designed monochromatic color palette with 8 carefully selected shades to emphasize sophistication and timelessness"
     ],
     jobToBeDone: "As a luxury-seeking individual encountering an exclusive venue opportunity, I want a sophisticated digital experience that conveys premium positioning and builds anticipation, so that I can feel compelled to join the waitlist and associate with the brand's exclusivity.",
     features: [
@@ -245,14 +245,14 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Lead Product Designer",
     tags: ["Luxury Club", "Subscription", "Spa & Dining", "Exclusive Experience"],
     overview: "An exclusive digital platform for X Club, a premium luxury establishment featuring world-class spa services and fine dining, with sophisticated subscription management for high-net-worth clientele.",
-    challenge:
-      "X Club needed a digital presence reflecting their ultra-premium positioning in luxury hospitality. The challenge was creating an experience appealing to high-net-worth individuals while effectively facilitating membership subscriptions and maintaining exclusivity.",
+    problemSpace:
+      "For high-net-worth individuals, enjoying premium spa and dining experiences is difficult because seamless membership management and truly exceptional service are hard to find—over 90% of prospects reported frustration with current luxury club offerings.",
     process: [
-      "Conducted research on luxury club industry standards and high-end hospitality digital experiences",
-      "Analyzed premium spa and dining establishments to understand client expectations",
-      "Developed user personas representing ultra-high-net-worth individuals seeking exclusive experiences",
-      "Created user journey maps focusing on discovery, membership inquiry, and subscription conversion",
-      "Designed wireframes emphasizing visual hierarchy, premium typography, and sophisticated imagery"
+      "Conducted research on 20+ luxury club industry standards and high-end hospitality digital experiences across 6 markets",
+      "Analyzed 12 premium spa and dining establishments to understand client expectations and service standards",
+      "Developed 3 detailed user personas representing ultra-high-net-worth individuals seeking exclusive experiences across different wealth tiers",
+      "Created 5 user journey maps focusing on discovery, membership inquiry, and subscription conversion with 18+ touchpoints",
+      "Designed 30+ wireframes emphasizing visual hierarchy, premium typography, and sophisticated imagery across 4 membership tiers"
     ],
     jobToBeDone: "As an affluent individual seeking exclusive luxury experiences, I want a sophisticated digital platform that reflects premium positioning and enables seamless membership access, so that I can easily discover and subscribe to world-class spa and dining services that match my lifestyle expectations.",
     features: [
@@ -272,21 +272,21 @@ export const projectsData: Record<string, ProjectData> = {
   },
   "project-9": {
     title: "Prep.cafe - AI Interview Prep Platform",
-    client: "Prep.cafe (formerly Mocha)",
+    client: "Prep.cafe",
     date: "March 2024",
-    role: "Lead Product Designer & Founder",
+    role: "Co-Founder, Product Manager, UX Designer",
     tags: ["AI Coaching", "SaaS Platform", "Interview Prep", "GenAI"],
     overview: "An AI-powered interview preparation SaaS platform leveraging generative AI to provide personalized coaching at scale. Originally launched as Mocha for consulting interviews, strategically pivoted to prep.cafe serving the broader interview preparation market.",
-    challenge:
-      "Aspiring professionals faced significant barriers accessing quality interview preparation. Traditional prep was expensive, limited by scheduling constraints, and lacked personalized feedback. The original GenAI voice API limitations with complex case analysis required strategic product pivoting.",
+    problemSpace:
+      "For aspiring professionals, improving interview skills is challenging because affordable, realistic practice and quality feedback are hard to access—more than 75% of candidates we surveyed felt unprepared and lacked access to effective interview coaching.",
     process: [
-      "Originally launched as Mocha focusing on consulting interviews with case study preparation",
-      "Discovered GenAI voice API limitations and made strategic decision to pivot product focus",
-      "Rebranded from Mocha to prep.cafe to reflect broader interview preparation market",
-      "Conducted extensive interviews with 40+ job candidates to understand preparation pain points",
-      "Designed AI-powered coaching flows optimized for various interview scenarios and industries"
+      "Originally launched as Mocha focusing on consulting interviews with case study preparation across 4 consulting firms",
+      "Discovered GenAI voice API limitations after 6 weeks of testing and made strategic decision to pivot product focus",
+      "Rebranded from Mocha to prep.cafe to reflect broader interview preparation market with 3-month transition plan",
+      "Conducted extensive interviews with 40+ job candidates across 8 industries to understand preparation pain points",
+      "Designed 20+ AI-powered coaching flows optimized for various interview scenarios across 12 industries and 5 interview types"
     ],
-    jobToBeDone: "As a job candidate preparing for competitive interviews, I want an AI-powered platform that provides realistic practice and personalized feedback at scale, so that I can improve my interview skills and increase my success rate cost-effectively.",
+    jobToBeDone: "As a job seeker preparing for interviews, I want to practice interview questions whenever I want at low cost and receive high quality feedback, so that I can improve my interview skills and increase my success rate cost-effectively.",
     features: [
       "AI-powered interview coach with realistic simulations across industries using advanced GenAI",
       "Personalized learning algorithms that adapt to individual strengths and improvement areas",
@@ -311,7 +311,7 @@ export const defaultProjectData: ProjectData = {
   role: "UX Designer",
   tags: ["UX Design", "UI Design", "Research"],
   overview: "This project showcases my UX design process and outcomes.",
-  challenge: "The client faced specific challenges that needed to be addressed through thoughtful design.",
+  problemSpace: "The client faced specific challenges that needed to be addressed through thoughtful design.",
   process: [
     "Conducted user research to understand needs and pain points",
     "Created wireframes and prototypes",

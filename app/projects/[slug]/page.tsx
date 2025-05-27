@@ -63,8 +63,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-normal mb-4 text-primary">The Challenge</h2>
-                    <p className="text-muted-foreground">{project.challenge}</p>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">Problem Space</h2>
+                    <p className="text-muted-foreground">{project.problemSpace}</p>
                   </div>
 
                   <div>
