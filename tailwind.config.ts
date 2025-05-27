@@ -27,6 +27,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-nunito)'],
+        orbitron: ['var(--font-orbitron)'],
       },
       colors: {
         border: "hsl(var(--border))",

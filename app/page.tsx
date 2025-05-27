@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Mail, Github, Linkedin, Twitter, Instagram } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { ProjectCard } from "@/components/project-card"
@@ -272,6 +272,12 @@ export default function Home() {
                       github.com/kaixiangkh7
                     </a>
                   </div>
+                  <div className="flex items-center gap-3 group">
+                    <Instagram className="h-5 w-5 text-primary" />
+                    <a href="https://www.instagram.com/kaixiang_huang/" className="hover:text-primary transition-colors">
+                      @kaixiang_huang
+                    </a>
+                  </div>
                 </div>
                 <div className="pt-6">
                   <h3 className="text-xl font-medium mb-4">Let's Build AI-Powered Products</h3>
@@ -297,16 +303,19 @@ export default function Home() {
               </Link>
             </div>
             <div className="flex space-x-6">
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/kaixianghuang/" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
               </a>
-              <a href="#" aria-label="Twitter">
+              <a href="https://x.com/kaixiangkh7" aria-label="Twitter">
                 <Twitter className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
               </a>
-              <a href="#" aria-label="GitHub">
+              <a href="https://github.com/kaixiangkh7/" aria-label="GitHub">
                 <Github className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
               </a>
-              <a href="mailto:hello@uxportfolio.com" aria-label="Email">
+              <a href="https://www.instagram.com/kaixiang_huang/" aria-label="Instagram">
+                <Instagram className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
+              </a>
+              <a href="mailto:kaixiang.huang@columbia.edu" aria-label="Email">
                 <Mail className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
               </a>
             </div>

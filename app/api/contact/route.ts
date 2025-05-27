@@ -191,7 +191,7 @@ export async function POST(request: NextRequest) {
 
       await transporter.sendMail({
         from: process.env.SMTP_FROM || process.env.SMTP_USER,
-        to: process.env.CONTACT_EMAIL || 'hello@uxportfolio.com',
+        to: process.env.CONTACT_EMAIL || 'kaixiang.huang@columbia.edu',
         subject: `Portfolio Contact: ${subject}`,
         html: `
           <h2>New Contact Form Submission</h2>
@@ -214,7 +214,7 @@ export async function POST(request: NextRequest) {
       
       const resendPayload = {
         from: process.env.RESEND_FROM || 'onboarding@resend.dev',
-        to: [process.env.CONTACT_EMAIL || 'hello@uxportfolio.com'],
+        to: [process.env.CONTACT_EMAIL || 'kaixiang.huang@columbia.edu'],
         subject: `Portfolio Contact: ${subject}${isSuspicious ? ' [SUSPICIOUS]' : ''}`,
         html: `
           <h2>New Contact Form Submission</h2>
@@ -266,7 +266,7 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           personalizations: [{
-            to: [{ email: process.env.CONTACT_EMAIL || 'hello@uxportfolio.com' }],
+            to: [{ email: process.env.CONTACT_EMAIL || 'kaixiang.huang@columbia.edu' }],
             subject: `Portfolio Contact: ${subject}`,
           }],
           from: { email: process.env.SENDGRID_FROM || 'noreply@yourdomain.com' },

@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Nunito } from "next/font/google"
+import { Nunito, Orbitron } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 // import { ReCaptchaProvider } from "@/components/recaptcha-provider"
@@ -11,9 +11,15 @@ const nunito = Nunito({
   variable: "--font-nunito"
 })
 
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-orbitron"
+})
+
 export const metadata: Metadata = {
-  title: "Kaixiang Huang - UX Portfolio",
-  description: "A portfolio showcasing UX design work by Kaixiang Huang",
+  title: "Kaixiang Huang - Product Manager Portfolio",
+  description: "A portfolio showcasing product management and AI/ML work by Kaixiang Huang",
   generator: 'v0.dev',
   metadataBase: new URL('https://www.kaixianghuang.com'),
   icons: {
@@ -28,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={nunito.className} suppressHydrationWarning>
+      <body className={`${nunito.className} ${nunito.variable} ${orbitron.variable}`} suppressHydrationWarning>
         {/* <ReCaptchaProvider> */}
           {children}
         {/* </ReCaptchaProvider> */}
