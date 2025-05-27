@@ -22,12 +22,12 @@ export default function Home() {
           <div className="container relative z-20">
             <div className="max-w-2xl text-white">
               <h1 className="text-5xl md:text-7xl mb-6"> 
-                <span className="font-light">Creating <br/></span>
-                <span className="font-bold">user centered</span> <br/> 
-                <span className="font-light">digital experiences</span>
+                <span className="font-light">Data-Driven <br/> Product Manager </span><br/> 
+                <span className="font-light">with </span><span className="font-bold">User-Centered</span> <br/> 
+                <span className="font-light">Design Expertise</span>
               </h1>
               <p className="text-xl text-white/80 mb-8 font-light">
-                I design intuitive and engaging user experiences that solve real problems and delight users.
+                I combine strategic product leadership with 7 years of design experience and hands-on AI/ML expertise. Running ML models, analyzing data, and designing user experiences to build products that solve real problems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="rounded-full px-8 font-medium shadow-md hover:shadow-lg transition-all">
@@ -60,7 +60,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground py-4 px-6 rounded-lg shadow-lg">
-                    <span className="font-medium text-lg">UX & Product</span>
+                    <span className="font-medium text-lg">AI Product Manager</span>
                   </div>
                   <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary rounded-lg opacity-20"></div>
                 </div>
@@ -68,32 +68,32 @@ export default function Home() {
               <div className="w-full md:w-3/5 space-y-6">
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
-                  <h2 className="text-4xl font-bold mb-4 leading-tight">UX Designer & Product Manager</h2>
+                  <h2 className="text-4xl font-bold mb-4 leading-tight">Product Manager with Design DNA & AI Expertise</h2>
                 </div>
                 <p className="text-muted-foreground text-lg">
-                  I bridge the gap between <span className="font-medium">user needs and business goals</span>, creating products that resonate with customers while driving growth. 
-                  With expertise in both UX design and product management, I lead cross-functional teams through the entire product lifecycle.
+                  I'm a <span className="font-medium">product manager with a rare combination</span> — 7 years of design experience, hands-on AI/ML capabilities, and deep business analytics expertise. 
+                  I don't just strategize about AI products; I run ML models, analyze complex datasets, and design intuitive experiences that make AI accessible to users.
                 </p>
                 <p className="text-muted-foreground text-lg">
-                  My approach combines user-centered design principles with strategic product thinking. I translate research insights into 
-                  product roadmaps and deliver experiences that balance user delight with business metrics.
+                  My approach combines <span className="font-medium">user-centered design thinking, technical AI implementation, and data-driven product strategy</span>. I translate user research into ML training data, 
+                  build predictive models that inform product decisions, and design experiences that seamlessly integrate AI capabilities while maintaining usability.
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">15+</h3>
-                    <p className="text-muted-foreground text-sm font-light">Products Shipped</p>
+                    <h3 className="text-3xl font-bold text-primary mb-1">10+</h3>
+                    <p className="text-muted-foreground text-sm font-light">AI/ML Models Deployed</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">7+</h3>
-                    <p className="text-muted-foreground text-sm font-light">Years Experience</p>
+                    <p className="text-muted-foreground text-sm font-light">Years Design Experience</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">40+</h3>
-                    <p className="text-muted-foreground text-sm font-light">User Research Studies</p>
+                    <p className="text-muted-foreground text-sm font-light">Data Analytics Projects</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">3</h3>
-                    <p className="text-muted-foreground text-sm font-light">Tech Startups</p>
+                    <h3 className="text-3xl font-bold text-primary mb-1">5</h3>
+                    <p className="text-muted-foreground text-sm font-light">Cross-functional Teams Led</p>
                   </div>
                 </div>
               </div>
@@ -179,57 +179,59 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-12">Skills & Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-xl font-medium mb-6 text-primary">Design Skills</h3>
+                <h3 className="text-xl font-medium mb-6 text-primary">AI/ML & Data Analytics</h3>
+                <div className="flex flex-wrap">
+                  <SkillBadge name="Machine Learning Models" />
+                  <SkillBadge name="Deep Learning & Neural Networks" />
+                  <SkillBadge name="Data Science & Analytics" />
+                  <SkillBadge name="Python & TensorFlow" />
+                  <SkillBadge name="Business Intelligence" />
+                  <SkillBadge name="Predictive Analytics" />
+                  <SkillBadge name="A/B Testing & Experimentation" />
+                  <SkillBadge name="SQL & Database Management" />
+                  <SkillBadge name="Statistical Analysis" />
+                  <SkillBadge name="GenAI & LLM Integration" />
+                </div>
+
+                <h3 className="text-xl font-medium mb-6 mt-8 text-primary">Product Management</h3>
+                <div className="flex flex-wrap">
+                  <SkillBadge name="AI Product Strategy" />
+                  <SkillBadge name="Roadmap Planning" />
+                  <SkillBadge name="User Story Writing" />
+                  <SkillBadge name="Stakeholder Management" />
+                  <SkillBadge name="Cross-functional Leadership" />
+                  <SkillBadge name="Data-Driven Decision Making" />
+                  <SkillBadge name="Market Research" />
+                  <SkillBadge name="Feature Prioritization" />
+                  <SkillBadge name="Go-to-Market Strategy" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-medium mb-6 text-primary">Design Foundation (7 Years)</h3>
                 <div className="flex flex-wrap">
                   <SkillBadge name="User Research" />
-                  <SkillBadge name="Wireframing" />
-                  <SkillBadge name="Prototyping" />
+                  <SkillBadge name="Design Thinking" />
+                  <SkillBadge name="AI/UX Integration" />
+                  <SkillBadge name="Wireframing & Prototyping" />
                   <SkillBadge name="Usability Testing" />
                   <SkillBadge name="Information Architecture" />
                   <SkillBadge name="Interaction Design" />
                   <SkillBadge name="Visual Design" />
-                  <SkillBadge name="Responsive Design" />
-                  <SkillBadge name="Accessibility" />
                   <SkillBadge name="Design Systems" />
                 </div>
 
-                <h3 className="text-xl font-medium mb-6 mt-8 text-primary">Tools</h3>
+                <h3 className="text-xl font-medium mb-6 mt-8 text-primary">Tools & Technologies</h3>
                 <div className="flex flex-wrap">
-                  <SkillBadge name="Figma" />
-                  <SkillBadge name="Adobe XD" />
-                  <SkillBadge name="Sketch" />
-                  <SkillBadge name="InVision" />
-                  <SkillBadge name="Miro" />
-                  <SkillBadge name="Zeplin" />
-                  <SkillBadge name="Adobe Creative Suite" />
-                  <SkillBadge name="Maze" />
-                  <SkillBadge name="Optimal Workshop" />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-medium mb-6 text-primary">Additional Skills</h3>
-                <div className="flex flex-wrap">
-                  <SkillBadge name="HTML/CSS" />
-                  <SkillBadge name="Basic JavaScript" />
-                  <SkillBadge name="Design Thinking" />
+                  <SkillBadge name="Python & Jupyter" />
+                  <SkillBadge name="TensorFlow & PyTorch" />
+                  <SkillBadge name="Tableau & Power BI" />
+                  <SkillBadge name="Google Analytics & Mixpanel" />
+                  <SkillBadge name="Jira & Confluence" />
+                  <SkillBadge name="Figma & Design Tools" />
+                  <SkillBadge name="AWS & Cloud Platforms" />
+                  <SkillBadge name="Git & Version Control" />
+                  <SkillBadge name="API Integration" />
                   <SkillBadge name="Agile/Scrum" />
-                  <SkillBadge name="Project Management" />
-                  <SkillBadge name="Stakeholder Management" />
-                  <SkillBadge name="Data Analysis" />
-                  <SkillBadge name="A/B Testing" />
-                  <SkillBadge name="Content Strategy" />
-                </div>
-
-                <h3 className="text-xl font-medium mb-6 mt-8 text-primary">Industries</h3>
-                <div className="flex flex-wrap">
-                  <SkillBadge name="Healthcare" />
-                  <SkillBadge name="E-commerce" />
-                  <SkillBadge name="Fintech" />
-                  <SkillBadge name="Education" />
-                  <SkillBadge name="Travel" />
-                  <SkillBadge name="SaaS" />
-                  <SkillBadge name="IoT/Smart Home" />
-                  <SkillBadge name="Entertainment" />
                 </div>
               </div>
             </div>
@@ -271,10 +273,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="pt-6">
-                  <h3 className="text-xl font-medium mb-4">Let's Connect</h3>
+                  <h3 className="text-xl font-medium mb-4">Let's Build AI-Powered Products</h3>
                   <p className="text-white/80 font-light">
-                    Whether you have a project in mind, want to discuss a potential collaboration, or just want to say
-                    hello, I'm always open to new conversations.
+                    Looking for a product manager who can bridge the gap between AI technology and user needs? With my unique combination of 7-year design foundation, hands-on ML expertise, and strategic product thinking, 
+                    I help teams build AI products that users actually want to use.
                   </p>
                 </div>
               </div>
@@ -305,23 +307,23 @@ export default function Home() {
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm font-medium">
-                      Subject
+                      Project Type
                     </label>
                     <input
                       id="subject"
                       className="w-full px-3 py-2 bg-white/10 border-0 text-white placeholder-white/50 focus:ring-1 focus:ring-primary"
-                      placeholder="What is this regarding?"
+                      placeholder="AI Product Strategy, ML Implementation, UX Research, Data Analytics..."
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
-                      Message
+                      Tell me about your challenge
                     </label>
                     <textarea
                       id="message"
                       rows={5}
                       className="w-full px-3 py-2 bg-white/10 border-0 text-white placeholder-white/50 resize-none focus:ring-1 focus:ring-primary"
-                      placeholder="Tell me about your project..."
+                      placeholder="What AI/ML product challenge are you facing? Whether it's building ML models, designing AI experiences, or analyzing user data, I'd love to understand your technical and user challenges..."
                     />
                   </div>
                   <Button className="w-full rounded-full px-8 font-medium shadow-md hover:shadow-lg transition-all">Send Message</Button>
@@ -336,7 +338,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <Link href="/" className="font-light text-xl">
-                <span className="text-primary">UX</span>Portfolio
+                <span className="text-primary">Product</span>Manager
               </Link>
             </div>
             <div className="flex space-x-6">
@@ -355,7 +357,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 text-center text-sm text-white/50">
-            © {new Date().getFullYear()} UX Portfolio. All rights reserved.
+            © {new Date().getFullYear()} Product Manager Portfolio. All rights reserved.
           </div>
         </div>
       </footer>

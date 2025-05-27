@@ -7,7 +7,7 @@ export function Header() {
     <header className="sticky top-0 z-10 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="font-light text-xl">
-          <span className="text-primary">UX</span>Portfolio
+          <span className="text-primary">Product</span>Manager
         </Link>
         <nav className="hidden md:flex gap-8">
           <Link href="/#about" className="text-sm font-light hover:text-primary transition-colors py-1">

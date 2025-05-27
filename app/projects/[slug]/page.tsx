@@ -310,7 +310,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </main>
       <footer className="py-12 bg-gray-900 text-white">
         <div className="container text-center text-sm text-white/50">
-          © {new Date().getFullYear()} UX Portfolio. All rights reserved.
+          © {new Date().getFullYear()} Product Manager Portfolio. All rights reserved.
         </div>
       </footer>
     </div>
