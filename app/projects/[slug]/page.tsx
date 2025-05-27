@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { PrimaryButton } from "@/components/ui/primary-button"
 import { GradientBackground } from "@/components/gradient-background"
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { getImagePath } from "@/lib/utils"
 import { getProjectData, projectSlugs } from "@/lib/projects-data"
 import { ProjectImageLayout } from "@/components/project-layout"
@@ -308,11 +309,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </main>
-      <footer className="py-12 bg-gray-900 text-white">
-        <div className="container text-center text-sm text-white/50">
-          © {new Date().getFullYear()} Product Manager Portfolio. All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

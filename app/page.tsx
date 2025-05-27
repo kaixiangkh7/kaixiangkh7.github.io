@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/project-card"
 import { SkillBadge } from "@/components/skill-badge"
 import { GradientBackground } from "@/components/gradient-background"
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
 import { getImagePath } from "@/lib/utils"
 
@@ -18,14 +19,14 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-[80vh] flex items-center">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-black/40 z-10"></div>
+            <div className="absolute inset-0 bg-black/40 z-1"></div>
           </div>
-          <div className="container relative z-20">
+          <div className="container relative z-1">
             <div className="max-w-2xl text-white">
               <h1 className="text-5xl md:text-7xl mb-6"> 
-                <span className="font-light">Data-Driven <br/> Product Manager </span><br/> 
-                <span className="font-light">with </span><span className="font-bold">User-Centered</span> <br/> 
-                <span className="font-light">Design Expertise</span>
+                <span className="font-extralight">Data-Driven <br/> Product Manager </span><br/> 
+                <span className="font-extralight">with </span><span className="font-bold">User-Centered</span> <br/> 
+                <span className="font-extralight">Design Expertise</span>
               </h1>
               <p className="text-xl text-white/80 mb-8 font-light">
                 I combine strategic product leadership with 7 years of design experience and hands-on AI/ML expertise. Running ML models, analyzing data, and designing user experiences to build products that solve real problems.
@@ -294,37 +295,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="py-12 bg-gray-900 text-white">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <Link href="/" className="font-light text-xl">
-                <span className="text-primary">Product</span>Manager
-              </Link>
-            </div>
-            <div className="flex space-x-6">
-              <a href="https://www.linkedin.com/in/kaixianghuang/" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
-              </a>
-              <a href="https://x.com/kaixiangkh7" aria-label="Twitter">
-                <Twitter className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
-              </a>
-              <a href="https://github.com/kaixiangkh7/" aria-label="GitHub">
-                <Github className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
-              </a>
-              <a href="https://www.instagram.com/kaixiang_huang/" aria-label="Instagram">
-                <Instagram className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
-              </a>
-              <a href="mailto:kaixiang.huang@columbia.edu" aria-label="Email">
-                <Mail className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
-              </a>
-            </div>
-          </div>
-          <div className="mt-8 text-center text-sm text-white/50">
-            © {new Date().getFullYear()} Product Manager Portfolio. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

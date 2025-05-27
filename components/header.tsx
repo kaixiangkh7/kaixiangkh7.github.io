@@ -4,23 +4,27 @@ import { PrimaryButton } from "@/components/ui/primary-button"
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-10 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-sm supports-[backdrop-filter]:bg-white/80 shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="font-light text-2xl flex items-center gap-2">
           <span className="font-orbitron font-bold text-primary tracking-wider text-3xl hover:text-primary/80 transition-colors">KAI</span>
         </Link>
         <nav className="hidden md:flex gap-8">
-          <Link href="/#about" className="text-sm font-light hover:text-primary transition-colors py-1">
+          <Link href="/#about" className="text-base font-light hover:text-primary transition-colors py-1 relative group">
             About
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/#projects" className="text-sm font-light hover:text-primary transition-colors py-1">
+          <Link href="/#projects" className="text-base font-light hover:text-primary transition-colors py-1 relative group">
             Projects
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/#skills" className="text-sm font-light hover:text-primary transition-colors py-1">
+          <Link href="/#skills" className="text-base font-light hover:text-primary transition-colors py-1 relative group">
             Skills
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/#contact" className="text-sm font-light hover:text-primary transition-colors py-1">
+          <Link href="/#contact" className="text-base font-light hover:text-primary transition-colors py-1 relative group">
             Contact
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </nav>
         <div className="flex items-center gap-4">
