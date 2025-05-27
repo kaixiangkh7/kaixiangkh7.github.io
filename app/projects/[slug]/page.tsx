@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Header />
       <main className="flex-1">
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/100 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/60 to-black/100 z-10"></div>
           <img
             src={getImagePath(project.images[0] || "/placeholder.svg")}
             alt={project.title}
@@ -127,7 +127,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <Button asChild className="w-full">
                           <Link href="https://flexit.fit/TV/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            View Live TV App
+                            View Launched TV App
                           </Link>
                         </Button>
                       </div>
@@ -137,7 +137,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <Button asChild className="w-full">
                           <Link href="https://echeloncoach.com/virtualpt/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            View Live Project
+                            View Launched Website
                           </Link>
                         </Button>
                       </div>
@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <Button asChild className="w-full">
                           <Link href="https://prep.cafe/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            View Live Platform
+                            View Launched Website
                           </Link>
                         </Button>
                       </div>

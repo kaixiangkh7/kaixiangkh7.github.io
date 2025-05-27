@@ -29,7 +29,7 @@ export default function Home() {
                 <span className="font-extralight">Design Expertise</span>
               </h1>
               <p className="text-xl text-white/80 mb-8 font-light">
-                I combine strategic product leadership with 7 years of design experience and hands-on AI/ML expertise. Running ML models, analyzing data, and designing user experiences to build products that solve real problems.
+                I combine strategic product leadership with 7 years of design experience and hands-on AI/ML expertise. Running ML models, analyzing data, and designing user experiences to build products that solve business problems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="rounded-full px-8 font-medium shadow-md hover:shadow-lg transition-all">
@@ -70,16 +70,21 @@ export default function Home() {
               <div className="w-full md:w-3/5 space-y-6">
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
-                  <h2 className="text-4xl font-bold mb-4 leading-tight">AI Product Manager <br/> with UX Design DNA</h2>
+                  <h2 className="text-4xl font-bold mb-4 leading-tight">
+                    AI Product Manager <br /> with Business Analytics & Design Expertise
+                  </h2>
+                  <p className="text-muted-foreground text-lg">
+                    <span className="font-medium">Double Master's, Columbia University:</span>
+                    <span className="font-semibold"> MBA</span> – Columbia Business School (Business Analytics, AI & Product Management),
+                    <span className="font-semibold"> MS</span> – Advanced Design (Digital Design, Human-Centered Design, Digital Twin & 3D Architectural Design)
+                  </p>
+                  <p className="text-muted-foreground text-lg mt-1">
+                    With 7 years of professional experience, I bridge the gap between business, technology, and design. I don't just strategize about AI products – I run ML models, analyze complex datasets, and design intuitive experiences that make AI accessible to users.
+                  </p>
+                  <p className="text-muted-foreground text-lg mt-1">
+                    My unique background enables me to lead cross-functional teams, drive product vision, and deliver solutions that are both innovative and user-centered.
+                  </p>
                 </div>
-                <p className="text-muted-foreground text-lg">
-                  I'm a <span className="font-medium">product manager with a rare combination</span> — 7 years of design experience, hands-on AI/ML capabilities, and deep business analytics expertise. 
-                  I don't just strategize about AI products; I run ML models, analyze complex datasets, and design intuitive experiences that make AI accessible to users.
-                </p>
-                <p className="text-muted-foreground text-lg">
-                  My approach combines <span className="font-medium">user-centered design thinking, technical AI implementation, and data-driven product strategy</span>. I translate user research into ML training data, 
-                  build predictive models that inform product decisions, and design experiences that seamlessly integrate AI capabilities while maintaining usability.
-                </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">3+</h3>
