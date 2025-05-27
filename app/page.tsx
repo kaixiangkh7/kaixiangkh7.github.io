@@ -83,11 +83,11 @@ export default function Home() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">3+</h3>
-                    <p className="text-muted-foreground text-sm font-light">AI/ML Apps Launched</p>
+                    <p className="text-muted-foreground text-sm font-light">AI/ML Products Launched</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">30+</h3>
-                    <p className="text-muted-foreground text-sm font-light">Digital Apps Designed</p>
+                    <p className="text-muted-foreground text-sm font-light">Digital Products Designed</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">7+</h3>
