@@ -64,7 +64,7 @@ export function ContactForm() { // Or export function ContactButton()
             {isSubmitting ? "Opening Email..." : "Get in Touch"}
           </span>
         </Button>
-      
+      <p className="text-sm text-white/50 mt-4"> Click to open your default email app and send me an email at <br/> kaixiang.huang@columbia.edu</p>
       </div>
     </div>
   )

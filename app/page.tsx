@@ -70,7 +70,7 @@ export default function Home() {
               <div className="w-full md:w-3/5 space-y-6">
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
-                  <h2 className="text-4xl font-bold mb-4 leading-tight">Product Manager <br/> with UX Design DNA & AI Expertise</h2>
+                  <h2 className="text-4xl font-bold mb-4 leading-tight">AI Product Manager <br/> with UX Design DNA</h2>
                 </div>
                 <p className="text-muted-foreground text-lg">
                   I'm a <span className="font-medium">product manager with a rare combination</span> — 7 years of design experience, hands-on AI/ML capabilities, and deep business analytics expertise. 
@@ -82,20 +82,20 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">10+</h3>
-                    <p className="text-muted-foreground text-sm font-light">AI/ML Models Deployed</p>
+                    <h3 className="text-3xl font-bold text-primary mb-1">3+</h3>
+                    <p className="text-muted-foreground text-sm font-light">AI/ML Apps Launched</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-primary mb-1">30+</h3>
+                    <p className="text-muted-foreground text-sm font-light">Digital Apps Designed</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">7+</h3>
-                    <p className="text-muted-foreground text-sm font-light">Years Design Experience</p>
+                    <p className="text-muted-foreground text-sm font-light">Years Experience</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">40+</h3>
                     <p className="text-muted-foreground text-sm font-light">Data Analytics Projects</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">5</h3>
-                    <p className="text-muted-foreground text-sm font-light">Cross-functional Teams Led</p>
                   </div>
                 </div>
               </div>
