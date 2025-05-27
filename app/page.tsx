@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/project-card"
 import { SkillBadge } from "@/components/skill-badge"
 import { GradientBackground } from "@/components/gradient-background"
 import { Header } from "@/components/header"
+import { ContactForm } from "@/components/contact-form"
 import { getImagePath } from "@/lib/utils"
 
 export default function Home() {
@@ -281,53 +282,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-8">
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        Name
-                      </label>
-                      <input
-                        id="name"
-                        className="w-full px-3 py-2 bg-white/10 border-0 text-white placeholder-white/50 focus:ring-1 focus:ring-primary"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="w-full px-3 py-2 bg-white/10 border-0 text-white placeholder-white/50 focus:ring-1 focus:ring-primary"
-                        placeholder="Your email"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
-                      Project Type
-                    </label>
-                    <input
-                      id="subject"
-                      className="w-full px-3 py-2 bg-white/10 border-0 text-white placeholder-white/50 focus:ring-1 focus:ring-primary"
-                      placeholder="AI Product Strategy, ML Implementation, UX Research, Data Analytics..."
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Tell me about your challenge
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="w-full px-3 py-2 bg-white/10 border-0 text-white placeholder-white/50 resize-none focus:ring-1 focus:ring-primary"
-                      placeholder="What AI/ML product challenge are you facing? Whether it's building ML models, designing AI experiences, or analyzing user data, I'd love to understand your technical and user challenges..."
-                    />
-                  </div>
-                  <Button className="w-full rounded-full px-8 font-medium shadow-md hover:shadow-lg transition-all">Send Message</Button>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>
