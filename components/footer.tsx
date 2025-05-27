@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Link href="/" className="font-light text-2xl flex items-center gap-2">
-              <span className="font-orbitron font-bold text-primary tracking-wider text-3xl hover:text-primary/80 transition-colors">KAI</span>
+              <span className="font-orbitron font-bold text-white tracking-wider text-3xl hover:text-gray-300 transition-colors">KAI</span>
             </Link>
           </div>
           <div className="flex space-x-6">

@@ -17,29 +17,34 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center">
+        <section className="relative min-h-[80vh] flex items-center px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-black/40 z-1"></div>
           </div>
           <div className="container relative z-1">
-            <div className="max-w-2xl text-white">
-              <h1 className="text-5xl md:text-7xl mb-6"> 
-                <span className="font-extralight">Data-Driven <br/> Product Manager </span><br/> 
-                <span className="font-extralight">with </span><span className="font-semibold">User-Centered</span> <br/> 
-                <span className="font-extralight">Design Expertise</span>
+            <div className="max-w-4xl text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6 leading-tight"> 
+                <span className="font-extralight">Data-Driven</span>
+                <br className="hidden sm:block" />
+                <span className="font-extralight"> Product Manager</span>
+                <br /> 
+                <span className="font-extralight">with </span>
+                <span className="font-semibold">User-Centered</span>
+                <br className="hidden sm:block" />
+                <span className="font-extralight"> Design Expertise</span>
               </h1>
-              <p className="text-xl text-white/80 mb-8 font-light">
+              <p className="text-lg sm:text-xl md:text-xl text-white/80 mb-6 sm:mb-8 font-light max-w-3xl">
                 I combine strategic product leadership with 7 years of design experience and hands-on AI/ML expertise. Running ML models, analyzing data, and designing user experiences to build products that solve business problems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="rounded-full px-8 font-medium shadow-md hover:shadow-lg transition-all">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button asChild size="lg" className="rounded-full px-6 sm:px-8 font-medium shadow-md hover:shadow-lg transition-all">
                   <Link href="#projects">View My Work</Link>
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   asChild
-                  className="rounded-full px-8 font-light bg-transparent text-white border-white hover:bg-white/20 shadow-md hover:shadow-lg transition-all"
+                  className="rounded-full px-6 sm:px-8 font-light bg-transparent text-white border-white hover:bg-white/20 shadow-md hover:shadow-lg transition-all"
                 >
                   <Link href="#contact">Contact Me</Link>
                 </Button>
@@ -71,12 +76,12 @@ export default function Home() {
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
                   <h2 className="text-4xl font-bold mb-4 leading-tight">
-                    AI Product Manager <br /> with Business Analytics & Design Expertise
+                    Hi, I'm Kai – AI Product Manager <br /> with Business Analytics & Design Expertise
                   </h2>
                   <p className="text-muted-foreground text-lg">
-                    <span className="font-medium">Double Master's, Columbia University:</span>
-                    <span className="font-semibold"> MBA</span> – Columbia Business School (Business Analytics, AI & Product Management),
-                    <span className="font-semibold"> MS</span> – Advanced Design (Digital Design, Human-Centered Design, Digital Twin & 3D Architectural Design)
+                    <span className="font-medium">I hold dual Master's degree from Columbia University: <br /></span>
+                    <span className="font-semibold"> MBA</span> – Columbia Business School (Business Analytics, AI & Product Management),<br />
+                    <span className="font-semibold"> MS</span> – Advanced Design (Digital & Human-Centered Design, Digital Twin & 3D Architectural Design)
                   </p>
                   <p className="text-muted-foreground text-lg mt-1">
                     With 7 years of professional experience, I bridge the gap between business, technology, and design. I don't just strategize about AI products – I run ML models, analyze complex datasets, and design intuitive experiences that make AI accessible to users.
@@ -92,7 +97,7 @@ export default function Home() {
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">30+</h3>
-                    <p className="text-muted-foreground text-sm font-light">Digital Products Designed</p>
+                    <p className="text-muted-foreground text-sm font-light">Digital Products Delivered</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">7+</h3>
