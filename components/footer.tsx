@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import { Mail, Github, Linkedin, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -15,8 +15,10 @@ export function Footer() {
             <a href="https://www.linkedin.com/in/kaixianghuang/" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
             </a>
-            <a href="https://x.com/kaixiangkh7" aria-label="Twitter">
-              <Twitter className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
+            <a href="https://x.com/kaixiangkh7" aria-label="X (formerly Twitter)">
+              <svg viewBox="0 0 24 24" className="h-5 w-5 text-white/70 hover:text-primary transition-colors fill-current">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </a>
             <a href="https://github.com/kaixiangkh7/" aria-label="GitHub">
               <Github className="h-5 w-5 text-white/70 hover:text-primary transition-colors" />
