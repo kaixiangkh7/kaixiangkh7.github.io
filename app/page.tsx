@@ -126,7 +126,7 @@ export default function Home() {
                 link="/projects/project-9"
               />
               <ProjectCard
-                title="Athena AI - Dating & Social Platform"
+                title="Athena - Dating & Social Platform"
                 description="Revolutionary dating app for fitness enthusiasts with 85% reporting more meaningful connections and 92% premium subscriber retention."
                 image="/images/athena/athena-thumbnail.jpg"
                 tags={["AI Matching", "Social Platform", "Dating App"]}
@@ -161,10 +161,10 @@ export default function Home() {
                 link="/projects/project-1"
               />
               <ProjectCard
-                title="Revive AI - Travel & Booking Intelligence"
-                description="Redesigned booking experience that reduced abandonment rates by 42% and improved mobile conversions by 58%."
+                title="Revive AI - Smart Itinerary & Lifestyle Intelligence"
+                description="AI-powered travel companion for high net worth individuals featuring intelligent scheduling of premium experiences, dining, and events."
                 image="/images/travel/Thumbnail.jpg"
-                tags={["Travel AI", "E-commerce", "Mobile First"]}
+                tags={["AI/ML", "Luxury Travel", "Smart Itinerary", "High Net Worth"]}
                 link="/projects/project-4"
               />
               <ProjectCard

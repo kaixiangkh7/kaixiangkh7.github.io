@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-normal mb-4 text-primary">Process & Approach</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">Research & Analytics</h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.process.map((step, index) => (
                         <li key={index}>{step}</li>
@@ -269,8 +269,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Revive AI - Travel & Booking Intelligence</p>
-                          <p className="text-sm text-muted-foreground">Travel AI, E-commerce</p>
+                          <p className="font-light group-hover:text-primary transition-colors">Revive - Smart Itinerary & Lifestyle Intelligence</p>
+                          <p className="text-sm text-muted-foreground">AI/ML, Luxury Travel, Smart Itinerary</p>
                         </div>
                       </div>
                     </Link>
@@ -302,7 +302,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         </div>
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors">X Club - Luxury Spa & Dining Experience</p>
-                          <p className="text-sm text-muted-foreground">Luxury Club, Subscription</p>
+                          <p className="text-sm text-muted-foreground">Luxury Club, Membership Only</p>
                         </div>
                       </div>
                     </Link>
