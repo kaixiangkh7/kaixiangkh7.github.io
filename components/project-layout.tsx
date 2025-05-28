@@ -151,10 +151,9 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
   // EliteFit Fitness App - Grid Layout
   if (projectSlug === 'project-1') {
     const features = [
-      "Fitness Boost - Motivation & Progress",
+      "EliteFit Platform - AI/ML recommendation",
       "Progress Summary - Achievement Tracking",
       "Leadership Board - Social Competition", 
-      "EliteFit Platform - Complete Experience"
     ]
 
     return (

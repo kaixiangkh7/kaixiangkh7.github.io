@@ -238,7 +238,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         </div>
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors">FlexIt AI - Motion tracking fitness coach</p>
-                          <p className="text-sm text-muted-foreground">Computer Vision, AI Coaching</p>
+                          <p className="text-sm text-muted-foreground">Computer Vision, AI Coaching, TV App</p>
                         </div>
                       </div>
                     </Link>
@@ -253,8 +253,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">EliteFit - Mobile Health & Wellness</p>
-                          <p className="text-sm text-muted-foreground">Mobile App, Healthcare</p>
+                          <p className="font-light group-hover:text-primary transition-colors">EliteFit AI- Mobile Health & Wellness</p>
+                          <p className="text-sm text-muted-foreground">Mobile App, Fitness, AI Motion Tracking</p>
                         </div>
                       </div>
                     </Link>
