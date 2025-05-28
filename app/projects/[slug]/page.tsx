@@ -205,7 +205,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Amazon Rexa - Enterprise Recruitment AI</p>
+                          <p className="font-light group-hover:text-primary transition-colors">Amazon AlphaHire - Enterprise Recruitment AI</p>
                           <p className="text-sm text-muted-foreground">Enterprise AI, Recruitment</p>
                         </div>
                       </div>
@@ -237,7 +237,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">FlexIt Vision - AI Computer Vision Coach</p>
+                          <p className="font-light group-hover:text-primary transition-colors">FlexIt AI - Motion tracking fitness coach</p>
                           <p className="text-sm text-muted-foreground">Computer Vision, AI Coaching</p>
                         </div>
                       </div>

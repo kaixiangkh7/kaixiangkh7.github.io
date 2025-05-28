@@ -18,7 +18,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "EliteFit - Mobile Health & Wellness",
     client: "Stealth Startup",
     date: "January 2023",
-    role: "Lead UX/UI Designer",
+    role: "UX Designer",
     tags: ["Mobile App", "Healthcare", "Wellness"],
     overview: "A complete redesign of a health tracking application to improve user engagement and retention.",
     problemSpace:
@@ -47,7 +47,7 @@ export const projectsData: Record<string, ProjectData> = {
     ],
   },
   "project-2": {
-    title: "Amazon Rexa - Enterprise Recruitment AI",
+    title: "Amazon AlphaHire - Enterprise Recruitment AI",
     client: "Amazon (Capstone Project at Columbia University)",
     date: "March 2023",
     role: "Product Manager & UX Designer",
@@ -80,26 +80,25 @@ export const projectsData: Record<string, ProjectData> = {
     ],
   },
   "project-3": {
-    title: "FlexIt Vision - AI Computer Vision Coach",
-    client: "FlexIt Fitness",
+    title: "FlexIt AI - Motion tracking fitness coach",
+    client: "FlexIt",
     date: "September 2023",
-    role: "Senior Product Designer",
+    role: "Product Manager & UX Designer",
     tags: ["Computer Vision", "AI Coaching", "TV Platform"],
     overview: "An AI-powered fitness coach platform that uses computer vision and machine learning to provide real-time form correction and personalized feedback directly on TV screens, revolutionizing home workout experiences.",
     problemSpace:
-      "For home fitness enthusiasts, exercising safely and effectively is tough because it's hard to get real-time feedback and professional guidance at home—89% of users said they struggled with proper form and feedback before using our solution.",
+      "For home fitness enthusiasts, exercising safely and effectively is tough because it's hard to get real-time feedback and professional guidance at home—89% of users said they struggled with proper form and feedback while working out at home.",
     process: [
-      "Conducted extensive user research with 20+ home fitness enthusiasts to understand form-related pain points across 8 workout categories",
-      "Collaborated with 3 ML engineers over 4 weeks to understand computer vision capabilities for movement analysis of 15+ exercise types",
-      "Designed 12 user flows for seamless TV-based interaction with voice and remote control across 6 workout scenarios",
-      "Created 35+ wireframes for real-time feedback overlay systems optimized for workout execution on 3 screen sizes",
-      "Conducted usability testing with 18 users performing exercises over 5 sessions to validate AI feedback delivery"
+      "Developed 15+ interactive prototypes to validate AI coaching concepts and test user interaction patterns with computer vision powered motion tracking systems",
+      "Conducted continuous data analysis and product iteration informed by key metrics including DAU (Daily Active Users), resulting an increase in 35% conversion rates, and 73% engagement improvement to optimize user experience",
+      "Analyzed the previous version of the TV app across 3 key user flows and 12+ user experience issues that needed to be addressed",
+      "Analyzed user feedback logs from 500+ sessions and session data to understand specific drop-off points, identifying 3 major pain areas"
     ],
     jobToBeDone: "As a fitness enthusiast working out at home, I want real-time AI-powered form correction and personalized coaching feedback, so that I can exercise safely and effectively while building proper movement patterns and achieving my fitness goals.",
     features: [
       "Real-time computer vision analysis with instant corrective feedback and movement scoring",
       "AI-powered personalized coaching that adapts to individual movement patterns and skill progression",
-      "TV-optimized interface with voice controls and hands-free workout management"
+      "TV-optimized interface with hands-free workout management"
     ],
     outcome:
       "The platform achieved 89% of users reporting improved exercise form within the first month. The computer vision system demonstrated 94% accuracy in movement detection, while user engagement increased by 73% compared to traditional video workouts.",
@@ -115,7 +114,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Revive AI - Travel & Booking Intelligence",
     client: "WanderWise Travel",
     date: "August 2023",
-    role: "Lead UX/UI Designer",
+    role: "UX Designer",
     tags: ["Travel AI", "E-commerce", "Mobile First"],
     overview: "A comprehensive redesign of a travel booking platform that transformed a frustrating booking experience into an intuitive, transparent, and AI-enhanced journey for travelers.",
     problemSpace: 
