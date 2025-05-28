@@ -76,12 +76,12 @@ export default function Home() {
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
                   <h2 className="text-4xl font-bold mb-4 leading-tight">
-                    Hi, I'm Kai – AI Product Manager <br /> with Business Analytics & Design Expertise
+                    Hi, I'm Kai – AI Product Manager <br /> with Business Analytics & UX Design Expertise
                   </h2>
                   <p className="text-muted-foreground text-lg">
                     <span className="font-medium">I hold dual Master's degree from Columbia University: <br /></span>
-                    <span className="font-semibold"> MBA</span> – Columbia Business School (Business Analytics, AI & Product Management),<br />
-                    <span className="font-semibold"> MS</span> – Advanced Design (Digital & Human-Centered Design, Digital Twin & 3D Architectural Design)
+                    <span className="font-semibold"> MBA</span> – Business Analytics, AI & Product Management<br />
+                    <span className="font-semibold"> MS</span> – Digital & Human-Centered Design, Digital Twin & 3D Architectural Design
                   </p>
                   <p className="text-muted-foreground text-lg mt-1">
                     With 7 years of professional experience, I bridge the gap between business, technology, and design. I don't just strategize about AI products – I run ML models, analyze complex datasets, and design intuitive experiences that make AI accessible to users.

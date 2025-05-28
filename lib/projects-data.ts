@@ -48,26 +48,26 @@ export const projectsData: Record<string, ProjectData> = {
   },
   "project-2": {
     title: "Amazon Rexa - Enterprise Recruitment AI",
-    client: "Amazon (Capstone Project)",
+    client: "Amazon (Capstone Project at Columbia University)",
     date: "March 2023",
-    role: "Product Designer & UX Researcher",
+    role: "Product Manager & UX Designer",
     tags: ["Enterprise AI", "Recruitment", "B2B Platform"],
     overview:
       "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale.",
     problemSpace:
       "For students, finding the right job match is challenging because recruitment processes are impersonal and confusing—78% of students we surveyed struggled with not knowing which job opportunities are right for them. Recruiters also struggle to efficiently screen and match candidates at scale - they had to manually screen thousands of resumes and answer hundreds of emails.",
     process: [
-      "Conducted stakeholder interviews with 8 Amazon recruiters and 12 recent student hires across 4 business units",
-      "Analyzed existing hiring workflow across 3 departments to identify 15+ automation opportunities",
-      "Designed 6 detailed user personas for students, recruiters, and hiring managers with different needs and pain points",
-      "Developed 30+ wireframes for AI-powered sign-on flow and personalized dashboards across 5 key user journeys",
-      "Implemented and tested the GenAI-integrated web application with 25 users over 4 testing cycles"
+      "Conducted user interviews with 3 Amazon recruiters, 12 student candidates, and surveyed 40+ students across 3 schools",
+      "Designed 3 detailed user personas for students, recruiters, and hiring managers with different needs and pain points",
+      "Developed 30+ high-fidelity screens for AI-powered sign-on and personalized dashboards across 10 key user journeys",
+      "Implemented and conducted usability testing with 25 users and 3 rounds of iterations",
+      "Collaborated with 2 ML engineers over 11 weeks to understand the capabilities of the GenAI-powered agent"
     ],
-    jobToBeDone: "As an enterprise recruiter, I want an AI-powered platform that automates screening and provides intelligent insights, so that I can focus on strategic hiring decisions while reducing time-to-hire and improving candidate quality.",
+    jobToBeDone: "When I'm looking for internships or full-time jobs, I want to quickly understand which roles fit my background, interests, and skills, so that I can confidently apply to the right opportunities without wasting time or feeling lost in the process.",
     features: [
       "AI agent Rexa providing intelligent candidate-role matching using machine learning algorithms",
       "Automated resume filtering and candidate assessment with personalized recruiter insights",
-      "Real-time communication tools with AI-enhanced conversation suggestions and analytics"
+      "Rexa as a real-time Q&A chatbot that helps students find job-related answers from a trusted database."
     ],
     outcome:
       "The platform demonstrated 45% reduction in manual resume screening time for recruiters, while students reported 60% higher satisfaction with role matching accuracy. The AI agent facilitated more meaningful interactions, leading to better candidate-role fit and reduced hiring cycle time.",
@@ -145,26 +145,25 @@ export const projectsData: Record<string, ProjectData> = {
     ],
   },
   "project-5": {
-    title: "FlexIt Platform - Fitness SaaS Solution",
-    client: "FlexIt Fitness (now Echelon Coach)",
+    title: "FlexIt - Fitness SaaS Solution",
+    client: "FlexIt (now Echelon Coach)",
     date: "November 2023",
-    role: "Senior Product Designer",
+    role: "UX Designer",
     tags: ["SaaS Platform", "Fitness", "Web App"],
-    overview: "A complete B2B SaaS platform redesign for online fitness training, creating an engaging and scalable solution for virtual personal training services. The platform successfully launched as Echelon Coach's commercial offering.",
+    overview: "A redesign of a B2B SaaS platform for virtual personal training, focused on building an engaging and scalable solution for online fitness coaching.",
     problemSpace:
-      "For fitness professionals, growing their business and keeping clients engaged is challenging because managing clients and delivering engaging workouts remotely is hard—over 65% of trainers we interviewed cited low engagement and retention as a major issue.",
+      "For fitness enthusiasts, maintaining consistent workout routines and achieving fitness goals is challenging — over 70% of users surveyed reported feeling disconnected and unmotivated during workout sessions.",
     process: [
-      "Conducted comprehensive user research with 25 existing users and fitness professionals across 8 trainer specialties",
-      "Analyzed 12 competitor SaaS platforms and identified 20+ best practices in fitness technology and monetization",
-      "Created 5 detailed user personas representing different fitness goals, trainer types, and business models",
-      "Developed 8 user journey maps for key SaaS flows: onboarding, subscription management, and trainer tools across 4 user types",
-      "Designed 50+ responsive wireframes with emphasis on scalable component systems for 3 platform tiers"
+      "Conducted comprehensive user research with 15 existing users and trainers to understand their goals, motivation factors, and virtual training pain points",
+      "Analyzed user behavior data from 1000+ virtual training sessions to identify key engagement patterns and drop-off points",
+      "Developed 2 user journey maps focusing on workout discovery, session booking, and progress tracking across 4 user types",
+      "Redesigned responsive 10+ high-fidelity screens to promote clarity and streamline onboarding, with a focus on intuitive workout flow and seamless sign-on experience"
     ],
-    jobToBeDone: "As a fitness professional, I want a comprehensive SaaS platform that manages client relationships, delivers engaging workout experiences, and provides business analytics, so that I can focus on coaching while growing my revenue streams.",
+    jobToBeDone: "As a fitness enthusiast, I want personalized virtual training that keeps me motivated and accountable, so that I can achieve my fitness goals with expert guidance from anywhere while maintaining a consistent workout routine.",
     features: [
-      "Comprehensive trainer business dashboard with client management and revenue analytics",
-      "Scalable subscription management system with flexible pricing tiers and automated billing",
-      "Integrated video delivery platform with real-time session capabilities and progress tracking"
+      "Brought forward key platform features early in the user journey to help users quickly understand value proposition and reduce drop-off rates",
+      "Implemented flipping card interactions to minimize steps required while delivering essential information as efficiently as possible",
+      "Enhanced tagline prominence and engagement through strategic placement and compelling messaging to capture user attention immediately"
     ],
     outcome:
       "The redesigned SaaS platform achieved 65% increase in user engagement, 45% improvement in session booking rates, and 52% increase in mobile retention. The platform successfully launched as Echelon Coach's commercial service, now serving thousands of users.",
@@ -175,26 +174,26 @@ export const projectsData: Record<string, ProjectData> = {
     ],
   },
   "project-6": {
-    title: "Athena AI - Dating & Social Platform",
-    client: "FlexIt Inc",
+    title: "Athena AI - Social & Dating Platform",
+    client: "FlexIt",
     date: "December 2023",
     role: "Lead Product Manager & UX Designer",
     tags: ["AI Matching", "Social Platform", "Dating App"],
-    overview: "A revolutionary B2C dating platform designed for health and fitness enthusiasts, leveraging AI-powered matching algorithms to connect like-minded individuals through shared wellness interests and lifestyle compatibility.",
+    overview: "A revolutionary dating and social platform designed for health and fitness enthusiasts, leveraging AI-powered matching algorithms to connect like-minded individuals through shared wellness interests and lifestyle compatibility.",
     problemSpace:
-      "For fitness enthusiasts, building meaningful romantic connections is difficult because it's hard to find partners who truly value health and wellness—85% of users said they struggled to find compatible matches on traditional dating apps.",
+      "For fitness enthusiasts, building meaningful romantic connections is difficult because it's hard to find partners who truly value health and wellness—85% of people surveyed said they struggled to find training partners on existing social apps.",
     process: [
       "Conducted extensive research with 30+ fitness enthusiasts across 6 fitness categories about dating experiences and relationship priorities",
       "Analyzed 8 competitor dating platforms to identify 12+ gaps in serving the wellness community",
       "Created 4 detailed user personas representing different fitness lifestyles and relationship goals across 3 age groups",
-      "Designed 15+ user flows for AI-based matching, workout compatibility, and community building across 5 key features",
-      "Developed 40+ wireframes focusing on premium monetization and subscription conversion strategies with 3 pricing tiers"
+      "Designed 15+ user flows for AI-based matching, workout compatibility, and community building",
+      "Developed 40+ hifi screens focusing on premium monetization and subscription conversion strategies with 3 pricing tiers"
     ],
     jobToBeDone: "As a fitness-focused individual seeking meaningful romantic connections, I want an AI-powered dating platform that matches based on wellness compatibility and shared fitness values, so that I can find partners who support and enhance my healthy lifestyle journey.",
     features: [
-      "AI-powered matching algorithm analyzing fitness preferences, goals, and lifestyle compatibility",
+      "Machine Learning recommender algorithms analyzing fitness preferences, goals, and lifestyle compatibility",
       "Workout partner discovery system with location-based fitness buddy recommendations",
-      "Premium subscription model with advanced AI filters and exclusive wellness community features"
+      "Premium subscription model with advanced AI recommendation and exclusive wellness community features"
     ],
     outcome:
       "Athena successfully captured the fitness dating market with 85% of users reporting more meaningful connections. The app achieved 92% retention among premium subscribers and 35% premium conversion within the first month.",
@@ -280,11 +279,11 @@ export const projectsData: Record<string, ProjectData> = {
     problemSpace:
       "For aspiring professionals, improving interview skills is challenging because affordable, realistic practice and quality feedback are hard to access—more than 75% of candidates we surveyed felt unprepared and lacked access to effective interview coaching.",
     process: [
-      "Originally launched as Mocha focusing on consulting interviews with case study preparation across 4 consulting firms",
+      "Originally launched as Mocha focusing on consulting interviews with case preparation targeting Tier 1 and Tier 2 consulting firms",
+      "Conducted extensive interviews with 40+ job candidates across 5 industries to understand preparation pain points",
+      "Designed 20+ AI-powered coaching flows optimized for various interview scenarios across 12 industries and 5 interview types",
       "Discovered GenAI voice API limitations after 6 weeks of testing and made strategic decision to pivot product focus",
       "Rebranded from Mocha to prep.cafe to reflect broader interview preparation market with 3-month transition plan",
-      "Conducted extensive interviews with 40+ job candidates across 8 industries to understand preparation pain points",
-      "Designed 20+ AI-powered coaching flows optimized for various interview scenarios across 12 industries and 5 interview types"
     ],
     jobToBeDone: "As a job seeker preparing for interviews, I want to practice interview questions whenever I want at low cost and receive high quality feedback, so that I can improve my interview skills and increase my success rate cost-effectively.",
     features: [

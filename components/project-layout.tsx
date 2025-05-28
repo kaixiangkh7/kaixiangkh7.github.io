@@ -97,8 +97,8 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
     const features = [
       "Onboarding Flow - Fitness Profile Creation",
       "Discovery Experience - Browse & Connect",
-      "Smart Matching - Workout Compatibility Algorithm",
-      "Personalized Feed - AI Recommendations",
+      "AI/ML Matching - Recommender Algorithm",
+      "Personalized Feed - Recommendation Engine",
       "Community Features - Fitness Events & Groups",
       "Premium Subscription - Monetization Strategy"
     ]

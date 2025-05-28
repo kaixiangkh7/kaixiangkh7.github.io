@@ -76,13 +76,17 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     </ul>
                   </div>
 
-                  <div>
-                    <h2 className="text-2xl font-normal mb-4 text-primary">Job To Be Done</h2>
-                    <p className="text-muted-foreground">{project.jobToBeDone}</p>
-                  </div>
+                  {slug !== 'project-5' && (
+                    <div>
+                      <h2 className="text-2xl font-normal mb-4 text-primary">Jobs To Be Done</h2>
+                      <p className="text-muted-foreground">{project.jobToBeDone}</p>
+                    </div>
+                  )}
 
                   <div>
-                    <h2 className="text-2xl font-normal mb-4 text-primary">Key Features</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">
+                      {slug === 'project-5' ? 'Key UX Considerations' : 'Key Features'}
+                    </h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.features.map((feature, index) => (
                         <li key={index}>{feature}</li>
@@ -185,7 +189,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Athena AI - Dating & Social Platform</p>
+                          <p className="font-light group-hover:text-primary transition-colors">Athena AI - Social & Dating Platform</p>
                           <p className="text-sm text-muted-foreground">AI Matching, Social Platform</p>
                         </div>
                       </div>
