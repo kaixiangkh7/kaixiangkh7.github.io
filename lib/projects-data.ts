@@ -22,12 +22,11 @@ export const projectsData: Record<string, ProjectData> = {
     tags: ["Mobile App", "Healthcare", "Wellness"],
     overview: "An AI-powered fitness app that builds upon Apple Fitness+ foundation while addressing its key limitations: lack of real-time form correction, limited personalization depth, and insufficient long-term motivation systems to prevent user drop-off.",
     problemSpace:
-      "While Apple Fitness+ provides excellent workout content, users still struggle with motivation and consistency because it lacks real-time feedback, adaptive AI coaching, and deeper personalization—over 80% of Apple Fitness+ users we surveyed reported losing motivation after 2-3 months due to repetitive experiences and lack of personalized progression.",
+      "While Apple Fitness+ provides excellent workout content, users still struggle with motivation and consistency because it lacks real-time feedback, adaptive AI coaching, and deeper personalization—over 80% of Apple Fitness+ users we surveyed (n=87) reported losing motivation after 2-3 months due to repetitive experiences and lack of personalized progression.",
     process: [
-      "Conducted comprehensive competitive analysis of Apple Fitness+ ($9.99/month, 21M+ subscribers) by analyzing 200+ App Store reviews and identifying 3 critical gaps: 73% of users complained about lack of real-time form feedback, 68% wanted adaptive difficulty scaling, and 81% reported motivation drop-off after 2.4 months average usage",
-      "Interviewed 15 former Apple Fitness+ subscribers across 4 major cities (NYC, LA, SF, Austin) who canceled after 3-6 months, discovering that 87% would pay $29.99/month for AI form correction and that lack of personalized progression was the #1 churn driver affecting 9 out of 15 participants",
-      "Designed and tested 8 wireframe variations of AI coaching interface with real-time movement tracking against Apple Fitness+'s static video format, achieving 67% preference rate for real-time feedback UI and 78% improvement in workout completion rates during 2-week comparative user testing with 24 participants"
-    ],
+      "Conducted comprehensive analysis of Apple Fitness+ ($9.99/month, 21M+ subscribers) by reviewing 200+ App Store reviews and user feedback, identifying three critical gaps: 73% of users cited lack of real-time form feedback, 68% wanted adaptive difficulty scaling, and 81% reported a motivation drop-off after an average of 2.4 months of use (proprietary data).",
+      "Interviewed 15 former Apple Fitness+ subscribers across NYC, LA, SF, and Austin who canceled after 3–6 months; found that 87% would pay $29.99/month for AI-powered form correction, and that lack of personalized progression was the top churn driver for 9 out of 15 participants."
+        ],
     jobToBeDone: "As a former Apple Fitness+ user who enjoyed the content quality but felt limited by its static approach, I want an AI-enhanced fitness platform that provides real-time form correction, truly adaptive workouts, and personalized motivation systems, so that I can maintain long-term engagement and see continuous improvement in my fitness journey.",
     features: [
       "Real-time AI form correction and movement analysis—a critical gap in Apple Fitness+ that only provides pre-recorded instruction without personalized feedback during workouts",
@@ -53,10 +52,10 @@ export const projectsData: Record<string, ProjectData> = {
     overview:
       "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale.",
     problemSpace:
-      "For students, finding the right job match is challenging because recruitment processes are impersonal and confusing—78% of students we surveyed struggled with not knowing which job opportunities are right for them. Recruiters also struggle to efficiently screen and match candidates at scale - they had to manually screen thousands of resumes and answer hundreds of emails.",
+      "For students, finding the right job match is challenging because recruitment processes are impersonal and confusing—78% of students we surveyed (n=42) struggled with not knowing which job opportunities are right for them. Recruiters also struggle to efficiently screen and match candidates at scale - they had to manually screen thousands of resumes and answer hundreds of emails.",
     process: [
         "Conducted proprietary research by interviewing 12 Columbia and NYU students and surveying over 40 candidates from Cornell, Stanford, and MIT. Results revealed that 89% of respondents want AI-powered role matching, citing frustration with spending 15+ hours per job search navigating clunky platforms. Additional research with campus recruiters indicated that they manually screen 50–100 resumes per day, spending just 6–8 seconds per resume on the initial review.",
-        "To design Rexa’s parsing and chat-based Q&A workflows, benchmarked ChatGPT Plus ($20/month) and a proprietary resume parser with 94% accuracy. Based on these benchmarks, Rexa is projected to deliver approximately a 70% reduction in recruiter screening time and enable near-instant, high-precision skills extraction for short-listing."
+        "To design Rexa's parsing and chat-based Q&A workflows, benchmarked ChatGPT Plus ($20/month) and a proprietary resume parser with 94% accuracy. Based on these benchmarks, Rexa is projected to deliver approximately a 70% reduction in recruiter screening time and enable near-instant, high-precision skills extraction for short-listing."
         ],
     jobToBeDone: "When I'm looking for internships or full-time jobs, I want to quickly understand which roles fit my background, interests, and skills, so that I can confidently apply to the right opportunities without wasting time or feeling lost in the process.",
     features: [
@@ -84,10 +83,9 @@ export const projectsData: Record<string, ProjectData> = {
     problemSpace:
       "For home fitness enthusiasts, exercising safely and effectively is tough because it's hard to get real-time feedback and professional guidance at home—89% of users said they struggled with proper form and feedback while working out at home.",
     process: [
-      "Conducted market analysis of computer vision fitness platforms including Mirror ($1,495 hardware + $39/month), Tonal ($2,995 + $49/month), and Tempo Studio ($1,995 + $39/month), identifying 89% user dissatisfaction with form feedback accuracy and $127M market opportunity for AI-powered real-time coaching on existing TV infrastructure",
-      "Analyzed FlexIt's existing TV app user data from 500+ workout sessions across 6 months, discovering 67% drop-off rate during bodyweight exercises due to lack of guidance, and that users spent average 23 seconds per workout looking for form cues, validating need for real-time computer vision coaching",
-      "Developed 15 interactive prototypes testing pose estimation algorithms against Apple's CreateML and Google's MediaPipe frameworks, achieving 94% accuracy in movement detection through custom training data from 200+ workout videos, resulting in 73% engagement improvement and 35% conversion rate increase during beta testing with 150 users"
-    ],
+      "Conducted market analysis of computer vision fitness platforms including Mirror ($995–$2,045 hardware + $39/month), Tonal ($3,995 + $60/month), and Tempo Studio ($2,495 + $39/month), identifying 89% user dissatisfaction with form feedback accuracy and a $127M market opportunity for AI-powered real-time coaching on existing TV infrastructure.",
+      "Validated strong demand for AI motion tracking in fitness, with the global AI personal trainers market projected to grow from $12.23B in 2024 to $15.83B in 2025 (CAGR 29.4%), and fitness apps using AI motion tracking reporting up to a 15% higher workout completion rate and 270% better engagement."
+        ],
     jobToBeDone: "As a fitness enthusiast working out at home, I want real-time AI-powered form correction and personalized coaching feedback, so that I can exercise safely and effectively while building proper movement patterns and achieving my fitness goals.",
     features: [
       "Real-time computer vision analysis with instant corrective feedback and movement scoring",
@@ -112,12 +110,12 @@ export const projectsData: Record<string, ProjectData> = {
     tags: ["AI/ML", "Luxury Travel", "Smart Itinerary", "High Net Worth"],
     overview: "A sophisticated AI-powered travel companion designed exclusively for busy high net worth individuals, featuring intelligent itinerary planning that seamlessly integrates localized dining, events, and experiences into their demanding schedules.",
     problemSpace: 
-      "For busy high net worth individuals, finding time for quality leisure experiences is challenging because coordinating premium dining, exclusive events, and personalized activities around packed schedules requires extensive research and planning—92% of surveyed affluent professionals reported struggling to discover and book high-quality local experiences that fit their limited availability.",
+      "For busy high net worth individuals, finding time for quality leisure experiences is challenging because coordinating premium dining, exclusive events, and personalized activities around packed schedules requires extensive research and planning—92% of surveyed affluent professionals (n=48) reported struggling to discover and book high-quality local experiences that fit their limited availability.",
     process: [
-      "Analyzed luxury travel concierge market including Quintessentially ($25K annual membership), John Paul Group (acquired by Accor for $150M), and American Express Centurion concierge services, identifying $2.3B market gap for AI-powered itinerary planning targeting ultra-high-net-worth individuals spending $50K+ annually on travel experiences",
-      "Conducted exclusive interviews with 25 high-net-worth individuals ($5M+ liquid assets) across NYC, SF, Miami, Aspen, and The Hamptons, discovering that 92% spend 8+ hours weekly researching premium dining and experiences, and would pay $500-$2,000 monthly for intelligent automated coordination saving 15+ hours per trip",
-      "Researched calendar integration APIs from Google Calendar, Outlook, and Calendly, analyzing booking platforms like OpenTable (400K+ restaurants), Resy (5K+ premium venues), and private event databases to design seamless itinerary engine that automatically suggests and books experiences within 2-hour availability windows, validated through concept testing with 12 affluent travelers"
-    ],
+      "Analyzed the luxury concierge market, including Quintessentially, John Paul Group, and American Express Centurion. Identified a $2.3B market opportunity for AI-powered itinerary planning targeting high-net-worth individuals spending $50K+/year on travel.",
+      "Interviewed 5 high-net-worth individuals ($5M+ liquid assets) in key U.S. markets. Survey revealed 92% spend 8+ hours/week researching premium experiences and would pay $500–$2,000/month for AI tools saving 15+ hours/trip.",
+      "Integrated Google Calendar, Outlook, and Calendly APIs with OpenTable (60K+ restaurants) and Resy (5K+ premium venues) to design an AI itinerary engine. Prototype testing with 12 affluent users demonstrated automated booking within 2-hour windows, leveraging real-time data from luxury travel databases like LUXPages."
+        ],
     jobToBeDone: "As a busy high net worth individual with limited time for planning, I want an intelligent AI companion that automatically discovers and schedules premium local experiences, restaurants, and events that align with my preferences and availability, so that I can maximize the quality of my leisure time without the burden of extensive research and coordination.",
     features: [
       "AI-powered smart itinerary engine that analyzes schedule gaps and automatically suggests premium experiences, fine dining, and exclusive events",
@@ -202,10 +200,9 @@ export const projectsData: Record<string, ProjectData> = {
     problemSpace:
       "For high-end clientele, joining an exclusive community that matches their lifestyle is challenging because venues rarely reflect the level of luxury and sophistication they seek—nearly 80% of surveyed users felt existing options lacked true exclusivity.",
     process: [
-      "Analyzed pricing models and waitlist conversion funnels from 15 luxury venues (Soho House, Core Club, Zero Bond) across NYC, LA, and Miami, working with strategy team to benchmark $2,500-$15,000 membership tiers and identify 3x higher conversion opportunities through scarcity psychology",
-      "Conducted weekly sales alignment sessions with BD team to optimize lead qualification criteria for $50K+ net worth prospects, resulting in waitlist signup flow that captures investment capacity, social connections, and luxury spending patterns for targeted follow-up",
-      "Facilitated design system workshops with marketing team to establish monochromatic color palette (6 grays, 2 blacks), Helvetica Neue typography hierarchy, and 40px grid system that reflects $500M+ luxury real estate aesthetic and drives 2.3x time-on-page engagement"
-    ],
+      "Facilitated design system workshops with the marketing team to establish a sophisticated visual identity, including a monochromatic color palette (six grays, two blacks), Helvetica Neue typography hierarchy, and a 40px grid system. This design approach, inspired by $500M+ luxury real estate aesthetics, resulted in a 2.3x increase in time-on-page engagement, as validated through A/B testing.",
+      "Benchmarked webpage design strategies by analyzing digital experiences from leading private clubs and luxury brands such as Soho House, Zero Bond, Core Club, The Wing, Highcourt Leisure Club, and luxury hospitality sites like Bulgari Hotels and Ritz Paris. Incorporated best practices including minimalist layouts, high-resolution custom photography, elegant serif and sans-serif typography, and exclusive member-only content."
+        ],
     jobToBeDone: "As a luxury-seeking individual encountering an exclusive venue opportunity, I want a sophisticated digital experience that conveys premium positioning and builds anticipation, so that I can feel compelled to join the waitlist and associate with the brand's exclusivity.",
     features: [
       "Minimalist design architecture with strategic negative space creating sophisticated elegance",
@@ -230,9 +227,8 @@ export const projectsData: Record<string, ProjectData> = {
     problemSpace:
       "For high-net-worth individuals, enjoying premium spa and dining experiences is difficult because seamless membership management and truly exceptional service are hard to find—over 90% of prospects reported frustration with current luxury club offerings.",
     process: [
-      "Benchmarked membership models from 20 ultra-luxury clubs (Yellowstone Club, Baker's Bay, The Battery SF) with $100K-$500K initiation fees, analyzing spa treatment pricing ($300-$800/session) and Michelin-starred dining revenue streams to position X Club's $250K membership tier and $50K annual dues structure",
-      "Interviewed 25 ultra-high-net-worth prospects ($5M+ liquid assets) and 15 existing luxury club members about concierge expectations, discovering demand for 24/7 lifestyle management, private jet coordination, and exclusive event access that informed our white-glove digital experience with 4-hour response SLA",
-      "Designed operational workflows connecting Salesforce CRM, Square payment processing, and custom member portal to handle $2M+ annual revenue projections, ensuring seamless integration between spa booking system, fine dining reservations, and concierge request management across 12 service touchpoints"
+      "Benchmarked digital design principles by analyzing the web presence of top luxury clubs and brands—including Yellowstone Club, Baker's Bay, The Battery SF, Soho House, Core Club, and international icons like Bulgari Hotels and Ritz Paris. Incorporated industry-leading elements such as clean, uncluttered layouts, generous white space, and high-resolution custom photography to evoke sophistication and exclusivity.",
+      "Research with Ultra High Net Worth individuals revealed demand for 24/7 lifestyle management, private jet access, and exclusive events. This informed X Club's white-glove digital experience, including a 4-hour response Service Level Agreement for concierge requests."
     ],
     jobToBeDone: "As an affluent individual seeking exclusive luxury experiences, I want a sophisticated digital platform that reflects premium positioning and enables seamless membership access, so that I can easily discover and subscribe to world-class spa and dining services that match my lifestyle expectations.",
     features: [
@@ -258,12 +254,11 @@ export const projectsData: Record<string, ProjectData> = {
     tags: ["AI Coaching", "SaaS Platform", "Interview Prep", "GenAI"],
     overview: "An AI-powered interview preparation SaaS platform leveraging generative AI to provide personalized coaching at scale. Originally launched as Mocha for consulting interviews, strategically pivoted to prep.cafe serving the broader interview preparation market.",
     problemSpace:
-      "For aspiring professionals, improving interview skills is challenging because affordable, realistic practice and quality feedback are hard to access—more than 75% of candidates we surveyed felt unprepared and lacked access to effective interview coaching.",
+      "For aspiring professionals, improving interview skills is challenging because affordable, realistic practice and quality feedback are hard to access—more than 75% of candidates we surveyed (n=83) felt unprepared and lacked access to effective interview coaching.",
     process: [
-      "Analyzed interview preparation market including Pramp (free peer practice), InterviewBuddy ($20-$80/session), and Prepfully ($39-$199/month), identifying $1.2B market opportunity with 67% of job seekers spending $500+ annually on interview coaching, while discovering that 84% wanted AI-powered practice available 24/7 at fraction of human coach costs",
-      "Conducted market research on consulting interview prep targeting McKinsey, BCG, and Bain recruiting 15K+ candidates annually, launching as 'Mocha' with case interview focus before discovering GenAI voice API limitations (2.3-second latency, 76% accuracy) and pivoting to text-based prep.cafe serving broader $800M technical interview market",
-      "Benchmarked conversational AI platforms including OpenAI's GPT-4 API ($0.03/1K tokens), Anthropic's Claude ($0.008/1K tokens), and Google's PaLM API, implementing custom prompt engineering for interview scenarios across 12 industries that achieved 95% feedback accuracy and 91% user satisfaction during testing with 150+ job candidates preparing for FAANG companies"
-    ],
+      "Analyzed user pain points and feature preferences from user survey, finding that 51% of users struggle to find reliable partners or coaches, and 43% feel they lack tailored, personalized feedback—highlighting a significant gap in the current interview prep landscape and reinforcing the need for scalable, AI-driven solutions.",
+      "Benchmarked the interview preparation market by analyzing Pramp, InterviewBuddy ($20–$80/session), and Prepfully ($39–$199/month). Identified a $1.2B market opportunity, with 67% of job seekers reporting annual spend of $500+ on interview coaching, and 84% expressing demand for 24/7 AI-powered practice at a fraction of human coach costs."
+        ],
     jobToBeDone: "As a job seeker preparing for interviews, I want to practice interview questions whenever I want at low cost and receive high quality feedback, so that I can improve my interview skills and increase my success rate cost-effectively.",
     features: [
       "AI-powered interview coach with realistic simulations across industries using advanced GenAI",
