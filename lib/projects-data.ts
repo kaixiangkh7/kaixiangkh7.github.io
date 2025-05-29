@@ -50,7 +50,7 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Product Manager & UX Designer",
     tags: ["Enterprise Solution", "AI/ML", "Generative AI", "Recommendation System", "Recruitment", "B2B Platform"],
     overview:
-      "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale.",
+      "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale. It is a Capstone Project at Columbia University with Peter Schwartz, Vinayak Mahbubani, and Aniket Deshpande",
     problemSpace:
       "Students struggle with confusing recruitment processes while recruiters manually screen thousands of resumes—78% of surveyed students (n=42) don't know which opportunities fit them.",
     process: [
