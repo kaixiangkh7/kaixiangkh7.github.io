@@ -40,31 +40,47 @@ export function ContactForm() { // Or export function ContactButton()
   }
 
   return (
-    <div className="py-12 text-center">
-      <h3 className="text-2xl font-medium text-white mb-4">
-        Contact Me
-      </h3>
+    <div className="space-y-8">
+      <div className="text-center">
+        <h3 className="text-3xl font-light text-white mb-4">
+          Let's build!
+        </h3>
+        
+        <div className="space-y-4 text-white/80">
+          <p className="text-lg leading-relaxed">
+            I'm always up to chat, jam on ideas, or help bring something bold to life—whether it's AI, product strategy, or killer design.
+          </p>
+          
+          <p className="text-lg leading-relaxed">
+            Got something in mind? Hit me up—let's build.
+          </p>
+        </div>
+      </div>
       
-      <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-        Whether you're looking to innovate with AI or enhance user experiences, 
-        I'm here to help turn your vision into reality.
-      </p>
-      
-      <div className="space-y-4">
+      <div className="flex justify-center">
         <Button 
           onClick={handleContactClick}
           disabled={isSubmitting}
-          className="group px-8 py-6 text-lg rounded-full font-medium 
-                   bg-white/10 hover:bg-white/20 text-white border border-white/20
-                   transform hover:-translate-y-0.5 transition-all duration-200"
+          className="group px-10 py-4 text-lg rounded-full font-medium 
+                   bg-primary hover:bg-primary/90 text-white border-0
+                   transform hover:scale-105 hover:-translate-y-1 
+                   transition-all duration-300 shadow-lg hover:shadow-2xl"
           size="lg"
         >
-          <span className="flex items-center gap-2">
-            <Mail className="w-5 h-5 group-hover:animate-bounce" />
+          <span className="flex items-center gap-3">
+            <Mail className="w-5 h-5 group-hover:animate-pulse" />
             {isSubmitting ? "Opening Email..." : "Get in Touch"}
           </span>
         </Button>
-      <p className="text-sm text-white/50 mt-4"> Click to open your default email app and send me an email at <br/> kaixiang.huang@columbia.edu</p>
+      </div>
+      
+      <div className="text-center">
+        <p className="text-sm text-white/50">
+          Click to open your default email app
+        </p>
+        <p className="text-sm text-white/70 mt-1">
+          kaixiang.huang@columbia.edu
+        </p>
       </div>
     </div>
   )

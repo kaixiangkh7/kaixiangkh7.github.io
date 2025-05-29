@@ -282,57 +282,79 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-24 relative gradient-bg text-white">
-          <div className="absolute inset-0 bg-black/30"></div>
+        <section id="contact" className="py-32 relative gradient-bg text-white">
+          <div className="absolute inset-0 bg-black/40"></div>
           <div className="container relative z-10">
-            <h2 className="text-3xl font-semibold mb-12">Get In Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <h3 className="text-xl font-medium mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 group">
-                    <Mail className="h-5 w-5 text-primary" />
-                    <a href="mailto:kaixiang.huang@columbia.edu" className="hover:text-primary transition-colors">
-                     kaixiang.huang@columbia.edu
-                    </a>
+            <div className="text-left mb-16">
+              <h2 className="text-4xl md:text-5xl font-light mb-6">Get In Touch</h2>
+              <p className="text-xl text-white/80 max-w-2xl">
+                Ready to build something amazing together?
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-medium mt-0 mb-8">Let's connect</h3>
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <Mail className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-white/60 text-sm">Email</p>
+                        <a href="mailto:kaixiang.huang@columbia.edu" className="text-white hover:text-primary transition-colors text-lg">
+                          kaixiang.huang@columbia.edu
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <Linkedin className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-white/60 text-sm">LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/kaixianghuang/" className="text-white hover:text-primary transition-colors text-lg">
+                          @Kaixiang Huang
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <svg viewBox="0 0 24 24" className="h-6 w-6 text-primary fill-current">
+                          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-white/60 text-sm">X (Twitter)</p>
+                        <a href="https://x.com/kaixiangkh7" className="text-white hover:text-primary transition-colors text-lg">
+                          @kaixiangkh7
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-4 group hover:translate-x-2 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                        <Github className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-white/60 text-sm">GitHub</p>
+                        <a href="https://github.com/kaixiangkh7/" className="text-white hover:text-primary transition-colors text-lg">
+                          github.com/kaixiangkh7
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3 group">
-                    <Linkedin className="h-5 w-5 text-primary" />
-                    <a href="https://www.linkedin.com/in/kaixianghuang/" className="hover:text-primary transition-colors">
-                      @Kaixiang Huang
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3 group">
-                    <svg viewBox="0 0 24 24" className="h-5 w-5 text-primary fill-current">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                    <a href="https://x.com/kaixiangkh7" className="hover:text-primary transition-colors">
-                      @kaixiangkh7
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3 group">
-                    <Github className="h-5 w-5 text-primary" />
-                    <a href="https://github.com/kaixiangkh7/" className="hover:text-primary transition-colors">
-                      github.com/kaixiangkh7
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3 group">
-                    <Instagram className="h-5 w-5 text-primary" />
-                    <a href="https://www.instagram.com/kaixiang_huang/" className="hover:text-primary transition-colors">
-                      @kaixiang_huang
-                    </a>
-                  </div>
-                </div>
-                <div className="pt-6">
-                  <h3 className="text-xl font-medium mb-4">Let's Build AI-Powered Products</h3>
-                  <p className="text-white/80 font-light">
-                    Looking for a product manager who can bridge the gap between AI technology and user needs? With my unique combination of 7-year design foundation, hands-on ML expertise, and strategic product thinking, 
-                    I help teams build AI products that users actually want to use.
-                  </p>
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-8">
-                <ContactForm />
+              
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
+                  <ContactForm />
+                </div>
               </div>
             </div>
           </div>
