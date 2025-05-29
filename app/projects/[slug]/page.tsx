@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   {slug !== 'project-5' && (
                     <div>
                       <h2 className="text-2xl font-normal mb-4 text-primary">Jobs To Be Done</h2>
-                      <p className="text-muted-foreground">{project.jobToBeDone}</p>
+                      <div className="text-muted-foreground whitespace-pre-line">{project.jobToBeDone}</div>
                     </div>
                   )}
 
