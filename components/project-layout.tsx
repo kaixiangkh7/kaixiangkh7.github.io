@@ -12,7 +12,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
     return (
       <div className="space-y-6">
         <div className="space-y-6">
-          <h2 className="text-2xl font-light mb-4 text-primary">Mobile Experience</h2>
+          <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {images.slice(1, 4).map((image, index) => (
               <div key={index} className="overflow-hidden rounded-lg max-w-md mx-auto">
@@ -27,7 +27,6 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
         </div>
 
         <div className="space-y-6">
-          <h2 className="text-2xl font-light mb-4 text-primary">Web Platform</h2>
           <div className="space-y-6">
             {images.slice(4).map((image, index) => (
               <div key={index} className="overflow-hidden rounded-lg">
@@ -55,7 +54,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
     
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">AI Coach Platform Features</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="space-y-8">
           {images.slice(1).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -76,7 +75,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
   if (projectSlug === 'project-5') {
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">Platform Redesign</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="space-y-8">
           {images.slice(1).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -105,7 +104,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
 
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">App Features & User Experience</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {images.slice(1).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -131,7 +130,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
 
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">Luxury Waitlist Experience</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="space-y-8">
           {images.slice(1).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -158,7 +157,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
 
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">App Features & User Experience</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {images.slice(1).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -186,7 +185,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
 
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">Platform Features</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="space-y-8">
           {images.slice(1).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -213,7 +212,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
 
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">Luxury Club Experience</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="space-y-8">
           {images.slice(1, 4).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -241,7 +240,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
 
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-light mb-4 text-primary">AI Interview Prep Platform</h2>
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
         <div className="space-y-8">
           {images.slice(1).map((image, index) => (
             <div key={index} className="overflow-hidden rounded-lg">
@@ -261,7 +260,7 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
   // Default layout for other projects
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-light mb-4 text-primary">Project Gallery</h2>
+      <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
       <div className="space-y-6">
         {images.slice(1).map((image, index) => (
           <div key={index} className="overflow-hidden rounded-lg">

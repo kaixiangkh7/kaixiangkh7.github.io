@@ -100,11 +100,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     images={project.images}
                     projectTitle={project.title}
                   />
-
-                  <div>
-                    <h2 className="text-2xl font-normal mb-4 text-primary">Outcome & Results</h2>
-                    <p className="text-muted-foreground">{project.outcome}</p>
-                  </div>
                 </div>
               </div>
 
