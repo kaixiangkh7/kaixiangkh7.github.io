@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Mail, Github, Linkedin, Instagram } from "lucide-react"
+import { ArrowRight, Mail, Github, Linkedin, Instagram, ChevronDown } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { ProjectCard } from "@/components/project-card"
@@ -17,13 +17,13 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center px-4 sm:px-6 lg:px-8">
+        <section className="relative min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-8 pt-20 pb-8">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-black/40 z-1"></div>
           </div>
-          <div className="container relative z-1">
+          <div className="container relative z-1 w-full">
             <div className="max-w-4xl text-white">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6 leading-tight"> 
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight font-light"> 
                 <span className="font-extralight">Data-Driven</span>
                 <br className="hidden sm:block" />
                 <span className="font-extralight"> Product Manager</span>
@@ -33,8 +33,8 @@ export default function Home() {
                 <br className="hidden sm:block" />
                 <span className="font-extralight"> Design Expertise</span>
               </h1>
-              <p className="text-xl text-white/80 mb-8 font-light leading-relaxed">
-              I bring strategic product leadership, 7 years of design expertise, and hands-on AI/ML capabilities to build data-driven products across generative AI, machine learning, and computer vision—bridging cutting-edge technology with intuitive, high-impact UI/UX.
+              <p className="text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 font-light leading-relaxed max-w-3xl">
+              I bring strategic product leadership, 7 years of design expertise, and hands-on AI/ML capabilities to build data-driven products across generative AI, machine learning, and computer vision—bridging cutting-edge technology with intuitive, user-centered UI/UX.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button asChild size="lg" className="rounded-full px-6 sm:px-8 font-medium shadow-md hover:shadow-lg transition-all">
@@ -50,6 +50,14 @@ export default function Home() {
                 </Button>
               </div>
             </div>
+          </div>
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-10">
+            <Link href="#about" className="group flex flex-col items-center text-white/70 hover:text-white transition-colors">
+              <div className="animate-bounce">
+                <ChevronDown className="h-10 w-10 sm:h-12 sm:w-12" />
+              </div>
+            </Link>
           </div>
         </section>
 
