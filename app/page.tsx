@@ -76,18 +76,18 @@ export default function Home() {
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
                   <h2 className="text-4xl font-bold mb-4 leading-tight">
-                    Hi, I'm Kai – AI Product Manager <br /> with Design & Analytics Expertise
+                    Hi, I'm Kai – Product Manager <br /> with UX Design & Business Analytics Expertise
                   </h2>
                   <p className="text-muted-foreground text-lg">
                     <span className="font-medium">I hold dual Master's degrees from Columbia University: <br /></span>
-                    <span className="font-semibold"> MBA</span> – Business Analytics & AI Product Management<br />
-                    <span className="font-semibold"> MS</span> – Digital & Human-Centered Design
+                    <span className="font-semibold"> MBA</span> – Business Analytics, AI, Product Management<br />
+                    <span className="font-semibold"> MS</span> – Digital & Human-Centered Design, Digital Twin, Architectural Design
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
                     My unique background combines <span className="font-medium">7 years of design expertise</span>, <span className="font-medium">3 years of product management</span>, and <span className="font-medium">2 years of hands-on AI/ML and business analytics</span>. This rare combination allows me to bridge the gap between technical complexity and user needs.
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
-                    I don't just strategize about AI products—I run ML models, analyze datasets, conduct user research, and design intuitive experiences. This hands-on approach enables me to lead cross-functional teams and deliver products that are both technically sophisticated and user-centered.
+                    I don't just strategize about products—I run ML models, analyze datasets, conduct user research, and design intuitive experiences. This hands-on approach enables me to lead cross-functional teams and deliver products that are both technically sophisticated and user-centered.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
