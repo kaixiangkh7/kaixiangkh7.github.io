@@ -191,9 +191,17 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-12">Skills & Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-xl font-medium mb-6 text-primary">AI/ML & Data Analytics</h3>
+                <h3 className="text-xl font-medium mb-6 text-primary">AI/ML & Data Analytics (2 Years)</h3>
                 <div className="flex flex-wrap">
-                  <SkillBadge name="Machine Learning Models" />
+                  <SkillBadge name="Supervised & Unsupervised Learning" />
+                  <SkillBadge name="Linear Regression & Logistic Regression" />
+                  <SkillBadge name="Decision Trees & Random Forests" />
+                  <SkillBadge name="K-Nearest Neighbors" />
+                  <SkillBadge name="XGBoost" />
+                  <SkillBadge name="K-Means Clustering" />
+                  <SkillBadge name="Reinforcement Learning" />
+                  
+
                   <SkillBadge name="Deep Learning & Neural Networks" />
                   <SkillBadge name="Data Science & Analytics" />
                   <SkillBadge name="Python & TensorFlow" />
@@ -205,11 +213,11 @@ export default function Home() {
                   <SkillBadge name="GenAI & LLM Integration" />
                 </div>
 
-                <h3 className="text-xl font-medium mb-6 mt-8 text-primary">Product Management</h3>
+                <h3 className="text-xl font-medium mb-6 mt-8 text-primary">Product Management (3 Years)</h3>
                 <div className="flex flex-wrap">
                   <SkillBadge name="AI Product Strategy" />
                   <SkillBadge name="Roadmap Planning" />
-                  <SkillBadge name="User Story Writing" />
+                  <SkillBadge name="User Story" />
                   <SkillBadge name="Stakeholder Management" />
                   <SkillBadge name="Cross-functional Leadership" />
                   <SkillBadge name="Data-Driven Decision Making" />
@@ -219,31 +227,43 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-6 text-primary">Design Foundation (7 Years)</h3>
+                <h3 className="text-xl font-medium mb-6 text-primary">Design (7 Years)</h3>
                 <div className="flex flex-wrap">
                   <SkillBadge name="User Research" />
                   <SkillBadge name="Design Thinking" />
-                  <SkillBadge name="AI/UX Integration" />
                   <SkillBadge name="Wireframing & Prototyping" />
+                  <SkillBadge name="High-Fidelity Design" />
                   <SkillBadge name="Usability Testing" />
                   <SkillBadge name="Information Architecture" />
                   <SkillBadge name="Interaction Design" />
                   <SkillBadge name="Visual Design" />
                   <SkillBadge name="Design Systems" />
+                  <SkillBadge name="Web Design" />
+                  <SkillBadge name="Mobile Design" />
+                  <SkillBadge name="UX Design" />
+                  <SkillBadge name="UI Design" />
+                  <SkillBadge name="User Persona" />
+                  <SkillBadge name="User Journey" />
+                  <SkillBadge name="User Flow" />
+                  <SkillBadge name="User Story" />
+                  
                 </div>
 
                 <h3 className="text-xl font-medium mb-6 mt-8 text-primary">Tools & Technologies</h3>
                 <div className="flex flex-wrap">
-                  <SkillBadge name="Python & Jupyter" />
-                  <SkillBadge name="TensorFlow & PyTorch" />
-                  <SkillBadge name="Tableau & Power BI" />
-                  <SkillBadge name="Google Analytics & Mixpanel" />
-                  <SkillBadge name="Jira & Confluence" />
-                  <SkillBadge name="Figma & Design Tools" />
+                  <SkillBadge name="Python" />
+                  <SkillBadge name="HTML/CSS/TypeScript" />
+                  <SkillBadge name="TensorFlow" />
+                  <SkillBadge name="SQL" />
+                  <SkillBadge name="Tableau" />
+                  <SkillBadge name="Jira" />
+                  <SkillBadge name="Figma" />
+                  <SkillBadge name="Digital Twin" />
+                  <SkillBadge name="Adobe Creative Cloud" />
                   <SkillBadge name="AWS & Cloud Platforms" />
                   <SkillBadge name="Git & Version Control" />
                   <SkillBadge name="API Integration" />
-                  <SkillBadge name="Agile/Scrum" />
+                  <SkillBadge name="Agile/Scrum (Certified Scrum Product Owner)" />
                 </div>
               </div>
             </div>
