@@ -30,8 +30,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
         alt: 'Kaixiang (Kai) Huang - Data-Driven Product Manager with User-Centered Design Expertise',
       },
     ],
