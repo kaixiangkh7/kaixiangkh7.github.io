@@ -253,8 +253,8 @@ export const projectsData: Record<string, ProjectData> = {
     ],
   },
   "project-9": {
-    title: "Prep.cafe - AI Interview Prep Platform",
-    client: "Prep.cafe",
+    title: "prep.cafe - AI Interview Prep Platform",
+    client: "prep.cafe",
     date: "March 2024",
     role: "Co-Founder, Product Manager, UX Designer",
     tags: ["AI/ML", "Generative AI", "SaaS Platform", "Interview Prep", "Education"],
