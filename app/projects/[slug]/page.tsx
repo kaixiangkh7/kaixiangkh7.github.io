@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, User, ExternalLink, Briefcase } from "lucide-react"
+import { ArrowLeft, User, ExternalLink, Briefcase, Users } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { PrimaryButton } from "@/components/ui/primary-button"
@@ -115,12 +115,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Briefcase className="h-5 w-5 text-primary mt-0.5" />
+                      <Briefcase className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <p className="font-medium">Role</p>
                         <p className="text-muted-foreground">{project.role}</p>
                       </div>
                     </div>
+                    {project.team && project.team.length > 0 && (
+                      <div className="flex items-start gap-3">
+                        <Users className="h-5 w-5 text-primary mt-0.5" />
+                        <div>
+                          <p className="font-medium">Team</p>
+                          <div className="text-muted-foreground space-y-1">
+                            {project.team.map((member, index) => (
+                              <p key={index}>{member}</p>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                     {slug === 'project-3' && (
                       <div className="pt-4">
                         <Button asChild className="w-full">

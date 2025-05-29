@@ -11,6 +11,7 @@ export interface ProjectData {
   features: string[]
   outcome: string
   images: string[]
+  team?: string[]
 }
 
 export const projectsData: Record<string, ProjectData> = {
@@ -50,7 +51,7 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Product Manager & UX Designer",
     tags: ["Enterprise Solution", "AI/ML", "Generative AI", "Recommendation System", "Recruitment", "B2B Platform"],
     overview:
-      "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale. It is a Capstone Project at Columbia University with Peter Schwartz, Vinayak Mahbubani, and Aniket Deshpande",
+      "A comprehensive enterprise recruitment platform featuring an AI-powered agent named Rexa to streamline hiring processes and create personalized experiences for both students and recruiters at scale.",
     problemSpace:
       "Students struggle with confusing recruitment processes while recruiters manually screen thousands of resumes—78% of surveyed students (n=42) don't know which opportunities fit them.",
     process: [
@@ -71,6 +72,11 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/amazon/signon-2.gif",
       "/images/amazon/dashboard.gif",
       "/images/amazon/recruitor.gif",
+    ],
+    team: [
+      "Peter Schwartz",
+      "Vinayak Mahbubani", 
+      "Aniket Deshpande"
     ],
   },
   "project-3": {
@@ -163,7 +169,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Athena - Social & Dating Platform",
     client: "FlexIt",
     date: "December 2023",
-    role: "Lead Product Manager & UX Designer",
+    role: "Product Manager & UX Designer",
     tags: ["AI/ML", "Recommender System", "Social Platform", "Dating App"],
     overview: "A revolutionary dating and social platform designed for health and fitness enthusiasts, leveraging AI-powered matching algorithms to connect like-minded individuals through shared wellness interests and lifestyle compatibility.",
     problemSpace:
@@ -194,7 +200,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Z Lounge - Luxury Waitlist Experience",
     client: "Stealth Startup",
     date: "January 2024",
-    role: "Lead UX Designer",
+    role: "UX Designer",
     tags: ["Luxury Design", "Waitlist", "Web Design", "Minimalist", "Membership Club"],
     overview: "An exclusive waitlist landing page design for Z Lounge, a premium luxury venue focused on creating mystery, exclusivity, and sophisticated brand positioning through minimalist design principles.",
     problemSpace:
@@ -221,7 +227,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "X Club - Luxury Spa & Dining Experience",
     client: "Stealth Startup",
     date: "February 2024",
-    role: "Lead UX Designer",
+    role: "UX Designer",
     tags: ["Luxury Club", "Subscription", "Spa & Dining", "Web Design", "Membership Club"],
     overview: "An exclusive digital platform for X Club, a premium luxury establishment featuring world-class spa services and fine dining, with sophisticated subscription management for high-net-worth clientele.",
     problemSpace:
@@ -273,6 +279,11 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/mocha/library.gif",
       "/images/mocha/dashboard.gif",
       "/images/mocha/mock.gif",
+    ],
+    team: [
+      "George Sun",
+      "Stacey Ou", 
+      "JJ Kaufman"
     ],
   },
 }
