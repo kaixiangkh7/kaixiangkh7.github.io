@@ -8,11 +8,14 @@ import { GradientBackground } from "@/components/gradient-background"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
+import { SmoothScrollLink } from "@/components/smooth-scroll-link"
+import { ScrollToHash } from "@/components/scroll-to-hash"
 import { getImagePath } from "@/lib/utils"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
+      <ScrollToHash />
       <GradientBackground />
       <Header />
       <main className="flex-1">
@@ -38,7 +41,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button asChild size="lg" className="rounded-full px-6 sm:px-8 font-medium shadow-md hover:shadow-lg transition-all">
-                  <Link href="#projects">View My Work</Link>
+                  <SmoothScrollLink href="#projects">View My Work</SmoothScrollLink>
                 </Button>
                 <Button
                   variant="outline"
@@ -46,18 +49,18 @@ export default function Home() {
                   asChild
                   className="rounded-full px-6 sm:px-8 font-light bg-transparent text-white border-white hover:bg-white/20 shadow-md hover:shadow-lg transition-all"
                 >
-                  <Link href="#contact">Contact Me</Link>
+                  <SmoothScrollLink href="#contact">Contact Me</SmoothScrollLink>
                 </Button>
               </div>
             </div>
           </div>
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-10 hidden sm:block">
-            <Link href="#about" className="group flex flex-col items-center text-white/70 hover:text-white transition-colors">
+          <div className="absolute bottom-8 sm:bottom-10 left-1/2 transform -translate-x-1/2 z-10 hidden sm:block">
+            <SmoothScrollLink href="#about" className="group flex flex-col items-center text-white/70 hover:text-white transition-colors">
               <div className="animate-bounce">
                 <ChevronDown className="h-10 w-10 sm:h-12 sm:w-12" />
               </div>
-            </Link>
+            </SmoothScrollLink>
           </div>
         </section>
 
