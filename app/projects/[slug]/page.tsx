@@ -126,7 +126,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <Button asChild className="w-full">
                           <Link href="https://flexit.fit/TV/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            View Launched TV App
+                            View Live Product
                           </Link>
                         </Button>
                       </div>
@@ -136,7 +136,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <Button asChild className="w-full">
                           <Link href="https://echeloncoach.com/virtualpt/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            View Launched Website
+                            View Live Product
                           </Link>
                         </Button>
                       </div>
@@ -146,7 +146,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <Button asChild className="w-full">
                           <Link href="https://prep.cafe/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            View Launched Website
+                            View Live Product
                           </Link>
                         </Button>
                       </div>
