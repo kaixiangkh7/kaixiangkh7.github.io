@@ -18,7 +18,7 @@ const orbitron = Orbitron({
 })
 
 export const metadata: Metadata = {
-  title: "Kaixiang Huang - Product Manager Portfolio",
+  title: "Kaixiang (Kai) Huang – Product Manager & UX Designer",
   description: "A portfolio showcasing product management and AI/ML work by Kaixiang Huang",
   generator: 'v0.dev',
   metadataBase: new URL('https://www.kaixianghuang.com'),
