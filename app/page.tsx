@@ -52,7 +52,7 @@ export default function Home() {
             </div>
           </div>
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="absolute bottom-8 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-10 hidden sm:block">
             <Link href="#about" className="group flex flex-col items-center text-white/70 hover:text-white transition-colors">
               <div className="animate-bounce">
                 <ChevronDown className="h-10 w-10 sm:h-12 sm:w-12" />

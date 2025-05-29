@@ -32,7 +32,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 text-center text-sm text-white/50">
-          © {new Date().getFullYear()} Kaixiang Huang Website. All rights reserved.
+          © {new Date().getFullYear()} Kaixiang Huang. All rights reserved.
         </div>
       </div>
     </footer>
