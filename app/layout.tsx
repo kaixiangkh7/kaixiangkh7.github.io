@@ -18,12 +18,12 @@ const orbitron = Orbitron({
 })
 
 export const metadata: Metadata = {
-  title: "Kaixiang (Kai) Huang – Product Manager and UX Designer",
+  title: "Kaixiang (Kai) Huang – Data-Driven Product Manager with Design Expertise",
   description: "A portfolio showcasing product design work by Kaixiang Huang",
   generator: 'Kaixiang Huang',
   metadataBase: new URL('https://kaixiang.dev'),
   openGraph: {
-    title: "Kaixiang (Kai) Huang – Product Manager and UX Designer",
+    title: "Kaixiang (Kai) Huang – Data-Driven Product Manager with Design Expertise",
     description: "A portfolio showcasing product design work by Kaixiang Huang",
     url: 'https://kaixiang.dev',
     siteName: 'Kaixiang Huang Portfolio',
@@ -37,12 +37,6 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Kaixiang (Kai) Huang – Product Manager and UX Designer",
-    description: "A portfolio showcasing product design work by Kaixiang Huang",
-    images: ['/images/og-image.jpg'],
   },
   icons: {
     icon: '/icon.svg',
