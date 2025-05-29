@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Kaixiang (Kai) Huang – Product Manager & UX Designer",
   description: "A portfolio showcasing product management and AI/ML work by Kaixiang Huang",
   generator: 'v0.dev',
-  metadataBase: new URL('https://www.kaixianghuang.com'),
+  metadataBase: new URL('https://kaixiang.dev'),
   icons: {
     icon: '/icon.svg',
   },
