@@ -184,7 +184,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Athena AI - Social & Dating Platform</p>
+                          <p className="font-light group-hover:text-primary transition-colors">Athena - Social & Dating Platform</p>
                           <p className="text-sm text-muted-foreground">AI Matching, Social Platform</p>
                         </div>
                       </div>
@@ -216,7 +216,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">FlexIt Platform - Fitness SaaS Solution</p>
+                          <p className="font-light group-hover:text-primary transition-colors">FlexIt - Fitness SaaS Solution</p>
                           <p className="text-sm text-muted-foreground">SaaS Platform, Fitness</p>
                         </div>
                       </div>
@@ -248,7 +248,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">EliteFit AI- Mobile Health & Wellness</p>
+                          <p className="font-light group-hover:text-primary transition-colors">EliteFit - Mobile Health & Wellness</p>
                           <p className="text-sm text-muted-foreground">Mobile App, Fitness, AI Motion Tracking</p>
                         </div>
                       </div>

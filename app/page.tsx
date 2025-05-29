@@ -33,8 +33,8 @@ export default function Home() {
                 <br className="hidden sm:block" />
                 <span className="font-extralight"> Design Expertise</span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-xl text-white/80 mb-6 sm:mb-8 font-light max-w-3xl">
-                I combine strategic product leadership with 7 years of design experience and hands-on AI/ML expertise. Running ML models, analyzing data, and designing user experiences to build products that solve business problems.
+              <p className="text-xl text-white/80 mb-8 font-light leading-relaxed">
+              I bring strategic product leadership, 7 years of design expertise, and hands-on AI/ML capabilities to build data-driven products across generative AI, machine learning, and computer vision—bridging cutting-edge technology with intuitive, high-impact UI/UX.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button asChild size="lg" className="rounded-full px-6 sm:px-8 font-medium shadow-md hover:shadow-lg transition-all">
@@ -76,18 +76,18 @@ export default function Home() {
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
                   <h2 className="text-4xl font-bold mb-4 leading-tight">
-                    Hi, I'm Kai – AI Product Manager <br /> with Business Analytics & UX Design Expertise
+                    Hi, I'm Kai – AI Product Manager <br /> with Design & Analytics Expertise
                   </h2>
                   <p className="text-muted-foreground text-lg">
-                    <span className="font-medium">I hold dual Master's degree from Columbia University: <br /></span>
-                    <span className="font-semibold"> MBA</span> – Business Analytics, AI & Product Management<br />
-                    <span className="font-semibold"> MS</span> – Digital & Human-Centered Design, Digital Twin & 3D Architectural Design
+                    <span className="font-medium">I hold dual Master's degrees from Columbia University: <br /></span>
+                    <span className="font-semibold"> MBA</span> – Business Analytics & AI Product Management<br />
+                    <span className="font-semibold"> MS</span> – Digital & Human-Centered Design
                   </p>
-                  <p className="text-muted-foreground text-lg mt-1">
-                    With 7 years of professional experience, I bridge the gap between business, technology, and design. I don't just strategize about AI products – I run ML models, analyze complex datasets, and design intuitive experiences that make AI accessible to users.
+                  <p className="text-muted-foreground text-lg mt-4">
+                    My unique background combines <span className="font-medium">7 years of design expertise</span>, <span className="font-medium">3 years of product management</span>, and <span className="font-medium">2 years of hands-on AI/ML and business analytics</span>. This rare combination allows me to bridge the gap between technical complexity and user needs.
                   </p>
-                  <p className="text-muted-foreground text-lg mt-1">
-                    My unique background enables me to lead cross-functional teams, drive product vision, and deliver solutions that are both innovative and user-centered.
+                  <p className="text-muted-foreground text-lg mt-4">
+                    I don't just strategize about AI products—I run ML models, analyze datasets, conduct user research, and design intuitive experiences. This hands-on approach enables me to lead cross-functional teams and deliver products that are both technically sophisticated and user-centered.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
@@ -120,65 +120,65 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
                 title="Prep.cafe - AI Interview Prep Platform"
-                description="AI-powered interview prep platform with 91% user satisfaction and 78% higher success rates in actual interviews."
+                description="Leveraging generative AI and advanced language models to provide personalized interview coaching and realistic simulations at scale."
                 image="/images/mocha/mocha-thumbnail.jpg"
-                tags={["AI Coaching", "SaaS Platform", "Interview Prep", "GenAI"]}
+                tags={["AI/ML", "Generative AI", "SaaS Platform", "Interview Prep", "Education"]}
                 link="/projects/project-9"
               />
               <ProjectCard
-                title="Athena - Dating & Social Platform"
-                description="Revolutionary dating app for fitness enthusiasts with 85% reporting more meaningful connections and 92% premium subscriber retention."
+                title="Athena - Social & Dating Platform"
+                description="AI-powered matching platform using machine learning algorithms to connect fitness enthusiasts through wellness compatibility and shared values."
                 image="/images/athena/athena-thumbnail.jpg"
-                tags={["AI Matching", "Social Platform", "Dating App"]}
+                tags={["AI/ML", "Recommender System", "Social Platform", "Dating App"]}
                 link="/projects/project-6"
               />
               <ProjectCard
-                title="Amazon Rexa - Enterprise Recruitment AI"
-                description="AI-powered recruitment platform with agent Rexa that reduced manual screening time by 45% and improved role matching accuracy by 60%."
+                title="Amazon AlphaHire - Enterprise Recruitment AI"
+                description="Enterprise platform featuring AI agent Rexa with machine learning for intelligent candidate-role matching and automated resume filtering."
                 image="/images/amazon/amazon-thumbnail.jpg"
-                tags={["Enterprise AI", "Recruitment", "B2B Platform"]}
+                tags={["Enterprise Solution", "AI/ML", "Generative AI", "Recommendation System", "Recruitment", "B2B Platform"]}
                 link="/projects/project-2"
               />
               <ProjectCard
-                title="FlexIt Platform - Fitness SaaS Solution"
-                description="Redesigned an online fitness platform resulting in 65% increased user engagement and 45% improved booking rates."
+                title="FlexIt - Fitness SaaS Solution"
+                description="B2B SaaS platform redesign for virtual personal training with progressive disclosure and engaging user experience design."
                 image="/images/flexit/flexit_thumbmail.jpg"
-                tags={["SaaS Platform", "Fitness", "Web App"]}
+                tags={["SaaS Platform", "Fitness", "Web App", "Wellness"]}
                 link="/projects/project-5"
               />
               <ProjectCard
-                title="FlexIt Vision - AI Computer Vision Coach"
-                description="AI-powered fitness coach using computer vision for real-time form correction and personalized feedback on TV platforms."
+                title="FlexIt AI - Motion tracking fitness coach"
+                description="AI-powered fitness coach using computer vision and machine learning for real-time form correction and personalized feedback on TV platforms."
                 image="/images/ai_coach/tv-thumbnail.jpg"
-                tags={["Computer Vision", "AI Coaching", "TV Platform"]}
+                tags={["AI/ML", "Computer Vision", "Motion Tracking", "AI Coaching", "TV Platform", "Fitness"]}
                 link="/projects/project-3"
               />
               <ProjectCard
                 title="EliteFit - Mobile Health & Wellness"
-                description="Improved user engagement by 40% through a complete UX overhaul of a health tracking application."
+                description="AI-enhanced mobile fitness platform with real-time form correction, adaptive coaching, and personalized motivation systems."
                 image="/images/fitness/thumbnail.jpg"
-                tags={["Mobile App", "Healthcare", "Wellness"]}
+                tags={["Mobile App", "AI/ML", "Fitness", "Wellness"]}
                 link="/projects/project-1"
               />
               <ProjectCard
-                title="Revive AI - Smart Itinerary & Lifestyle Intelligence"
-                description="AI-powered travel companion for high net worth individuals featuring intelligent scheduling of premium experiences, dining, and events."
+                title="Revive - Smart Itinerary & Lifestyle Intelligence"
+                description="AI-powered travel companion with intelligent itinerary planning, calendar integration, and automated premium experience booking for high net worth individuals."
                 image="/images/travel/Thumbnail.jpg"
-                tags={["AI/ML", "Luxury Travel", "Smart Itinerary", "High Net Worth"]}
+                tags={["AI/ML", "Travel", "Smart Itinerary", "High Net Worth"]}
                 link="/projects/project-4"
               />
               <ProjectCard
-                title="Z Lounge - Luxury Waitlist Experience"
-                description="Exclusive waitlist design featuring minimalist elegance and sophisticated aesthetics that increased sign-ups by 78%."
+                title="Z Lounge - Mysterious Experience"
+                description="Exclusive waitlist landing page with sophisticated minimalist design, strategic negative space, and premium typography system."
                 image="/images/z_lounge/zlounge-thumbnail.jpg"
-                tags={["Luxury Design", "Waitlist", "Web Design"]}
+                tags={["Luxury Design", "Waitlist", "Web Design", "Minimalist", "Membership Club"]}
                 link="/projects/project-7"
               />
               <ProjectCard
                 title="X Club - Luxury Spa & Dining Experience"
-                description="Exclusive digital experience for premium luxury club featuring world-class spa services, fine dining, and seamless subscription management for discerning clientele."
+                description="Digital platform for exclusive luxury club featuring sophisticated membership management, premium subscription processing, and integrated concierge services."
                 image="/images/x_club/xclub-thumbnail.jpg"
-                tags={["Luxury Club", "Subscription", "Spa & Dining"]}
+                tags={["Luxury Club", "Subscription", "Spa & Dining", "Web Design", "Membership Club"]}
                 link="/projects/project-8"
               />
             </div>
