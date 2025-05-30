@@ -11,6 +11,8 @@ import { ContactForm } from "@/components/contact-form"
 import { SmoothScrollLink } from "@/components/smooth-scroll-link"
 import { ScrollToHash } from "@/components/scroll-to-hash"
 import { getImagePath } from "@/lib/utils"
+import { PrimaryButton } from "@/components/ui/primary-button"
+import { SecondaryButton } from "@/components/ui/secondary-button"
 
 export default function Home() {
   return (
@@ -40,17 +42,12 @@ export default function Home() {
               I combine 7 years of design experience with product strategy and AI/ML skills to create smart, data-driven products—from generative AI to computer vision—built with clean, user-first deisgn at the core.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button asChild size="lg" className="rounded-full px-6 sm:px-8 font-medium shadow-md hover:shadow-lg transition-all">
+                <PrimaryButton asChild size="lg" rounded="full" className="px-6 sm:px-8">
                   <SmoothScrollLink href="#projects">View My Work</SmoothScrollLink>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  asChild
-                  className="rounded-full px-6 sm:px-8 font-light bg-transparent text-white border-white hover:bg-white/20 shadow-md hover:shadow-lg transition-all"
-                >
+                </PrimaryButton>
+                <SecondaryButton asChild size="lg" rounded="full" className="px-6 sm:px-8">
                   <SmoothScrollLink href="#contact">Contact Me</SmoothScrollLink>
-                </Button>
+                </SecondaryButton>
               </div>
             </div>
           </div>
@@ -98,7 +95,7 @@ export default function Home() {
                     My unique background combines <span className="font-medium">7 years of design expertise</span>, <span className="font-medium">3 years of product management</span>, and <span className="font-medium">2 years of AI/ML and business analytics experience</span>. This rare combination allows me to bridge the gap between technical complexity and user needs.
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
-                  I don’t just strategize—I build. I run ML models, dive into data, talk to users, and design high-fidelity prototypes in Figma. This hands-on approach helps me work smoothly with cross-functional teams and ship products that are both technically sharp and truly user-centered.
+                  I don't just strategize—I build. I run ML models, dive into data, talk to users, and design high-fidelity prototypes in Figma. This hands-on approach helps me work smoothly with cross-functional teams and ship products that are both technically sharp and truly user-centered.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">

@@ -3,14 +3,14 @@ import { Button, ButtonProps } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { ArrowRight } from "lucide-react"
 
-interface PrimaryButtonProps extends ButtonProps {
+interface SecondaryButtonProps extends ButtonProps {
   arrow?: boolean
   rounded?: "full" | "none" | "sm" | "default"
   shadow?: boolean
   asChild?: boolean
 }
 
-export const PrimaryButton = React.forwardRef<HTMLButtonElement, PrimaryButtonProps>(
+export const SecondaryButton = React.forwardRef<HTMLButtonElement, SecondaryButtonProps>(
   ({ className, children, arrow = false, rounded = "default", shadow = true, asChild, ...props }, ref) => {
     const roundedClasses = {
       full: "rounded-full",
@@ -24,10 +24,10 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, PrimaryButtonPr
     return (
       <Button
         ref={ref}
-        variant="default"
+        variant="outline"
         asChild={asChild}
         className={cn(
-          "bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 transition-all duration-300 transform hover:-translate-y-0.5",
+          "bg-transparent border-white text-white hover:bg-white/20 font-medium py-3 px-6 transition-all duration-300 transform hover:-translate-y-0.5",
           flexClasses,
           shadow && "shadow-lg hover:shadow-xl",
           roundedClasses[rounded],
@@ -49,4 +49,4 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, PrimaryButtonPr
   }
 )
 
-PrimaryButton.displayName = "PrimaryButton" 
+SecondaryButton.displayName = "SecondaryButton" 

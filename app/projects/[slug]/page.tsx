@@ -135,33 +135,33 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       </div>
                     )}
                     {slug === 'project-3' && (
-                      <div className="pt-4">
-                        <Button asChild className="w-full">
-                          <Link href="https://flexit.fit/TV/" target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="mr-2 h-4 w-4" />
+                      <div className="pt-6">
+                        <PrimaryButton asChild className="w-full" rounded="full">
+                          <Link href="https://flexit.fit/TV/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                            <ExternalLink className="h-4 w-4" />
                             View Live Product
                           </Link>
-                        </Button>
+                        </PrimaryButton>
                       </div>
                     )}
                     {slug === 'project-5' && (
-                      <div className="pt-4">
-                        <Button asChild className="w-full">
-                          <Link href="https://echeloncoach.com/virtualpt/" target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="mr-2 h-4 w-4" />
+                      <div className="pt-6">
+                        <PrimaryButton asChild className="w-full" rounded="full">
+                          <Link href="https://echeloncoach.com/virtualpt/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                            <ExternalLink className="h-4 w-4" />
                             View Live Product
                           </Link>
-                        </Button>
+                        </PrimaryButton>
                       </div>
                     )}
                     {slug === 'project-9' && (
-                      <div className="pt-4">
-                        <Button asChild className="w-full">
-                          <Link href="https://prep.cafe/" target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="mr-2 h-4 w-4" />
+                      <div className="pt-6">
+                        <PrimaryButton asChild className="w-full" rounded="full">
+                          <Link href="https://prep.cafe/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                            <ExternalLink className="h-4 w-4" />
                             View Live Product
                           </Link>
-                        </Button>
+                        </PrimaryButton>
                       </div>
                     )}
                   </div>
@@ -170,147 +170,147 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                 <div className="border-l-4 border-primary pl-6">
                   <h3 className="text-lg font-normal mb-4 text-primary">More Projects</h3>
-                  <div className="space-y-4">
-                    <Link href="/projects/project-9" className="block group">
+                  <div className="space-y-2">
+                    <Link href="/projects/project-9" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/mocha/mocha-thumbnail.jpg")}
                             alt="Prep.cafe Interview Prep"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Prep.cafe - AI Interview Prep Platform</p>
-                          <p className="text-sm text-muted-foreground">AI Coaching, SaaS Platform</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Prep.cafe - AI Interview Prep Platform</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">AI Coaching, SaaS Platform</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-6" className="block group">
+                    <Link href="/projects/project-6" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/athena/athena-thumbnail.jpg")}
                             alt="Athena Dating App"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Athena - Social & Dating Platform</p>
-                          <p className="text-sm text-muted-foreground">AI Matching, Social Platform</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Athena - Social & Dating Platform</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">AI Matching, Social Platform</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-2" className="block group">
+                    <Link href="/projects/project-2" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/amazon/amazon-thumbnail.jpg")}
                             alt="Amazon Student Hire Portal"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Amazon AlphaHire - Enterprise Recruitment AI</p>
-                          <p className="text-sm text-muted-foreground">Enterprise AI, Recruitment</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Amazon AlphaHire - Enterprise Recruitment AI</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Enterprise AI, Recruitment</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-5" className="block group">
+                    <Link href="/projects/project-5" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/flexit/flexit_thumbmail.jpg")}
                             alt="FlexIt Platform"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">FlexIt - Fitness SaaS Solution</p>
-                          <p className="text-sm text-muted-foreground">SaaS Platform, Fitness</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">FlexIt - Fitness SaaS Solution</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">SaaS Platform, Fitness</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-3" className="block group">
+                    <Link href="/projects/project-3" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/ai_coach/tv-thumbnail.jpg")}
                             alt="FlexIt AI Coach"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">FlexIt AI - Motion tracking fitness coach</p>
-                          <p className="text-sm text-muted-foreground">Computer Vision, AI Coaching, TV App</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">FlexIt AI - Motion tracking fitness coach</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Computer Vision, AI Coaching, TV App</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-1" className="block group">
+                    <Link href="/projects/project-1" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/fitness/thumbnail.jpg")}
                             alt="EliteFit App"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">EliteFit - Mobile Health & Wellness</p>
-                          <p className="text-sm text-muted-foreground">Mobile App, Fitness, AI Motion Tracking</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">EliteFit - Mobile Health & Wellness</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Mobile App, Fitness, AI Motion Tracking</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-4" className="block group">
+                    <Link href="/projects/project-4" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/travel/Thumbnail.jpg")}
                             alt="Travel Platform"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Revive - Smart Itinerary & Lifestyle Intelligence</p>
-                          <p className="text-sm text-muted-foreground">AI/ML, Luxury Travel, Smart Itinerary</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Revive - Smart Itinerary & Lifestyle Intelligence</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">AI/ML, Luxury Travel, Smart Itinerary</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-7" className="block group">
+                    <Link href="/projects/project-7" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/z_lounge/zlounge-thumbnail.jpg")}
                             alt="Z Lounge Waitlist"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">Z Lounge - Luxury Waitlist Experience</p>
-                          <p className="text-sm text-muted-foreground">Luxury Design, Waitlist</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Z Lounge - Luxury Waitlist Experience</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Luxury Design, Waitlist</p>
                         </div>
                       </div>
                     </Link>
                     <div className="h-px bg-border"></div>
-                    <Link href="/projects/project-8" className="block group">
+                    <Link href="/projects/project-8" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
                           <img
                             src={getImagePath("/images/x_club/xclub-thumbnail.jpg")}
                             alt="X Club Luxury Experience"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
                           />
                         </div>
                         <div>
-                          <p className="font-light group-hover:text-primary transition-colors">X Club - Luxury Spa & Dining Experience</p>
-                          <p className="text-sm text-muted-foreground">Luxury Club, Membership Only</p>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">X Club - Luxury Spa & Dining Experience</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Luxury Club, Membership Only</p>
                         </div>
                       </div>
                     </Link>
