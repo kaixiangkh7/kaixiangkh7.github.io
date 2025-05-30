@@ -98,7 +98,7 @@ export default function Home() {
                     My unique background combines <span className="font-medium">7 years of design expertise</span>, <span className="font-medium">3 years of product management</span>, and <span className="font-medium">2 years of AI/ML and business analytics experience</span>. This rare combination allows me to bridge the gap between technical complexity and user needs.
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
-                    I don't just strategize about products—I run ML models, analyze datasets, conduct user research, and design intuitive experiences. This hands-on approach enables me to lead cross-functional teams and deliver products that are both technically sophisticated and user-centered.
+                  I don’t just strategize—I build. I run ML models, dive into data, talk to users, and design high-fidelity prototypes in Figma. This hands-on approach helps me work smoothly with cross-functional teams and ship products that are both technically sharp and truly user-centered.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
@@ -127,7 +127,7 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-24 relative bg-gray-50">
           <div className="container">
-            <h2 className="text-3xl font-semibold mb-12">Featured Projects</h2>
+            <h2 className="text-3xl font-semibold mb-12">Featured Product & Design Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
                 title="Prep.cafe - AI Interview Prep Platform"
