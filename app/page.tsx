@@ -37,7 +37,7 @@ export default function Home() {
                 <span className="font-extralight"> Design Expertise</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 font-light leading-relaxed max-w-3xl">
-              I bring strategic product leadership, 7 years of design expertise, and hands-on AI/ML capabilities to build data-driven products across generative AI, machine learning, and computer vision—bridging cutting-edge technology with intuitive, user-centered UI/UX.
+              I combine 7 years of design experience with product strategy and AI/ML skills to create smart, data-driven products—from generative AI to computer vision—built with clean, user-first deisgn at the core.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Button asChild size="lg" className="rounded-full px-6 sm:px-8 font-medium shadow-md hover:shadow-lg transition-all">
