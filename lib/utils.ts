@@ -16,8 +16,7 @@ export function getImagePath(path: string): string {
     return path;
   }
   
-  // Add the repository prefix in production
-  return process.env.NODE_ENV === 'production' 
-    ? `/kaixiangkh7.github.io${path.startsWith('/') ? path : `/${path}`}` 
-    : path;
+  // For custom domain deployment, return path as-is
+  // No longer need GitHub Pages repository prefix
+  return path;
 }
