@@ -19,6 +19,10 @@ export function Header() {
             Projects
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </SmoothScrollLink>
+          <Link href="/blog" className="text-base font-light hover:text-primary transition-colors py-1 relative group">
+            Blog
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </Link>
           <SmoothScrollLink href="/#skills" className="text-base font-light hover:text-primary transition-colors py-1 relative group">
             Skills
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
