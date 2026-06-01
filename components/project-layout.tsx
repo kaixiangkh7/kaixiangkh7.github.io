@@ -260,10 +260,10 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
   // Buy or Rent Advisor - Vertical GIF Layout
   if (projectSlug === 'project-10') {
     const features = [
-      "Home Page - ZIP Code Entry & Feature Overview",
-      "Results Page - Verdict, Metrics & Market Data",
-      "Cost-Over-Time Chart - Interactive Stay-Year Analysis",
-      "Assumptions Drawer - Adjustable Financial Variables",
+      "Home Page - ZIP Code Entry & Financial Model Overview",
+      "Results Dashboard - Verdict, Metro Map & Market Data",
+      "Cost-Over-Time Chart - Interactive Stay-Year Breakeven Analysis",
+      "Assumptions Drawer & AdvisorMode - Adjustable Financial Variables",
     ]
 
     return (

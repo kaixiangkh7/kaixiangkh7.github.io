@@ -301,8 +301,8 @@ export const projectsData: Record<string, ProjectData> = {
     ],
     jobToBeDone: "As a prospective homebuyer or renter evaluating options in a specific city, I want a data-driven financial model that accounts for local home prices, rent, taxes, and investment tradeoffs, so that I can make a confident, well-informed housing decision without relying on national averages or oversimplified rules of thumb.",
     features: [
-      "ZIP-code financial model: live Zillow ZHVI/ZORI data drives a 30-year simulation with 14 adjustable assumptions and a breakeven year calculation, surfacing whether buying or renting is cheaper at any stay horizon",
-      "Interactive cost-over-time chart with a draggable stay-year marker that updates all metrics in real time, plus a collapsible assumptions drawer for mortgage rate, appreciation, tax rate, and 10+ additional variables",
+      "ZIP-code financial model: live Zillow ZHVI/ZORI data drives a 30-year simulation with 14 adjustable assumptions and a breakeven year calculation, with a metro VerdictMap that color-codes neighboring ZIPs by breakeven year on an interactive map",
+      "Interactive cost-over-time chart with a draggable stay-year marker that recalculates 30 years of buy-vs-rent data in under 350 ms, plus an AdvisorMode that sets all assumptions from a plain-language housing scenario",
       "Hermes Agent skill integration: the calculation and ZIP market snapshot are exposed as AI-callable tools, enabling natural-language queries like 'Should I buy in 94110 if I plan to stay 5 years?'"
     ],
     outcome: "The advisor delivers a complete buy-vs-rent verdict for any US ZIP code in under 3 seconds, with a breakeven timeline, price-to-rent ratio, and month-by-month cost breakdown — replacing a spreadsheet that previously took analysts 45+ minutes to build manually. The Hermes Agent integration extends the tool into an AI-native real estate companion capable of answering portfolio-level housing decisions at scale.",
