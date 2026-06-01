@@ -257,6 +257,34 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
     )
   }
 
+  // Buy or Rent Advisor - Vertical GIF Layout
+  if (projectSlug === 'project-10') {
+    const features = [
+      "Home Page - ZIP Code Entry & Feature Overview",
+      "Results Page - Verdict, Metrics & Market Data",
+      "Cost-Over-Time Chart - Interactive Stay-Year Analysis",
+      "Assumptions Drawer - Adjustable Financial Variables",
+    ]
+
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
+        <div className="space-y-8">
+          {images.slice(1).map((image, index) => (
+            <div key={index} className="overflow-hidden rounded-lg">
+              <h3 className="text-lg font-medium mb-3 text-gray-800">{features[index]}</h3>
+              <img
+                src={getImagePath(image)}
+                alt={`${projectTitle} - ${features[index]}`}
+                className="w-full h-auto object-contain shadow-lg"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   // Default layout for other projects
   return (
     <div className="space-y-6">

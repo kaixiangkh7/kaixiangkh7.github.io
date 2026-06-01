@@ -189,6 +189,13 @@ export default function Home() {
                 tags={["Luxury Club", "Subscription", "Spa & Dining", "Web Design", "Membership Club"]}
                 link="/projects/project-8"
               />
+              <ProjectCard
+                title="Buy or Rent Advisor - Real Estate Decision Engine"
+                description="Full-stack financial intelligence tool powered by live Zillow data and a NYT-style 30-year simulation engine, delivering a hyperlocal buy-vs-rent verdict with breakeven timeline for any US ZIP code."
+                image="/images/buyorrent/buyorrent-thumbnail.jpg"
+                tags={["Data Analytics", "Real Estate", "Finance", "Web App", "AI/ML"]}
+                link="/projects/project-10"
+              />
             </div>
           </div>
         </section>

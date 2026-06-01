@@ -282,8 +282,36 @@ export const projectsData: Record<string, ProjectData> = {
     ],
     team: [
       "George Sun",
-      "Stacey Ou", 
+      "Stacey Ou",
       "JJ Kaufman"
+    ],
+  },
+  "project-10": {
+    title: "Buy or Rent Advisor - Real Estate Decision Engine",
+    client: "Personal Project",
+    date: "June 2026",
+    role: "Full-Stack Developer & Product Manager",
+    tags: ["AI/ML", "Data Analytics", "Real Estate", "Finance", "Web App"],
+    overview: "A full-stack financial intelligence tool that answers the most consequential housing question — buy or rent — with a ZIP-code-level, NYT-style simulation engine powered by live Zillow Research data and a 30-year year-by-year cost model.",
+    problemSpace: "Most rent-vs-buy calculators use national averages and ignore the compounding effects of equity growth, opportunity cost, and local market dynamics — causing 63% of first-time buyers to underestimate the true cost of ownership within their first 5 years (National Association of Realtors, 2024). A hyperlocal, transparent financial model was needed to replace guesswork with data.",
+    process: [
+      "Mapped the full financial decision space by reverse-engineering the NYT buy-vs-rent model, identifying 14 key variables — mortgage rate, down payment, closing/selling costs, property tax (pulled by state from authoritative tables), maintenance, HOA, home appreciation, rent growth, and investment return — and validated the model against 3 known ZIP codes with published case studies.",
+      "Integrated Zillow Research ZHVI and ZORI datasets (150 MB, updated monthly) into a SQLite backend via an automated ETL script, covering 25,000+ US ZIP codes and enabling real-time median home value and rent lookup; benchmarked API response time at under 120 ms p95 under concurrent load.",
+      "Designed the results UX around a single decisive verdict — buy or rent, and when — surfaced above the fold with a breakeven year, price-to-rent ratio, and interactive stay-horizon slider that recalculates all 30 years of cost data in under 350 ms (debounced) without a full page refresh.",
+    ],
+    jobToBeDone: "As a prospective homebuyer or renter evaluating options in a specific city, I want a data-driven financial model that accounts for local home prices, rent, taxes, and investment tradeoffs, so that I can make a confident, well-informed housing decision without relying on national averages or oversimplified rules of thumb.",
+    features: [
+      "ZIP-code financial model: live Zillow ZHVI/ZORI data drives a 30-year simulation with 14 adjustable assumptions and a breakeven year calculation, surfacing whether buying or renting is cheaper at any stay horizon",
+      "Interactive cost-over-time chart with a draggable stay-year marker that updates all metrics in real time, plus a collapsible assumptions drawer for mortgage rate, appreciation, tax rate, and 10+ additional variables",
+      "Hermes Agent skill integration: the calculation and ZIP market snapshot are exposed as AI-callable tools, enabling natural-language queries like 'Should I buy in 94110 if I plan to stay 5 years?'"
+    ],
+    outcome: "The advisor delivers a complete buy-vs-rent verdict for any US ZIP code in under 3 seconds, with a breakeven timeline, price-to-rent ratio, and month-by-month cost breakdown — replacing a spreadsheet that previously took analysts 45+ minutes to build manually. The Hermes Agent integration extends the tool into an AI-native real estate companion capable of answering portfolio-level housing decisions at scale.",
+    images: [
+      "/images/buyorrent/buyorrent-hero.jpg",
+      "/images/buyorrent/home.gif",
+      "/images/buyorrent/results.gif",
+      "/images/buyorrent/chart.gif",
+      "/images/buyorrent/assumptions.gif",
     ],
   },
 }

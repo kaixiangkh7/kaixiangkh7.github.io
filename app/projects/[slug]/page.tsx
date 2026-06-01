@@ -314,6 +314,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         </div>
                       </div>
                     </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-10" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/buyorrent/buyorrent-thumbnail.jpg")}
+                            alt="Buy or Rent Advisor"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Buy or Rent Advisor - Real Estate Decision Engine</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Data Analytics, Real Estate, Finance</p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
