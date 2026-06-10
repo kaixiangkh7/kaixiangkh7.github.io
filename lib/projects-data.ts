@@ -282,8 +282,36 @@ export const projectsData: Record<string, ProjectData> = {
     ],
     team: [
       "George Sun",
-      "Stacey Ou", 
+      "Stacey Ou",
       "JJ Kaufman"
+    ],
+  },
+  "project-10": {
+    title: "Buy or Rent Advisor - AI-Native Real Estate Decision Engine",
+    client: "Personal Project",
+    date: "June 2026",
+    role: "AI-Native Developer & Product Manager",
+    tags: ["AI/ML", "Agentic Development", "FinTech", "Full-Stack", "Real Estate", "Web App"],
+    overview: "A full-stack financial intelligence tool built end-to-end by orchestrating Claude Code and Codex as coding agents — architecting a FastAPI simulation engine, a React/TypeScript frontend, and a Zillow ETL pipeline without writing a single line of boilerplate by hand. The product itself also ships AI natively: Hermes Agent tool-calling skills and a natural-language AdvisorMode make it queryable by other AI systems.",
+    problemSpace: "Most rent-vs-buy calculators use national averages and ignore the compounding effects of equity growth, opportunity cost, and local market dynamics — causing 63% of first-time buyers to underestimate the true cost of ownership within their first 5 years (NAR, 2024). Beyond the product gap, this project explored a deeper question: can a solo developer use AI coding agents to ship a production-quality full-stack app — complete with a financial model, live data pipeline, REST API, and AI integrations — in a fraction of the traditional timeline?",
+    process: [
+      "Directed Claude Code (via CLAUDE.md-driven agentic sessions) to scaffold and iterate the entire FastAPI backend — including the NYT-style 30-year buy-vs-rent simulation engine (14 financial variables, amortized mortgage, equity tracking, investment return modeling), SQLite data layer, Pydantic schemas, rate-limiting middleware, and pytest test suite — reviewing diffs and steering direction rather than writing implementation code.",
+      "Used Codex in parallel for frontend generation: prompting component-level TypeScript interfaces, the Recharts cost-over-time chart, the 16-input AssumptionsDrawer, and the AdvisorMode natural-language parser — then integrating, type-checking, and composing the agent outputs into a coherent React/TypeScript app with full type safety.",
+      "Integrated Zillow Research ZHVI and ZORI datasets (150 MB, updated monthly) into a SQLite backend via an AI-generated ETL script covering 25,000+ US ZIP codes, and wired up the Hermes Agent skill layer so the calculation engine and market snapshot are callable by external AI systems via natural-language queries.",
+    ],
+    jobToBeDone: "As a prospective homebuyer evaluating options in a specific city, I want a data-driven financial model that accounts for local home prices, rent, taxes, and investment tradeoffs, so that I can make a confident housing decision — and as an AI developer, I want to validate that agentic coding workflows can produce production-quality full-stack software without manual boilerplate.",
+    features: [
+      "Hermes Agent tool-calling integration: the financial simulation and ZIP market snapshot are registered as AI-callable skills, enabling external agents to query 'Should I buy in 94110 if I plan to stay 5 years?' and receive a structured verdict with full year-by-year cost breakdown",
+      "Natural-language AdvisorMode: users describe their housing scenario in plain English and the app parses it into the 14 assumption parameters — bridging conversational AI and quantitative financial modeling in a single UX flow",
+      "Metro VerdictMap: an interactive map color-codes every ZIP in the metro by breakeven year under current assumptions, turning a single-ZIP verdict into a geographic market intelligence layer that reveals where buying becomes financially viable across an entire region",
+    ],
+    outcome: "Shipped a production-quality full-stack app — FastAPI backend, React/TypeScript frontend, 25K-ZIP Zillow data pipeline, REST API, AI agent skills, and interactive map — by directing Claude Code and Codex rather than writing implementation code, proving that an AI-native development workflow can compress solo full-stack delivery from weeks to days. The finished product answers buy-vs-rent for any US ZIP in under 3 seconds and is queryable by other AI systems at scale.",
+    images: [
+      "/images/buyorrent/buyorrent-hero.jpg",
+      "/images/buyorrent/home.gif",
+      "/images/buyorrent/results.gif",
+      "/images/buyorrent/chart.gif",
+      "/images/buyorrent/assumptions.gif",
     ],
   },
 }

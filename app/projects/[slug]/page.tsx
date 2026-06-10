@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowLeft, User, ExternalLink, Briefcase, Users } from "lucide-react"
+import { ArrowLeft, User, ExternalLink, Briefcase, Users, Github } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { PrimaryButton } from "@/components/ui/primary-button"
@@ -68,7 +68,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   <div>
-                    <h2 className="text-2xl font-normal mb-4 text-primary">Research & Analytics</h2>
+                    <h2 className="text-2xl font-normal mb-4 text-primary">
+                      {slug === 'project-10' ? 'AI-Native Development' : 'Research & Analytics'}
+                    </h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.process.map((step, index) => (
                         <li key={index}>{step}</li>
@@ -160,6 +162,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                           <Link href="https://prep.cafe/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                             <ExternalLink className="h-4 w-4" />
                             View Live Product
+                          </Link>
+                        </PrimaryButton>
+                      </div>
+                    )}
+                    {slug === 'project-10' && (
+                      <div className="pt-6">
+                        <PrimaryButton asChild className="w-full" rounded="full">
+                          <Link href="https://github.com/kaixiangkh7/buy_or_rent" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                            <Github className="h-4 w-4" />
+                            View on GitHub
                           </Link>
                         </PrimaryButton>
                       </div>
@@ -311,6 +323,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors duration-300">X Club - Luxury Spa & Dining Experience</p>
                           <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Luxury Club, Membership Only</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-10" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/buyorrent/buyorrent-thumbnail.jpg")}
+                            alt="Buy or Rent Advisor"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Buy or Rent Advisor - Real Estate Decision Engine</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Data Analytics, Real Estate, Finance</p>
                         </div>
                       </div>
                     </Link>

@@ -189,6 +189,13 @@ export default function Home() {
                 tags={["Luxury Club", "Subscription", "Spa & Dining", "Web Design", "Membership Club"]}
                 link="/projects/project-8"
               />
+              <ProjectCard
+                title="Buy or Rent Advisor - AI-Native Real Estate Decision Engine"
+                description="Full-stack app built end-to-end by orchestrating Claude Code and Codex — FastAPI simulation engine, React frontend, 25K-ZIP Zillow ETL, Hermes Agent skills, and interactive metro map."
+                image="/images/buyorrent/buyorrent-thumbnail.jpg"
+                tags={["AI/ML", "Agentic Development", "FinTech", "Full-Stack", "Real Estate", "Web App"]}
+                link="/projects/project-10"
+              />
             </div>
           </div>
         </section>

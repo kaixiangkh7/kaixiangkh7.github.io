@@ -65,7 +65,7 @@ This is the standard process for turning another GitHub repo into a portfolio en
 1. Clone the target repo to a **sibling temp directory** (never inside this website repo).
 2. Read its `package.json`/README, install deps, and start its dev server (`npm install && npm run dev` or equivalent). Note the local URL/port.
 3. Identify the key screens/flows (landing, onboarding, core feature, dashboard, etc.).
-4. Drive each flow with **Playwright** recording video (`recordVideo` → `.webm`), then convert each clip to an optimized `.gif` with **ffmpeg** (palette-gen for quality; cap width ~900–1000px to keep file size sane).
+4. Drive each flow with **Playwright** recording video using `deviceScaleFactor: 2` and `recordVideo: { size: {width:2560, height:1600} }` so frames render at 2× native resolution. Convert each `.webm` to `.gif` with **ffmpeg** two-pass palette (256 colors, `bayer:bayer_scale=3` dithering, `fps=10`, `scale=1440:-1:flags=lanczos`). This matches the existing site standard (~1440×900, 4–8 MB, sharp text). Results-heavy GIFs may use `fps=8` to stay under 8 MB. Composite hero/thumbnail JPGs on a dark background: `pad=iw+120:ih+80:60:40:color=#0f0f0f`.
 5. Save the GIFs plus one representative `<slug>-hero.jpg` and `<slug>-thumbnail.jpg` frame into `public/images/<slug>/`.
 6. If the repo can't run locally (backend secrets, mobile-only, build failure), capture whatever screens are reachable and **flag the gap to the user — never fabricate screens**.
 
