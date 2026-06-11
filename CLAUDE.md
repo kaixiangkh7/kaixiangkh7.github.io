@@ -100,7 +100,7 @@ Data-driven, metric-rich, PM/UX framing. `overview` 1–2 sentences; `problemSpa
 
 - `npm run dev`: new card shows on `/`; `/projects/project-N` renders hero + all sections + Key Screens GIFs with correct captions; new entry appears in another detail page's "More Projects".
 - `npm run build` completes (static export) with the new route generated and no broken image paths.
-- Then run the **Visual Validation Loop** below to confirm the new page matches the existing site's style.
+- Then run the **Visual Validation Loop** below to confirm the new page matches the existing site's style (or use the `/visual-match` skill to automate this step).
 
 ---
 

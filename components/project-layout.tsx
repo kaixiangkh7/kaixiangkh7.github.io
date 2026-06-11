@@ -285,6 +285,35 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
     )
   }
 
+  if (projectSlug === 'project-11') {
+    const features = [
+      "Today Dashboard - AI Recommendations & Caregiver Alerts",
+      "Handoff Tab - AI-Generated Shift Summary",
+      "Timeline View - Chronological Care Event Log",
+      "Memory Tab - Auto-Detected Child Behavior Patterns",
+    ]
+
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
+        <div className="space-y-8">
+          {images.slice(1).map((image, index) => (
+            <div key={index} className="overflow-hidden rounded-lg">
+              <h3 className="text-lg font-medium mb-3 text-gray-800">{features[index]}</h3>
+              <div className="flex justify-start">
+                <img
+                  src={getImagePath(image)}
+                  alt={`${projectTitle} - ${features[index]}`}
+                  className="w-[30%] h-auto object-contain shadow-lg"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   // Default layout for other projects
   return (
     <div className="space-y-6">

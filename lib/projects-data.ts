@@ -314,6 +314,34 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/buyorrent/assumptions.gif",
     ],
   },
+  "project-11": {
+    title: "Tiny Handoff - AI-Native Childcare Coordination App",
+    client: "Personal Project",
+    date: "June 2026",
+    role: "AI-Native Developer & Product Designer",
+    tags: ["AI/ML", "Agentic Development", "OpenAI", "Telegram Bot", "Mobile Web", "TypeScript"],
+    overview: "A shared childcare coordination app where caregivers log daily care events via a web dashboard or Telegram — typing or speaking — and an AI agent classifies inputs, extracts structured care logs, and auto-generates handoff summaries for the next caregiver.",
+    problemSpace: "Parents and caregivers coordinating across shifts struggle to maintain consistent care records. Manual logging apps create friction at exactly the moments caregivers are most fatigued — holding a fussy toddler or feeding a baby at 2 AM. Critical information (last feed, nap duration, mood, medication) gets lost between shifts, causing anxiety and inconsistent care for the child.",
+    process: [
+      "Built the AI agent layer using OpenAI structured outputs (json_schema strict mode) to classify any free-text input as log, ask, or clarify and extract typed CareEvent objects — with a rule-based fallback chain in lib/utils.ts ensuring the app never surfaces a broken state if the API fails.",
+      "Implemented a Telegram gateway (long-polling + webhook) with OpenAI Whisper voice transcription so caregivers can log updates by voice while their hands are occupied — the agent processes the transcription identically to typed input, making the input modality invisible to the core logic.",
+      "Designed memory auto-detection that scans saved events for behavioral patterns (sleep regression, food aversion, feeding frequency changes) and proposes new memory entries for caregiver confirmation, turning raw logs into a growing knowledge base about the child.",
+    ],
+    jobToBeDone: "As a caregiver handing off childcare to a partner or nanny, I want a frictionless way to log care events and receive an AI-generated handoff summary, so that the next caregiver arrives fully briefed without me drafting a manual update from scratch.",
+    features: [
+      "AI event agent: any free-text or voice message is classified as log, question, or clarification, then decomposed into typed CareEvent objects (feeding, nap, mood, health) — eliminating form-filling entirely in favor of natural language input",
+      "Telegram voice gateway: caregivers speak a care update while their hands are full, the app transcribes via OpenAI Whisper and routes through the AI agent, replying with a warm conversational confirmation — making logging possible at 2 AM with one hand",
+      "Auto-generated shift handoff summaries: the Handoff tab compiles the day's CareEvents into a readable briefing covering last feed, nap duration, mood trend, and health flags — with AI-written copy that reads like a message from a caregiver, not a database export",
+    ],
+    outcome: "Shipped an end-to-end AI-native childcare coordination system — voice transcription, NLP event extraction, structured care logs, memory auto-detection, and AI-generated handoff summaries — demonstrating that AI agents can replace structured form-filling entirely in high-friction, hands-occupied mobile contexts.",
+    images: [
+      "/images/tinyhandoff/tinyhandoff-hero.jpg",
+      "/images/tinyhandoff/home.gif",
+      "/images/tinyhandoff/handoff.gif",
+      "/images/tinyhandoff/timeline.gif",
+      "/images/tinyhandoff/memory.gif",
+    ],
+  },
 }
 
 export const defaultProjectData: ProjectData = {

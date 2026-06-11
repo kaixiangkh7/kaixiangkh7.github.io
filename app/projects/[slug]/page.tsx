@@ -69,7 +69,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                   <div>
                     <h2 className="text-2xl font-normal mb-4 text-primary">
-                      {slug === 'project-10' ? 'AI-Native Development' : 'Research & Analytics'}
+                      {(slug === 'project-10' || slug === 'project-11') ? 'AI-Native Development' : 'Research & Analytics'}
                     </h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.process.map((step, index) => (
@@ -323,6 +323,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors duration-300">X Club - Luxury Spa & Dining Experience</p>
                           <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Luxury Club, Membership Only</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-11" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/tinyhandoff/tinyhandoff-thumbnail.jpg")}
+                            alt="Tiny Handoff"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Tiny Handoff - AI-Native Childcare Coordination</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">AI/ML, Telegram Bot, OpenAI</p>
                         </div>
                       </div>
                     </Link>

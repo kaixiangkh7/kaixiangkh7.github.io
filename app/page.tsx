@@ -127,6 +127,20 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-12">Featured Product & Design Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
+                title="Tiny Handoff - AI-Native Childcare Coordination App"
+                description="Caregivers log daily care events via web or Telegram (text or voice) and an AI agent auto-generates handoff summaries for the next shift — no forms, no manual write-ups."
+                image="/images/tinyhandoff/tinyhandoff-thumbnail.jpg"
+                tags={["AI/ML", "Agentic Development", "OpenAI", "Telegram Bot", "Mobile Web", "TypeScript"]}
+                link="/projects/project-11"
+              />
+              <ProjectCard
+                title="Buy or Rent Advisor - AI-Native Real Estate Decision Engine"
+                description="Full-stack app built end-to-end by orchestrating Claude Code and Codex — FastAPI simulation engine, React frontend, 25K-ZIP Zillow ETL, Hermes Agent skills, and interactive metro map."
+                image="/images/buyorrent/buyorrent-thumbnail.jpg"
+                tags={["AI/ML", "Agentic Development", "FinTech", "Full-Stack", "Real Estate", "Web App"]}
+                link="/projects/project-10"
+              />
+              <ProjectCard
                 title="Prep.cafe - AI Interview Prep Platform"
                 description="Leveraging generative AI and advanced language models to provide personalized interview coaching and realistic simulations at scale."
                 image="/images/mocha/mocha-thumbnail.jpg"
@@ -188,13 +202,6 @@ export default function Home() {
                 image="/images/x_club/xclub-thumbnail.jpg"
                 tags={["Luxury Club", "Subscription", "Spa & Dining", "Web Design", "Membership Club"]}
                 link="/projects/project-8"
-              />
-              <ProjectCard
-                title="Buy or Rent Advisor - AI-Native Real Estate Decision Engine"
-                description="Full-stack app built end-to-end by orchestrating Claude Code and Codex — FastAPI simulation engine, React frontend, 25K-ZIP Zillow ETL, Hermes Agent skills, and interactive metro map."
-                image="/images/buyorrent/buyorrent-thumbnail.jpg"
-                tags={["AI/ML", "Agentic Development", "FinTech", "Full-Stack", "Real Estate", "Web App"]}
-                link="/projects/project-10"
               />
             </div>
           </div>

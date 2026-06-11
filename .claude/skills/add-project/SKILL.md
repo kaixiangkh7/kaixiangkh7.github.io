@@ -31,8 +31,8 @@ Ask the user for the local URL(s). Skip to Phase 2.
 Clone to a **sibling temp dir** — never inside the website repo:
 
 ```bash
-git clone <repo-url> "C:\Users\kaihuang\OneDrive - Capgemini\Desktop\<slug>_temp"
-cd "C:\Users\kaihuang\OneDrive - Capgemini\Desktop\<slug>_temp"
+git clone <repo-url> "C:\Users\kaixi\AppData\Local\Temp\<slug>_temp"
+cd "C:\Users\kaixi\AppData\Local\Temp\<slug>_temp"
 ```
 
 Read the README/`package.json` to identify the stack. Typical patterns:
@@ -69,7 +69,7 @@ Pick a 1–3 word lowercase snake_case name for the image folder that describes 
 
 Create the folder:
 ```bash
-mkdir -p "C:\Users\kaihuang\OneDrive - Capgemini\Desktop\website\public\images\<slug>"
+mkdir -p "c:\Users\kaixi\OneDrive\桌面\website\kaixiangkh7.github.io\public\images\<slug>"
 ```
 
 ---
@@ -79,115 +79,198 @@ mkdir -p "C:\Users\kaihuang\OneDrive - Capgemini\Desktop\website\public\images\<
 ### Critical capture settings (non-negotiable)
 
 - **Viewport**: `{ width: 1280, height: 800 }` — matches most app max-widths (1024–1152px), avoids gray-side margins
-- **RecordVideo size**: must equal viewport — `{ size: { width: 1280, height: 800 } }`
-- **DO NOT use `deviceScaleFactor: 2`** — it causes the app content to render in only part of the video frame
+- **DO NOT use `recordVideo`** — headless Chromium produces blank webm files. Use frame-by-frame `page.screenshot()` at 100ms intervals and stitch with ffmpeg instead.
 - **GIF encode width**: 1280px (matches the viewport; keeps files full-width and sharp)
-- **Hero/thumbnail**: capture at 1280×800, composite onto dark background (`pad=iw+80:ih+60:40:30:color=#0f0f0f`)
+- **Hero/thumbnail**: CSS laptop mockup on a gradient background (see below)
 
 ### ffmpeg binary
 
 ```js
-import ffmpegPath from 'ffmpeg-static'; // already installed in capture_temp
-// path: C:\Users\kaihuang\OneDrive - Capgemini\Desktop\capture_temp\node_modules\ffmpeg-static\ffmpeg.exe
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const ffmpegPath = require('ffmpeg-static');
 ```
 
 ### Capture workspace
 
-Use `C:\Users\kaihuang\OneDrive - Capgemini\Desktop\capture_temp\` — Playwright and ffmpeg-static are already installed there.
+Use `C:\Users\kaixi\AppData\Local\Temp\capture_temp\` — Playwright and ffmpeg-static are already installed there.
 
-### GIF encoding recipe (two-pass palette)
+### GIF encoding recipe (frame-by-frame, two-pass palette)
+
+Do not use `recordVideo`. Instead capture frames with `page.screenshot()` at 100ms intervals, then stitch:
 
 ```js
-function toGif(src, dest, fps = 10, colors = 256, width = 1280) {
-  const pal = dest.replace('.gif', '-pal.png');
-  execFileSync(ffmpegPath, [
-    '-y', '-i', src,
-    '-vf', `fps=${fps},scale=${width}:-1:flags=lanczos,palettegen=max_colors=${colors}`,
-    pal
-  ]);
-  execFileSync(ffmpegPath, [
-    '-y', '-i', src, '-i', pal,
-    '-filter_complex', `fps=${fps},scale=${width}:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=3`,
-    dest
-  ]);
-  // delete palette file after
-}
+// capture_temp/capture_<slug>_frames.mjs
+import { chromium } from 'playwright';
+import { execFileSync } from 'child_process';
+import { mkdirSync, rmSync } from 'fs';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const ffmpegPath = require('ffmpeg-static');
+
+const FRAMES = 'C:\\Users\\kaixi\\AppData\\Local\\Temp\\capture_temp\\frames_<slug>';
+const IMG    = 'c:\\Users\\kaixi\\OneDrive\\桌面\\website\\kaixiangkh7.github.io\\public\\images\\<slug>';
+const VP     = { width: 1280, height: 800 };
+const BASE   = 'http://localhost:5173';
+
+mkdirSync(FRAMES, { recursive: true });
+
+const browser = await chromium.launch({ headless: true });
+const ctx  = await browser.newContext({ viewport: VP });
+const page = await ctx.newPage();
+
+await page.goto(BASE, { waitUntil: 'networkidle', timeout: 20000 });
+await page.waitForTimeout(1500);
+
+let frameIdx = 0;
+const snap = async () => {
+  await page.screenshot({ path: `${FRAMES}\\frame${String(frameIdx++).padStart(4,'0')}.png` });
+};
+
+// Capture interaction sequence — adapt to the app
+for (let i = 0; i < 15; i++) { await snap(); await page.waitForTimeout(100); }
+// ... type inputs, scroll, interact ...
+for (let i = 0; i < 20; i++) { await snap(); await page.waitForTimeout(100); }
+
+await ctx.close();
+await browser.close();
+
+// Stitch frames → GIF (one-pass with split/palette)
+execFileSync(ffmpegPath, [
+  '-y', '-framerate', '10', '-i', `${FRAMES}\\frame%04d.png`,
+  '-vf', `scale=1280:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3`,
+  `${IMG}\\home.gif`
+]);
+
+rmSync(FRAMES, { recursive: true, force: true });
+console.log('GIF written');
 ```
 
 **Target sizes per GIF type:**
 
 | GIF | fps | colors | Expected size |
 |-----|-----|--------|---------------|
-| Simple UI (home/landing) | 10 | 256 | 1–3 MB |
-| Complex scroll (charts, maps, dashboards) | 5–6 | 128 | 5–9 MB |
-| Interaction (sliders, drawers, modals) | 8 | 192 | 4–8 MB |
+| Simple UI (home/landing) | 10 | 256 | 300 KB – 3 MB |
+| Complex scroll (charts, maps) | 5–6 | 128 | 3–9 MB |
+| Interaction (sliders, modals) | 8 | 192 | 2–8 MB |
 
-If a GIF exceeds 9 MB, drop fps by 2 or colors by half and re-encode from the same `.webm`.
+If a GIF exceeds 9 MB, drop fps by 2 or colors by half and re-stitch from the same frame directory.
 
 ### Key screens to capture (adapt to the actual app)
 
-1. **Home/landing** — the entry point; hover over feature cards, type in a key input
+1. **Home/landing** — the entry point; type in a key input, hover feature cards
 2. **Core feature / dashboard** — the main value screen; scroll through it
 3. **Interactive element** — chart, slider, filter, or any interaction that shows the product working
 4. **Settings/config/drawer** — assumptions panel, profile editor, or secondary flow
 
-### Capture script skeleton
+### Hero & thumbnail — CSS laptop mockup on gradient background
+
+Hero and thumbnail use a CSS-rendered laptop mockup (black bezel, camera dot, silver base) placed on a colored gradient background. This gives the same polished look as the other portfolio projects.
+
+**Choose a gradient that complements the project's brand colors:**
+- Pink/red product → `linear-gradient(135deg, #f97794 0%, #c471ed 50%, #f64f59 100%)`
+- Orange/warm product → `linear-gradient(135deg, #f6a623 0%, #f97794 50%, #f64f59 100%)`
+- Blue/teal product → `linear-gradient(135deg, #667eea 0%, #764ba2 50%, #6b8dd6 100%)`
+
+**Script pattern** (`capture_<slug>_mockup.mjs`):
 
 ```js
-// capture_temp/capture_<slug>.mjs
 import { chromium } from 'playwright';
 import { execFileSync } from 'child_process';
-import { mkdirSync, rmSync, existsSync } from 'fs';
-import ffmpegPath from 'ffmpeg-static';
+import { readFileSync, writeFileSync } from 'fs';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const ffmpegPath = require('ffmpeg-static');
 
-const WEBM = 'C:\\...\\capture_temp\\webms_<slug>';
-const IMG  = 'C:\\...\\website\\public\\images\\<slug>';
-const VP   = { width: 1280, height: 800 };
-const BASE = 'http://localhost:5173'; // adjust port
-
-mkdirSync(WEBM, { recursive: true });
-mkdirSync(IMG,  { recursive: true });
+const OUT = 'c:\\Users\\kaixi\\OneDrive\\桌面\\website\\kaixiangkh7.github.io\\public\\images\\<slug>';
+const TMP = 'C:\\Users\\kaixi\\AppData\\Local\\Temp\\capture_temp';
 
 const browser = await chromium.launch({ headless: true });
 
-// Hero screenshot
-{
-  const ctx = await browser.newContext({ viewport: VP });
-  const page = await ctx.newPage();
-  await page.goto(`${BASE}/most-impressive-route`, { waitUntil: 'networkidle', timeout: 30000 });
-  await page.waitForTimeout(3000);
-  await page.screenshot({ path: `${IMG}\\raw_hero.jpg`, type: 'jpeg', quality: 95 });
-  // composite on dark bg
-  execFileSync(ffmpegPath, ['-y', '-i', `${IMG}\\raw_hero.jpg`, '-vf', 'pad=iw+80:ih+60:40:30:color=#0f0f0f', `${IMG}\\<slug>-hero.jpg`]);
-  rmSync(`${IMG}\\raw_hero.jpg`, { force: true });
-  await ctx.close();
-}
+// 1. Screenshot the app
+const appCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+const appPage = await appCtx.newPage();
+await appPage.goto('http://localhost:5173', { waitUntil: 'networkidle', timeout: 20000 });
+await appPage.waitForTimeout(2000);
+const rawShot = `${TMP}\\raw_app.png`;
+await appPage.screenshot({ path: rawShot, fullPage: false });
+await appCtx.close();
 
-// Thumbnail
-{
-  const ctx = await browser.newContext({ viewport: VP });
-  const page = await ctx.newPage();
-  await page.goto(BASE, { waitUntil: 'networkidle', timeout: 30000 });
-  await page.waitForTimeout(1500);
-  await page.screenshot({ path: `${IMG}\\raw_thumb.jpg`, type: 'jpeg', quality: 95 });
-  execFileSync(ffmpegPath, ['-y', '-i', `${IMG}\\raw_thumb.jpg`, '-vf', 'pad=iw+80:ih+60:40:30:color=#0f0f0f', `${IMG}\\<slug>-thumbnail.jpg`]);
-  rmSync(`${IMG}\\raw_thumb.jpg`, { force: true });
-  await ctx.close();
-}
+const appBase64 = readFileSync(rawShot).toString('base64');
 
-// Each GIF: record → close context (finalizes webm) → toGif
-// ... (one block per key screen)
+// 2. Build HTML: gradient bg + CSS laptop frame + app screenshot
+const makeHtml = (canvasW, canvasH, laptopW, gradient) => `<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    width: ${canvasW}px; height: ${canvasH}px;
+    background: ${gradient};
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .laptop { width: ${laptopW}px; position: relative; }
+  .screen-bezel {
+    background: #1a1a1a; border-radius: 14px 14px 0 0;
+    padding: 18px 18px 0 18px;
+    box-shadow: 0 0 0 2px #3a3a3a, 0 30px 60px rgba(0,0,0,0.5);
+  }
+  .screen-bezel::before {
+    content:''; display:block; width:8px; height:8px;
+    background:#3a3a3a; border-radius:50%; margin:0 auto 10px;
+  }
+  .screen { background:#fff; border-radius:4px 4px 0 0; overflow:hidden; width:100%; aspect-ratio:16/10; }
+  .screen img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+  .chin { background:linear-gradient(180deg,#2a2a2a,#1a1a1a); height:22px; border-radius:0 0 4px 4px; }
+  .hinge { background:linear-gradient(180deg,#2a2a2a,#303030); height:6px; }
+  .base { background:linear-gradient(180deg,#d0d0d0,#b8b8b8); height:18px; border-radius:0 0 10px 10px;
+          box-shadow:0 8px 24px rgba(0,0,0,0.3); }
+  .base::after { content:''; display:block; width:200px; height:6px; background:#a0a0a0;
+                 border-radius:0 0 4px 4px; margin:0 auto; }
+</style></head><body>
+  <div class="laptop">
+    <div class="screen-bezel">
+      <div class="screen"><img src="data:image/png;base64,${appBase64}"/></div>
+      <div class="chin"></div>
+    </div>
+    <div class="hinge"></div><div class="base"></div>
+  </div>
+</body></html>`;
+
+const GRADIENT = 'linear-gradient(135deg, #f97794 0%, #c471ed 50%, #f64f59 100%)';
+
+// Hero: 1400×900, laptop 860px wide
+const heroHtml = makeHtml(1400, 900, 860, GRADIENT);
+writeFileSync(`${TMP}\\mockup_hero.html`, heroHtml);
+const heroCtx = await browser.newContext({ viewport: { width: 1400, height: 900 } });
+const heroPage = await heroCtx.newPage();
+await heroPage.goto(`file:///${TMP.replace(/\\/g,'/')}/mockup_hero.html`, { waitUntil: 'load' });
+await heroPage.waitForTimeout(500);
+const heroRaw = `${TMP}\\hero_raw.png`;
+await heroPage.screenshot({ path: heroRaw });
+await heroCtx.close();
+execFileSync(ffmpegPath, ['-y','-i',heroRaw,'-update','1','-q:v','2', `${OUT}\\<slug>-hero.jpg`]);
+
+// Thumbnail: 1000×1000 → 800×800
+const thumbHtml = makeHtml(1000, 1000, 620, GRADIENT);
+writeFileSync(`${TMP}\\mockup_thumb.html`, thumbHtml);
+const thumbCtx = await browser.newContext({ viewport: { width: 1000, height: 1000 } });
+const thumbPage = await thumbCtx.newPage();
+await thumbPage.goto(`file:///${TMP.replace(/\\/g,'/')}/mockup_thumb.html`, { waitUntil: 'load' });
+await thumbPage.waitForTimeout(500);
+const thumbRaw = `${TMP}\\thumb_raw.png`;
+await thumbPage.screenshot({ path: thumbRaw });
+await thumbCtx.close();
+execFileSync(ffmpegPath, ['-y','-i',thumbRaw,'-update','1','-vf','scale=800:800:flags=lanczos','-q:v','2', `${OUT}\\<slug>-thumbnail.jpg`]);
 
 await browser.close();
+console.log('Hero and thumbnail done.');
 ```
-
-**Always close the context BEFORE calling `toGif`** — closing the context finalizes the `.webm` file. Calling ffmpeg on an open/unfinished webm produces a corrupted GIF.
 
 ### Verify GIFs are full-width
 
 Extract frame 10 and read it visually before committing:
 ```js
-execFileSync(ffmpegPath, ['-y', '-i', `${IMG}\\home.gif`, '-vf', 'select=eq(n\\,10)', '-vframes', '1', 'frame10.png']);
+execFileSync(ffmpegPath, ['-y', '-i', `${IMG}\\home.gif`, '-vf', 'select=eq(n\\,10)', '-vframes', '1', '-update', '1', 'frame10.png']);
 // Read frame10.png — if content fills the full width, proceed. If gray sides appear, re-check viewport.
 ```
 
@@ -296,7 +379,7 @@ If the project has a live URL or GitHub repo, also add a `PrimaryButton` block k
 ## Phase 6 — Build + validate
 
 ```bash
-cd "C:\Users\kaihuang\OneDrive - Capgemini\Desktop\website"
+cd "c:\Users\kaixi\OneDrive\桌面\website\kaixiangkh7.github.io"
 npm run build   # must pass; clears .next first if stale: rm -rf .next
 ```
 
@@ -327,7 +410,7 @@ Use Playwright to screenshot `/projects/project-N` and compare against an existi
 ## Phase 7 — Commit
 
 ```bash
-cd "C:\Users\kaihuang\OneDrive - Capgemini\Desktop\website"
+cd "c:\Users\kaixi\OneDrive\桌面\website\kaixiangkh7.github.io"
 git add lib/projects-data.ts components/project-layout.tsx app/page.tsx \
   "app/projects/[slug]/page.tsx" public/images/<slug>/
 git commit -m "Add <ProjectName> as project-N"
@@ -343,7 +426,7 @@ Do NOT push — leave that to the user.
 |---|---|---|
 | Gray margins in GIF | Viewport too wide for app max-width | Use 1280px viewport |
 | GIF shows blank first frame | Screenshot taken before page rendered | Increase `waitForTimeout` before recording |
-| GIF is corrupted/empty | webm finalized after ffmpeg called | Always close Playwright context BEFORE calling `toGif` |
+| GIF is blank/white | headless Chromium `recordVideo` doesn't capture | Use frame-by-frame `page.screenshot()` + ffmpeg stitch instead |
 | `pages-manifest.json` error on dev server | Stale `.next` cache | `rm -rf .next` then restart |
 | `EADDRINUSE` on port | Prior server process still running | `pkill -f "next dev"` then use a new port |
 | GIF over 9MB | Map/chart content with high color variation | Drop fps to 5, colors to 128, width to 1100px |
