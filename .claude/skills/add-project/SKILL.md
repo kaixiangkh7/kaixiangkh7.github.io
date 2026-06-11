@@ -163,14 +163,29 @@ If a GIF exceeds 9 MB, drop fps by 2 or colors by half and re-stitch from the sa
 3. **Interactive element** — chart, slider, filter, or any interaction that shows the product working
 4. **Settings/config/drawer** — assumptions panel, profile editor, or secondary flow
 
-### Hero & thumbnail — CSS laptop mockup on gradient background
+### Hero & thumbnail — detect app type, then apply the right frame
 
-Hero and thumbnail use a CSS-rendered laptop mockup (black bezel, camera dot, silver base) placed on a colored gradient background. This gives the same polished look as the other portfolio projects.
+Before generating hero/thumbnail, **determine whether the app is a web app or a mobile app**:
+
+| Signal | App type |
+|---|---|
+| GIF viewport width ≥ 800px | **Web app** → laptop mockup |
+| GIF viewport width ≤ 500px | **Mobile app** → phone mockup |
+| App has bottom nav, max-width ≤ 600px, or portrait layout | **Mobile app** → phone mockup |
+| App fills full browser width at 1280px | **Web app** → laptop mockup |
+
+Quick check: capture a screenshot at 1280×800. If the content is a narrow centered column (phone-like), it's a mobile app. If it fills the width, it's a web app.
 
 **Choose a gradient that complements the project's brand colors:**
 - Pink/red product → `linear-gradient(135deg, #f97794 0%, #c471ed 50%, #f64f59 100%)`
 - Orange/warm product → `linear-gradient(135deg, #f6a623 0%, #f97794 50%, #f64f59 100%)`
-- Blue/teal product → `linear-gradient(135deg, #667eea 0%, #764ba2 50%, #6b8dd6 100%)`
+- Blue/teal product → `linear-gradient(135deg, #667eea 0%, #764ba2 50%, #e0417a 100%)`
+
+---
+
+#### Option A — Web app: CSS laptop mockup
+
+Screenshot the app at `{ width: 1440, height: 900 }`. Place it inside a laptop frame.
 
 **Script pattern** (`capture_<slug>_mockup.mjs`):
 
@@ -265,6 +280,59 @@ execFileSync(ffmpegPath, ['-y','-i',thumbRaw,'-update','1','-vf','scale=800:800:
 await browser.close();
 console.log('Hero and thumbnail done.');
 ```
+
+---
+
+#### Option B — Mobile app: CSS phone mockup
+
+Screenshot the app at the **same mobile viewport used for GIFs** (e.g. `{ width: 448, height: 900 }`). Place it inside a phone frame. The portrait phone sits naturally centered on the landscape hero canvas.
+
+```js
+const appCtx = await browser.newContext({ viewport: { width: 448, height: 900 } });
+// ... screenshot to rawShot ...
+const appBase64 = readFileSync(rawShot).toString('base64');
+
+// phoneW controls the rendered phone width; all radii scale proportionally
+const makePhoneHtml = (canvasW, canvasH, phoneW, gradient) => `<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:${canvasW}px; height:${canvasH}px; background:${gradient};
+         display:flex; align-items:center; justify-content:center; }
+  .phone {
+    width:${phoneW}px; background:#111;
+    border-radius:${Math.round(phoneW*0.155)}px;
+    padding:${Math.round(phoneW*0.052)}px;
+    box-shadow:0 0 0 2px #333, 0 0 0 4px #222, 0 40px 80px rgba(0,0,0,0.55);
+    position:relative;
+  }
+  .phone::before {
+    content:''; position:absolute;
+    top:${Math.round(phoneW*0.067)}px; left:50%; transform:translateX(-50%);
+    width:${Math.round(phoneW*0.296)}px; height:${Math.round(phoneW*0.096)}px;
+    background:#000; border-radius:${Math.round(phoneW*0.048)}px; z-index:2;
+  }
+  .screen { width:100%; aspect-ratio:448/900; border-radius:${Math.round(phoneW*0.111)}px; overflow:hidden; }
+  .screen img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+  .home { width:${Math.round(phoneW*0.333)}px; height:5px; background:rgba(255,255,255,0.3);
+          border-radius:3px; margin:${Math.round(phoneW*0.044)}px auto ${Math.round(phoneW*0.007)}px; }
+</style></head><body>
+  <div class="phone">
+    <div class="screen"><img src="data:image/png;base64,${appBase64}"/></div>
+    <div class="home"></div>
+  </div>
+</body></html>`;
+
+// Hero: 1400×900 canvas, phone 340px wide
+const heroHtml = makePhoneHtml(1400, 900, 340, GRADIENT);
+
+// Thumbnail: 1000×1000 canvas, phone 270px wide → scale to 800×800
+const thumbHtml = makePhoneHtml(1000, 1000, 270, GRADIENT);
+
+// Render + export using the same pattern as the laptop version above
+```
+
+---
 
 ### Verify GIFs are full-width
 
