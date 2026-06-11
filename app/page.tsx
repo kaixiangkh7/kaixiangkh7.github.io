@@ -28,18 +28,18 @@ export default function Home() {
           </div>
           <div className="container relative z-1 w-full">
             <div className="max-w-4xl text-white">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight font-light"> 
-                <span className="font-extralight">Data-Driven</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight font-light">
+                <span className="font-extralight">Enterprise AI</span>
                 <br className="hidden sm:block" />
-                <span className="font-extralight"> Product Manager</span>
-                <br /> 
-                <span className="font-extralight">with </span>
-                <span className="font-semibold">User-Centered</span>
+                <span className="font-extralight"> Practitioner</span>
+                <br />
+                <span className="font-extralight">who </span>
+                <span className="font-semibold">ships</span>
                 <br className="hidden sm:block" />
-                <span className="font-extralight"> Design Expertise</span>
+                <span className="font-extralight"> to production</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 font-light leading-relaxed max-w-3xl">
-              I combine 7 years of design experience with product strategy and AI/ML skills to create smart, data-driven products—from generative AI to computer vision—built with clean, user-first deisgn at the core.
+                I build enterprise AI systems that go live — not demos. At Capgemini Invent, I serve as product owner across end-to-end AI delivery for Fortune 500 clients, spanning conversational AI, agentic workflows, and cloud-native systems on GCP. Columbia MBA · MS Design.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <PrimaryButton asChild size="lg" rounded="full" className="px-6 sm:px-8">
@@ -70,12 +70,12 @@ export default function Home() {
                   <div className="w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-2xl shadow-xl">
                     <img
                       src={getImagePath("/images/profile/profile.jpg")}
-                      alt="Kaixiang Huang - AI Product Manager"
+                      alt="Kaixiang Huang - Enterprise AI Practitioner & Product Owner"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground py-4 px-6 rounded-lg shadow-lg">
-                    <span className="font-medium text-lg">PM | UX | AI</span>
+                    <span className="font-medium text-lg">AI | PO | Builder</span>
                   </div>
                   <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary rounded-lg opacity-20"></div>
                 </div>
@@ -84,36 +84,35 @@ export default function Home() {
                 <div>
                   <h4 className="text-primary font-semibold mb-2">About Me</h4>
                   <h2 className="text-4xl font-bold mb-4 leading-tight">
-                    Hi, I'm Kai – Product Manager <br /> with UX Design & Business Analytics Expertise
+                    Hi, I'm Kai — Enterprise AI Practitioner, <br /> Product Owner & Builder
                   </h2>
                   <p className="text-muted-foreground text-lg">
-                    <span className="font-medium">I hold dual Master's degrees from Columbia University: <br /></span>
-                    <span className="font-semibold"> MBA</span> – Business Analytics, AI/ML, Product Management<br />
-                    <span className="font-semibold"> MS</span> – Digital & Human-Centered Design, Digital Twin, Architectural Design
+                    <span className="font-medium">Dual Master's degrees from Columbia University: </span>
+                    <span className="font-semibold">MBA</span> (Business Analytics, AI/ML) and <span className="font-semibold">MS Design</span> — which means I can lead a requirements workshop in the morning and dig into production session logs in the afternoon.
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
-                    My unique background combines <span className="font-medium">7 years of design expertise</span>, <span className="font-medium">3 years of product management</span>, and <span className="font-medium">2 years of AI/ML and business analytics experience</span>. This rare combination allows me to bridge the gap between technical complexity and user needs.
+                    My background spans three domains that rarely overlap: <span className="font-medium">enterprise AI delivery</span>, <span className="font-medium">product ownership</span>, and <span className="font-medium">design strategy</span>. At Capgemini Invent, I serve as product owner across the full AI delivery lifecycle — from conversation design and stakeholder alignment to UAT and post-go-live QA — for Fortune 500 clients.
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
-                  I don't just strategize—I build. I run ML models, dive into data, talk to users, and design high-fidelity prototypes in Figma. This hands-on approach helps me work smoothly with cross-functional teams and ship products that are both technically sharp and truly user-centered.
+                    I don't just strategize — I build. From leading 772-case UAT test suites on production conversational AI systems to shipping agentic apps end-to-end with Claude Code, I work at the seam where enterprise AI strategy meets technical execution.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">3+</h3>
-                    <p className="text-muted-foreground text-sm font-light">AI/ML Products Launched</p>
+                    <h3 className="text-3xl font-bold text-primary mb-1">Fortune 500</h3>
+                    <p className="text-muted-foreground text-sm font-light">Enterprise AI Client</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">30+</h3>
-                    <p className="text-muted-foreground text-sm font-light">Digital Products Delivered</p>
+                    <h3 className="text-3xl font-bold text-primary mb-1">772</h3>
+                    <p className="text-muted-foreground text-sm font-light">UAT Test Cases Executed</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">7+</h3>
                     <p className="text-muted-foreground text-sm font-light">Years Experience</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">40+</h3>
-                    <p className="text-muted-foreground text-sm font-light">Data Analytics Projects</p>
+                    <h3 className="text-3xl font-bold text-primary mb-1">30+</h3>
+                    <p className="text-muted-foreground text-sm font-light">Products Shipped</p>
                   </div>
                 </div>
               </div>
