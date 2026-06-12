@@ -39,7 +39,7 @@ export default function Home() {
                 <span className="font-extralight"> to production</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 font-light leading-relaxed max-w-3xl">
-                I build enterprise AI systems that go live — not demos. At Capgemini Invent, I serve as product owner across end-to-end AI delivery for Fortune 500 clients, spanning conversational AI, agentic workflows, and cloud-native systems on GCP. Columbia MBA · MS Design.
+                I build enterprise AI systems that go live — not demos. At Capgemini Invent, I serve as product owner across end-to-end AI delivery for Fortune 500 clients, spanning conversational AI, agentic workflows, and cloud-native systems on Google Cloud. Columbia MBA · MS.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <PrimaryButton asChild size="lg" rounded="full" className="px-6 sm:px-8">
@@ -88,13 +88,13 @@ export default function Home() {
                   </h2>
                   <p className="text-muted-foreground text-lg">
                     <span className="font-medium">Dual Master's degrees from Columbia University: </span>
-                    <span className="font-semibold">MBA</span> (Business Analytics, AI/ML) and <span className="font-semibold">MS Design</span> — which means I can lead a requirements workshop in the morning and dig into production session logs in the afternoon.
+                    <span className="font-semibold">MBA</span> (Business Analytics, AI/ML) and <span className="font-semibold">MS</span> — which means I can lead a requirements workshop in the morning and dig into production session logs in the afternoon.
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
-                    My background spans three domains that rarely overlap: <span className="font-medium">enterprise AI delivery</span>, <span className="font-medium">product ownership</span>, and <span className="font-medium">design strategy</span>. At Capgemini Invent, I serve as product owner across the full AI delivery lifecycle — from conversation design and stakeholder alignment to UAT and post-go-live QA — for Fortune 500 clients.
+                    My background spans three domains that rarely overlap: <span className="font-medium">enterprise AI delivery</span>, <span className="font-medium">product ownership</span>, and <span className="font-medium">design strategy</span>. At Capgemini Invent, I serve as product owner across the full AI delivery lifecycle — from conversation design and stakeholder alignment through development, QA, and go-live to post-go-live production support — for Fortune 500 clients.
                   </p>
                   <p className="text-muted-foreground text-lg mt-4">
-                    I don't just strategize — I build. From leading 772-case UAT test suites on production conversational AI systems to shipping agentic apps end-to-end with Claude Code, I work at the seam where enterprise AI strategy meets technical execution.
+                    I don't just strategize — I build. From shipping production conversational AI systems to building agentic apps end-to-end with Claude Code, I work at the seam where enterprise AI strategy meets technical execution.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
@@ -103,8 +103,8 @@ export default function Home() {
                     <p className="text-muted-foreground text-sm font-light">Enterprise AI Client</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-1">772</h3>
-                    <p className="text-muted-foreground text-sm font-light">UAT Test Cases Executed</p>
+                    <h3 className="text-3xl font-bold text-primary mb-1">3+</h3>
+                    <p className="text-muted-foreground text-sm font-light">AI Systems Shipped</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl font-bold text-primary mb-1">7+</h3>
@@ -123,18 +123,18 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-24 relative bg-gray-50">
           <div className="container">
-            <h2 className="text-3xl font-semibold mb-12">Featured Product & Design Works</h2>
+            <h2 className="text-3xl font-semibold mb-12">Things I've Built</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
-                title="Tiny Handoff - AI-Native Childcare Coordination App"
-                description="Caregivers log daily care events via web or Telegram (text or voice) and an AI agent auto-generates handoff summaries for the next shift — no forms, no manual write-ups."
+                title="Tiny Handoff - AI Companion for Busy Parents"
+                description="Tiny is an AI companion you talk to like a friend — it listens, offers emotional support, automatically logs care events from your conversation, and surfaces sleep and feeding patterns. No forms. No extra logins. Just talk."
                 image="/images/tinyhandoff/tinyhandoff-thumbnail.jpg"
                 tags={["AI/ML", "Agentic Development", "OpenAI", "Telegram Bot", "Mobile Web", "TypeScript"]}
                 link="/projects/project-11"
               />
               <ProjectCard
-                title="Buy or Rent Advisor - AI-Native Real Estate Decision Engine"
-                description="Full-stack app built end-to-end by orchestrating Claude Code and Codex — FastAPI simulation engine, React frontend, 25K-ZIP Zillow ETL, Hermes Agent skills, and interactive metro map."
+                title="Buy or Rent Advisor - AI Real Estate Decision Engine"
+                description="Enter your ZIP code and financial situation — the AI agent pulls live Zillow market data, runs a personalized rent-vs-buy financial model, visualizes the results, and if you decide to buy, searches available listings. No finance degree required."
                 image="/images/buyorrent/buyorrent-thumbnail.jpg"
                 tags={["AI/ML", "Agentic Development", "FinTech", "Full-Stack", "Real Estate", "Web App"]}
                 link="/projects/project-10"
