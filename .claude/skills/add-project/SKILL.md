@@ -185,7 +185,7 @@ Quick check: capture a screenshot at 1280×800. If the content is a narrow cente
 
 #### Option A — Web app: CSS laptop mockup
 
-Screenshot the app at `{ width: 1440, height: 900 }`. Place it inside a laptop frame.
+Screenshot the app at `{ width: 1280, height: 800 }`. MacBook Pro-style frame: thin bezel with pill notch, silver base **wider than the screen** with 4 rubber feet (2 per side).
 
 **Script pattern** (`capture_<slug>_mockup.mjs`):
 
@@ -203,79 +203,78 @@ const TMP = 'C:\\Users\\kaixi\\AppData\\Local\\Temp\\capture_temp';
 const browser = await chromium.launch({ headless: true });
 
 // 1. Screenshot the app
-const appCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+const appCtx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
 const appPage = await appCtx.newPage();
 await appPage.goto('http://localhost:5173', { waitUntil: 'networkidle', timeout: 20000 });
 await appPage.waitForTimeout(2000);
-const rawShot = `${TMP}\\raw_app.png`;
-await appPage.screenshot({ path: rawShot, fullPage: false });
+await appPage.screenshot({ path: `${TMP}\\raw_app.png`, fullPage: false });
 await appCtx.close();
+const appBase64 = readFileSync(`${TMP}\\raw_app.png`).toString('base64');
 
-const appBase64 = readFileSync(rawShot).toString('base64');
-
-// 2. Build HTML: gradient bg + CSS laptop frame + app screenshot
-const makeHtml = (canvasW, canvasH, laptopW, gradient) => `<!DOCTYPE html>
+// 2. Build HTML: gradient bg + thin MacBook-style laptop frame
+const makeHtml = (canvasW, canvasH, laptopW, gradient) => {
+  const ext  = Math.round(laptopW * 0.055); // base overhang each side
+  const fW   = Math.round(laptopW * 0.044); // rubber foot width
+  const fGap = Math.round(laptopW * 0.052); // gap between 2 feet per side
+  return `<!DOCTYPE html>
 <html><head><meta charset="utf-8"/>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    width: ${canvasW}px; height: ${canvasH}px;
-    background: ${gradient};
-    display: flex; align-items: center; justify-content: center; overflow: hidden;
-  }
-  .laptop { width: ${laptopW}px; position: relative; }
-  .screen-bezel {
-    background: #1a1a1a; border-radius: 14px 14px 0 0;
-    padding: 18px 18px 0 18px;
-    box-shadow: 0 0 0 2px #3a3a3a, 0 30px 60px rgba(0,0,0,0.5);
-  }
-  .screen-bezel::before {
-    content:''; display:block; width:8px; height:8px;
-    background:#3a3a3a; border-radius:50%; margin:0 auto 10px;
-  }
-  .screen { background:#fff; border-radius:4px 4px 0 0; overflow:hidden; width:100%; aspect-ratio:16/10; }
+  body { width:${canvasW}px; height:${canvasH}px; background:${gradient};
+         display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .laptop { width:${laptopW}px; position:relative; }
+  .bezel { background:#111; border-radius:8px 8px 0 0; padding:20px 5px 0;
+    box-shadow:0 0 0 1px #2a2a2a,0 20px 50px rgba(0,0,0,0.45); position:relative; }
+  .bezel::before { content:''; position:absolute; top:7px; left:50%; transform:translateX(-50%);
+    width:50px; height:6px; background:#222; border-radius:3px; }
+  .screen { background:#000; border-radius:3px 3px 0 0; overflow:hidden; width:100%; aspect-ratio:16/10; }
   .screen img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
-  .chin { background:linear-gradient(180deg,#2a2a2a,#1a1a1a); height:22px; border-radius:0 0 4px 4px; }
-  .hinge { background:linear-gradient(180deg,#2a2a2a,#303030); height:6px; }
-  .base { background:linear-gradient(180deg,#d0d0d0,#b8b8b8); height:18px; border-radius:0 0 10px 10px;
-          box-shadow:0 8px 24px rgba(0,0,0,0.3); }
-  .base::after { content:''; display:block; width:200px; height:6px; background:#a0a0a0;
-                 border-radius:0 0 4px 4px; margin:0 auto; }
+  .chin { background:#111; height:6px; }
+  .hinge { background:linear-gradient(180deg,#1a1a1a,#252525); height:3px; }
+  .base { background:linear-gradient(180deg,#c8c8c8,#b0b0b0); height:12px;
+    width:calc(100% + ${ext*2}px); margin-left:-${ext}px;
+    border-radius:0 0 8px 8px; box-shadow:0 6px 18px rgba(0,0,0,0.25); position:relative; }
+  .base::after { content:''; position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+    width:${Math.round(laptopW*0.2)}px; height:4px; background:#9a9a9a; border-radius:0 0 3px 3px; }
+  .feet { width:calc(100% + ${ext*2}px); margin-left:-${ext}px; height:4px; position:relative; }
+  .feet::before { content:''; position:absolute; bottom:0; left:${Math.round(ext*0.5)}px;
+    width:${fW}px; height:4px; background:#888; border-radius:0 0 2px 2px; box-shadow:${fGap}px 0 0 #888; }
+  .feet::after { content:''; position:absolute; bottom:0; right:${Math.round(ext*0.5)}px;
+    width:${fW}px; height:4px; background:#888; border-radius:0 0 2px 2px; box-shadow:-${fGap}px 0 0 #888; }
 </style></head><body>
   <div class="laptop">
-    <div class="screen-bezel">
+    <div class="bezel">
       <div class="screen"><img src="data:image/png;base64,${appBase64}"/></div>
       <div class="chin"></div>
     </div>
-    <div class="hinge"></div><div class="base"></div>
+    <div class="hinge"></div>
+    <div class="base"></div>
+    <div class="feet"></div>
   </div>
 </body></html>`;
+};
 
 const GRADIENT = 'linear-gradient(135deg, #f97794 0%, #c471ed 50%, #f64f59 100%)';
 
-// Hero: 1400×900, laptop 860px wide
-const heroHtml = makeHtml(1400, 900, 860, GRADIENT);
-writeFileSync(`${TMP}\\mockup_hero.html`, heroHtml);
+// Hero: 1400×900, laptop 760px wide
+writeFileSync(`${TMP}\\mockup_hero.html`, makeHtml(1400, 900, 760, GRADIENT));
 const heroCtx = await browser.newContext({ viewport: { width: 1400, height: 900 } });
 const heroPage = await heroCtx.newPage();
 await heroPage.goto(`file:///${TMP.replace(/\\/g,'/')}/mockup_hero.html`, { waitUntil: 'load' });
-await heroPage.waitForTimeout(500);
-const heroRaw = `${TMP}\\hero_raw.png`;
-await heroPage.screenshot({ path: heroRaw });
+await heroPage.waitForTimeout(300);
+await heroPage.screenshot({ path: `${TMP}\\hero_raw.png` });
 await heroCtx.close();
-execFileSync(ffmpegPath, ['-y','-i',heroRaw,'-update','1','-q:v','2', `${OUT}\\<slug>-hero.jpg`]);
+execFileSync(ffmpegPath, ['-y','-i',`${TMP}\\hero_raw.png`,'-update','1','-q:v','2', `${OUT}\\<slug>-hero.jpg`]);
 
-// Thumbnail: 1000×1000 → 800×800
-const thumbHtml = makeHtml(1000, 1000, 620, GRADIENT);
-writeFileSync(`${TMP}\\mockup_thumb.html`, thumbHtml);
+// Thumbnail: 1000×1000 → 800×800, laptop 480px wide
+writeFileSync(`${TMP}\\mockup_thumb.html`, makeHtml(1000, 1000, 480, GRADIENT));
 const thumbCtx = await browser.newContext({ viewport: { width: 1000, height: 1000 } });
 const thumbPage = await thumbCtx.newPage();
 await thumbPage.goto(`file:///${TMP.replace(/\\/g,'/')}/mockup_thumb.html`, { waitUntil: 'load' });
-await thumbPage.waitForTimeout(500);
-const thumbRaw = `${TMP}\\thumb_raw.png`;
-await thumbPage.screenshot({ path: thumbRaw });
+await thumbPage.waitForTimeout(300);
+await thumbPage.screenshot({ path: `${TMP}\\thumb_raw.png` });
 await thumbCtx.close();
-execFileSync(ffmpegPath, ['-y','-i',thumbRaw,'-update','1','-vf','scale=800:800:flags=lanczos','-q:v','2', `${OUT}\\<slug>-thumbnail.jpg`]);
+execFileSync(ffmpegPath, ['-y','-i',`${TMP}\\thumb_raw.png`,'-update','1','-vf','scale=800:800:flags=lanczos','-q:v','2', `${OUT}\\<slug>-thumbnail.jpg`]);
 
 await browser.close();
 console.log('Hero and thumbnail done.');
@@ -283,54 +282,83 @@ console.log('Hero and thumbnail done.');
 
 ---
 
-#### Option B — Mobile app: CSS phone mockup
+#### Option B — Mobile app: 3-phone CSS mockup
 
-Screenshot the app at the **same mobile viewport used for GIFs** (e.g. `{ width: 448, height: 900 }`). Place it inside a phone frame. The portrait phone sits naturally centered on the landscape hero canvas.
+Capture **3 distinct screens** (e.g. home, list/timeline, detail/settings). Show them side-by-side in a phone triptych — same pattern as Athena. Thumbnail: 3 phones centered. Hero: 3 phones grouped to the right (left side open).
+
+Screenshot each screen at the **same mobile viewport used for GIFs** (e.g. `{ width: 448, height: 900 }`).
 
 ```js
-const appCtx = await browser.newContext({ viewport: { width: 448, height: 900 } });
-// ... screenshot to rawShot ...
-const appBase64 = readFileSync(rawShot).toString('base64');
+// Capture 3 screens by navigating through the app
+const thCtx = await browser.newContext({ viewport: { width: 448, height: 900 } });
+const thPage = await thCtx.newPage();
+await thPage.goto('http://localhost:3000', { waitUntil: 'networkidle', timeout: 20000 });
+await thPage.waitForTimeout(2000);
+await thPage.screenshot({ path: `${TMP}\\screen1.png` });   // screen 1 (home/default)
 
-// phoneW controls the rendered phone width; all radii scale proportionally
-const makePhoneHtml = (canvasW, canvasH, phoneW, gradient) => `<!DOCTYPE html>
-<html><head><meta charset="utf-8"/>
+await thPage.click('text=<Tab2Label>');                      // navigate to screen 2
+await thPage.waitForTimeout(1000);
+await thPage.screenshot({ path: `${TMP}\\screen2.png` });
+
+await thPage.click('text=<Tab3Label>');                      // navigate to screen 3
+await thPage.waitForTimeout(1000);
+await thPage.screenshot({ path: `${TMP}\\screen3.png` });
+
+await thCtx.close();
+const b1 = readFileSync(`${TMP}\\screen1.png`).toString('base64');
+const b2 = readFileSync(`${TMP}\\screen2.png`).toString('base64');
+const b3 = readFileSync(`${TMP}\\screen3.png`).toString('base64');
+
+// 3-phone triptych — thin bezel, pill notch, proportional radii
+// align='center': thumbnail (phones centered on square canvas)
+// align='right':  hero (phones grouped right, left side open)
+const makePhoneTriple = (cW, cH, pW, b1, b2, b3, gradient, align = 'center') => {
+  const r   = Math.round(pW * 0.10);
+  const p   = Math.round(pW * 0.026);
+  const ni  = Math.round(pW * 0.067);
+  const nw  = Math.round(pW * 0.24);
+  const nh  = Math.round(pW * 0.075);
+  const nr  = Math.round(pW * 0.038);
+  const sr  = Math.round(pW * 0.08);
+  const hw  = Math.round(pW * 0.28);
+  const hm  = Math.round(pW * 0.035);
+  const gap = Math.round(pW * 0.075);
+  const phone = (b64) => `<div class="phone"><div class="screen"><img src="data:image/png;base64,${b64}"/></div><div class="home"></div></div>`;
+  const rowStyle = align === 'right'
+    ? `position:absolute;right:30px;top:50%;transform:translateY(-50%);display:flex;gap:${gap}px;align-items:center;`
+    : `display:flex;gap:${gap}px;align-items:center;`;
+  const bodyStyle = align === 'right'
+    ? `width:${cW}px;height:${cH}px;background:${gradient};position:relative;`
+    : `width:${cW}px;height:${cH}px;background:${gradient};display:flex;align-items:center;justify-content:center;`;
+  return `<!DOCTYPE html><html><head><meta charset="utf-8"/>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { width:${canvasW}px; height:${canvasH}px; background:${gradient};
-         display:flex; align-items:center; justify-content:center; }
-  .phone {
-    width:${phoneW}px; background:#111;
-    border-radius:${Math.round(phoneW*0.155)}px;
-    padding:${Math.round(phoneW*0.052)}px;
-    box-shadow:0 0 0 2px #333, 0 0 0 4px #222, 0 40px 80px rgba(0,0,0,0.55);
-    position:relative;
-  }
-  .phone::before {
-    content:''; position:absolute;
-    top:${Math.round(phoneW*0.067)}px; left:50%; transform:translateX(-50%);
-    width:${Math.round(phoneW*0.296)}px; height:${Math.round(phoneW*0.096)}px;
-    background:#000; border-radius:${Math.round(phoneW*0.048)}px; z-index:2;
-  }
-  .screen { width:100%; aspect-ratio:448/900; border-radius:${Math.round(phoneW*0.111)}px; overflow:hidden; }
-  .screen img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
-  .home { width:${Math.round(phoneW*0.333)}px; height:5px; background:rgba(255,255,255,0.3);
-          border-radius:3px; margin:${Math.round(phoneW*0.044)}px auto ${Math.round(phoneW*0.007)}px; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{${bodyStyle}}
+  .phone{width:${pW}px;background:#111;border-radius:${r}px;padding:${p}px;
+    box-shadow:0 0 0 1px #2a2a2a,0 0 0 2px #1a1a1a,0 30px 60px rgba(0,0,0,0.5);
+    position:relative;flex-shrink:0;}
+  .phone::before{content:'';position:absolute;top:${ni}px;left:50%;transform:translateX(-50%);
+    width:${nw}px;height:${nh}px;background:#000;border-radius:${nr}px;z-index:2;}
+  .screen{width:100%;aspect-ratio:448/900;border-radius:${sr}px;overflow:hidden;}
+  .screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+  .home{width:${hw}px;height:4px;background:rgba(255,255,255,0.25);border-radius:2px;margin:${hm}px auto 2px;}
 </style></head><body>
-  <div class="phone">
-    <div class="screen"><img src="data:image/png;base64,${appBase64}"/></div>
-    <div class="home"></div>
-  </div>
+  <div style="${rowStyle}">${phone(b1)}${phone(b2)}${phone(b3)}</div>
 </body></html>`;
+};
 
-// Hero: 1400×900 canvas, phone 340px wide
-const heroHtml = makePhoneHtml(1400, 900, 340, GRADIENT);
+const GRADIENT = 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #e0417a 100%)';
 
-// Thumbnail: 1000×1000 canvas, phone 270px wide → scale to 800×800
-const thumbHtml = makePhoneHtml(1000, 1000, 270, GRADIENT);
+// Thumbnail: 1000×1000, 3 phones at 220px each, centered
+writeFileSync(`${TMP}\\th_thumb.html`, makePhoneTriple(1000, 1000, 220, b1, b2, b3, GRADIENT, 'center'));
+// ... render + ffmpeg scale=800:800 → <slug>-thumbnail.jpg
 
-// Render + export using the same pattern as the laptop version above
+// Hero: 1400×900, 3 phones at 170px each, right-aligned
+writeFileSync(`${TMP}\\th_hero.html`, makePhoneTriple(1400, 900, 170, b1, b2, b3, GRADIENT, 'right'));
+// ... render + ffmpeg → <slug>-hero.jpg
 ```
+
+**Which screens to capture:** Pick 3 tabs/views that each show distinct, populated content. Avoid empty states. If a tab requires a filter change to show data (e.g. "Last 7 days"), click it before screenshotting.
 
 ---
 
