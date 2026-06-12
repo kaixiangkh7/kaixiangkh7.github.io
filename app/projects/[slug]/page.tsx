@@ -96,6 +96,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     </ul>
                   </div>
 
+                  {project.tools && project.tools.length > 0 && (
+                    <div>
+                      <h2 className="text-2xl font-normal mb-4 text-primary">Tools Used</h2>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tools.map((tool) => (
+                          <span key={tool} className="px-3 py-1 text-sm border border-border/50 hover:border-primary hover:text-primary hover:scale-105 transition-all duration-300">
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {/* Project Image Layouts */}
                   <ProjectImageLayout 
                     projectSlug={slug}

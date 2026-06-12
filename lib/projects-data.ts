@@ -11,6 +11,7 @@ export interface ProjectData {
   features: string[]
   outcome: string
   images: string[]
+  tools?: string[]
   team?: string[]
 }
 
@@ -43,6 +44,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/fitness/leadership_animation.gif",
 
     ],
+    tools: ["Claude Code", "Codex"],
   },
   "project-2": {
     title: "Amazon AlphaHire - Enterprise Recruitment AI",
@@ -73,9 +75,10 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/amazon/dashboard.gif",
       "/images/amazon/recruitor.gif",
     ],
+    tools: ["Claude Code", "Codex", "Figma"],
     team: [
       "Peter Schwartz",
-      "Vinayak Mahbubani", 
+      "Vinayak Mahbubani",
       "Aniket Deshpande"
     ],
   },
@@ -107,6 +110,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/ai_coach/workout.jpg",
       "/images/ai_coach/leaderboard.jpg",
     ],
+    tools: ["Figma", "TensorFlow", "Computer Vision API", "Adobe Creative Cloud"],
   },
   "project-4": {
     title: "Revive - Smart Itinerary & Lifestyle Intelligence",
@@ -137,6 +141,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/travel/iphone_your_trip.png",
       "/images/travel/mac_selection.png",
     ],
+    tools: ["Claude Code", "Codex"],
   },
   "project-5": {
     title: "FlexIt - Fitness SaaS Solution",
@@ -164,6 +169,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/flexit/web_mainpage.gif",
       "/images/flexit/web_mainpage_2.gif",
     ],
+    tools: ["Figma"],
   },
   "project-6": {
     title: "Athena - Social & Dating Platform",
@@ -195,6 +201,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/athena/community.gif",
       "/images/athena/subscription.gif",
     ],
+    tools: ["Figma"],
   },
   "project-7": {
     title: "Z Lounge - Luxury Waitlist Experience",
@@ -222,6 +229,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/z_lounge/waitlist.gif",
       "/images/z_lounge/About.jpg",
     ],
+    tools: ["Figma"],
   },
   "project-8": {
     title: "X Club - Luxury Spa & Dining Experience",
@@ -251,6 +259,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/x_club/subscription.gif",
       "/images/x_club/xclub-thumbnail.jpg",
     ],
+    tools: ["Figma"],
   },
   "project-9": {
     title: "prep.cafe - AI Interview Prep Platform",
@@ -280,6 +289,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/mocha/dashboard.gif",
       "/images/mocha/mock.gif",
     ],
+    tools: ["Cursor"],
     team: [
       "George Sun",
       "Stacey Ou",
@@ -287,25 +297,25 @@ export const projectsData: Record<string, ProjectData> = {
     ],
   },
   "project-10": {
-    title: "Buy or Rent Advisor - AI-Native Real Estate Decision Engine",
+    title: "Buy or Rent Advisor - AI Real Estate Decision Engine",
     client: "Personal Project",
     date: "June 2026",
     role: "AI-Native Developer & Product Manager",
     tags: ["AI/ML", "Agentic Development", "FinTech", "Full-Stack", "Real Estate", "Web App"],
-    overview: "A full-stack financial intelligence tool built end-to-end by orchestrating Claude Code and Codex as coding agents — architecting a FastAPI simulation engine, a React/TypeScript frontend, and a Zillow ETL pipeline without writing a single line of boilerplate by hand. The product itself also ships AI natively: Hermes Agent tool-calling skills and a natural-language AdvisorMode make it queryable by other AI systems.",
-    problemSpace: "Most rent-vs-buy calculators use national averages and ignore the compounding effects of equity growth, opportunity cost, and local market dynamics — causing 63% of first-time buyers to underestimate the true cost of ownership within their first 5 years (NAR, 2024). Beyond the product gap, this project explored a deeper question: can a solo developer use AI coding agents to ship a production-quality full-stack app — complete with a financial model, live data pipeline, REST API, and AI integrations — in a fraction of the traditional timeline?",
+    overview: "An AI-powered tool that helps everyday people — not financial experts — make a sound rent-vs-buy decision in their city. Enter a ZIP code and your financial situation; the agent handles everything else: pulling live market data, running a personalized financial model, visualizing the tradeoffs, and searching available listings if you decide to buy.",
+    problemSpace: "In cities like New York and San Francisco, both buying and renting have become extraordinarily expensive — and the people who need help most are those right at the threshold of affordability. They could technically afford a mortgage, but they don't have the financial background to know if it actually makes sense versus continuing to rent. Generic online calculators use national averages and ignore local market realities, leaving this group without a reliable way to make one of the most consequential financial decisions of their lives.",
     process: [
-      "Directed Claude Code (via CLAUDE.md-driven agentic sessions) to scaffold and iterate the entire FastAPI backend — including the NYT-style 30-year buy-vs-rent simulation engine (14 financial variables, amortized mortgage, equity tracking, investment return modeling), SQLite data layer, Pydantic schemas, rate-limiting middleware, and pytest test suite — reviewing diffs and steering direction rather than writing implementation code.",
-      "Used Codex in parallel for frontend generation: prompting component-level TypeScript interfaces, the Recharts cost-over-time chart, the 16-input AssumptionsDrawer, and the AdvisorMode natural-language parser — then integrating, type-checking, and composing the agent outputs into a coherent React/TypeScript app with full type safety.",
-      "Integrated Zillow Research ZHVI and ZORI datasets (150 MB, updated monthly) into a SQLite backend via an AI-generated ETL script covering 25,000+ US ZIP codes, and wired up the Hermes Agent skill layer so the calculation engine and market snapshot are callable by external AI systems via natural-language queries.",
+      "Designed the product around a single user input — ZIP code — so that the agent takes on all the complexity. It fetches live median home prices and rent data from Zillow for that exact market, then walks the user through their personal financial assumptions (down payment, expected interest rate, how long they plan to stay) before running the model.",
+      "Built a 30-year financial simulation engine that models mortgage amortization, equity accumulation, opportunity cost of the down payment, and rent escalation side by side — then renders the result as a clear visual showing when buying breaks even against renting under the user's specific conditions.",
+      "Added a listing search layer so users who get a 'buy' recommendation can immediately see available properties in their ZIP that fit their budget — closing the gap between financial decision and action in one product flow.",
     ],
-    jobToBeDone: "As a prospective homebuyer evaluating options in a specific city, I want a data-driven financial model that accounts for local home prices, rent, taxes, and investment tradeoffs, so that I can make a confident housing decision — and as an AI developer, I want to validate that agentic coding workflows can produce production-quality full-stack software without manual boilerplate.",
+    jobToBeDone: "As someone considering whether to buy or rent in an expensive city, without a deep financial background, I want a tool that uses real local market data and my actual financial situation to tell me which option makes more sense — and show me why — so that I can make a confident, informed decision without needing a financial advisor.",
     features: [
-      "Hermes Agent tool-calling integration: the financial simulation and ZIP market snapshot are registered as AI-callable skills, enabling external agents to query 'Should I buy in 94110 if I plan to stay 5 years?' and receive a structured verdict with full year-by-year cost breakdown",
-      "Natural-language AdvisorMode: users describe their housing scenario in plain English and the app parses it into the 14 assumption parameters — bridging conversational AI and quantitative financial modeling in a single UX flow",
-      "Metro VerdictMap: an interactive map color-codes every ZIP in the metro by breakeven year under current assumptions, turning a single-ZIP verdict into a geographic market intelligence layer that reveals where buying becomes financially viable across an entire region",
+      "ZIP-based market intelligence: the agent fetches live Zillow median home prices and rent data for your exact market — no national averages, no guesswork, real numbers for where you actually live",
+      "Personalized rent-vs-buy model: input your down payment, expected interest rate, and how long you plan to stay — the agent runs a full 30-year financial simulation and generates a clear visual showing when buying breaks even against renting under your specific conditions",
+      "From decision to action: if the model says buy, the agent searches available listings in your ZIP that match your budget — so you go from financial clarity to browsing real options without leaving the product",
     ],
-    outcome: "Shipped a production-quality full-stack app — FastAPI backend, React/TypeScript frontend, 25K-ZIP Zillow data pipeline, REST API, AI agent skills, and interactive map — by directing Claude Code and Codex rather than writing implementation code, proving that an AI-native development workflow can compress solo full-stack delivery from weeks to days. The finished product answers buy-vs-rent for any US ZIP in under 3 seconds and is queryable by other AI systems at scale.",
+    outcome: "A financial decision tool that democratizes advice previously locked behind a financial advisor — anyone can enter a ZIP code and their situation and get a data-driven, locally accurate rent-vs-buy verdict in under 3 seconds, with the visualization and listing search to act on it immediately.",
     images: [
       "/images/buyorrent/buyorrent-hero.jpg",
       "/images/buyorrent/home.gif",
@@ -313,27 +323,28 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/buyorrent/chart.gif",
       "/images/buyorrent/assumptions.gif",
     ],
+    tools: ["Claude Code", "Codex"],
   },
   "project-11": {
-    title: "Tiny Handoff - AI-Native Childcare Coordination App",
+    title: "Tiny Handoff - AI Companion for Busy Parents",
     client: "Personal Project",
     date: "June 2026",
     role: "AI-Native Developer & Product Designer",
     tags: ["AI/ML", "Agentic Development", "OpenAI", "Telegram Bot", "Mobile Web", "TypeScript"],
-    overview: "A shared childcare coordination app where caregivers log daily care events via a web dashboard or Telegram — typing or speaking — and an AI agent classifies inputs, extracts structured care logs, and auto-generates handoff summaries for the next caregiver.",
-    problemSpace: "Parents and caregivers coordinating across shifts struggle to maintain consistent care records. Manual logging apps create friction at exactly the moments caregivers are most fatigued — holding a fussy toddler or feeding a baby at 2 AM. Critical information (last feed, nap duration, mood, medication) gets lost between shifts, causing anxiety and inconsistent care for the child.",
+    overview: "Tiny is an AI companion that lets exhausted parents talk naturally — no forms, no extra logins. It listens like a trusted friend, provides emotional support, automatically detects and logs care events from the conversation, and surfaces sleep and feeding patterns over time.",
+    problemSpace: "Parents are perpetually exhausted and stretched thin. The last thing they need is another app requiring deliberate data entry — yet the information about their child's day (last nap, what they ate, how they're feeling) is genuinely valuable for continuity of care and spotting developmental patterns. Traditional care apps demand parents stop, open the app, and fill out a form at exactly the moment they have no free hands and no mental bandwidth. The result: the data never gets captured, and the insights it could generate are lost.",
     process: [
-      "Built the AI agent layer using OpenAI structured outputs (json_schema strict mode) to classify any free-text input as log, ask, or clarify and extract typed CareEvent objects — with a rule-based fallback chain in lib/utils.ts ensuring the app never surfaces a broken state if the API fails.",
-      "Implemented a Telegram gateway (long-polling + webhook) with OpenAI Whisper voice transcription so caregivers can log updates by voice while their hands are occupied — the agent processes the transcription identically to typed input, making the input modality invisible to the core logic.",
-      "Designed memory auto-detection that scans saved events for behavioral patterns (sleep regression, food aversion, feeding frequency changes) and proposes new memory entries for caregiver confirmation, turning raw logs into a growing knowledge base about the child.",
+      "Designed Tiny as a single conversational interface that handles three jobs simultaneously — emotional support and parenting advice, automatic care event detection from natural language, and pattern analysis — so parents never need to switch modes or think about what the app is 'supposed to do with' what they just said.",
+      "Built the agent to infer and log care events invisibly from natural conversation: a parent saying 'she finally fell asleep after a rough hour' triggers a nap log with inferred start time — no explicit command required. Voice input via Telegram means logging is possible at 2 AM with one hand.",
+      "Layered pattern intelligence on top of accumulated logs — sleep regressions, feeding frequency shifts, mood trends — surfacing observations proactively so parents discover patterns they would never have noticed from memory alone.",
     ],
-    jobToBeDone: "As a caregiver handing off childcare to a partner or nanny, I want a frictionless way to log care events and receive an AI-generated handoff summary, so that the next caregiver arrives fully briefed without me drafting a manual update from scratch.",
+    jobToBeDone: "As an exhausted parent with no time for another form or login, I want to just talk to an AI like I'd talk to a trusted friend — telling it how my child's day went — and have it automatically log what matters, give me a moment of support, and tell me if there are patterns I should pay attention to, so that I can stay informed about my child's wellbeing without adding to my mental load.",
     features: [
-      "AI event agent: any free-text or voice message is classified as log, question, or clarification, then decomposed into typed CareEvent objects (feeding, nap, mood, health) — eliminating form-filling entirely in favor of natural language input",
-      "Telegram voice gateway: caregivers speak a care update while their hands are full, the app transcribes via OpenAI Whisper and routes through the AI agent, replying with a warm conversational confirmation — making logging possible at 2 AM with one hand",
-      "Auto-generated shift handoff summaries: the Handoff tab compiles the day's CareEvents into a readable briefing covering last feed, nap duration, mood trend, and health flags — with AI-written copy that reads like a message from a caregiver, not a database export",
+      "Tiny, your AI companion: talk naturally about your child's day and Tiny listens — offering emotional support, answering parenting questions, and handling all the logging and analysis invisibly in the background",
+      "Zero-effort care logging: mention that your baby just fell asleep or finished lunch and Tiny logs it automatically — no form, no deliberate command, no context switching at the worst possible moment",
+      "Pattern intelligence: with every conversation, Tiny builds a picture of your child's routines — proactively surfacing sleep patterns, feeding trends, and behavioral shifts before you'd notice them yourself",
     ],
-    outcome: "Shipped an end-to-end AI-native childcare coordination system — voice transcription, NLP event extraction, structured care logs, memory auto-detection, and AI-generated handoff summaries — demonstrating that AI agents can replace structured form-filling entirely in high-friction, hands-occupied mobile contexts.",
+    outcome: "A parenting companion that removes the cognitive overhead of childcare tracking entirely. Parents talk, Tiny listens and logs. The result is richer care records generated naturally from conversation, and AI-surfaced pattern insights that would otherwise require weeks of deliberate data entry to uncover.",
     images: [
       "/images/tinyhandoff/tinyhandoff-hero.jpg",
       "/images/tinyhandoff/home.gif",
@@ -341,6 +352,7 @@ export const projectsData: Record<string, ProjectData> = {
       "/images/tinyhandoff/timeline.gif",
       "/images/tinyhandoff/memory.gif",
     ],
+    tools: ["Claude Code", "Codex"],
   },
 }
 
