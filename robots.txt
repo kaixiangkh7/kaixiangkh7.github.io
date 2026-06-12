@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Optimize crawling
+User-agent: Googlebot
+Allow: /
+
+User-agent: facebookexternalhit/*
+Allow: /
+
+User-agent: LinkedInBot/*
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+Sitemap: https://www.kaixiang.dev/sitemap.xml 
