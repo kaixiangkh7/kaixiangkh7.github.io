@@ -314,6 +314,32 @@ export function ProjectImageLayout({ projectSlug, images, projectTitle }: Projec
     )
   }
 
+  if (projectSlug === 'project-12') {
+    const features = [
+      "Multi-Agent Landing — animated network diagram showing Lead, Web Expert, URL Expert, PDF Expert, and Review Board nodes connected by live dashed signal lines",
+      "Research War Room — agent panel with persistent chat sessions per expert; Web Expert enabled for live internet lookups; 'Analyzing intent...' as the pipeline kicks off",
+      "Final Report — Lead Researcher's Research Strategy and FINAL DECISION: APPROVED flow into a grounded HTML report where every factual claim is rendered as a clickable cyan citation chip, each linking back to the exact source quote",
+    ]
+
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-normal mb-4 text-primary">Key Screens</h2>
+        <div className="space-y-8">
+          {images.slice(1).map((image, index) => (
+            <div key={index} className="overflow-hidden rounded-lg">
+              <h3 className="text-lg font-medium mb-3 text-gray-800">{features[index]}</h3>
+              <img
+                src={getImagePath(image)}
+                alt={`${projectTitle} - ${features[index]}`}
+                className="w-full h-auto object-contain shadow-lg"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   // Default layout for other projects
   return (
     <div className="space-y-6">

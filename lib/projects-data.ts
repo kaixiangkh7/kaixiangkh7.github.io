@@ -354,6 +354,34 @@ export const projectsData: Record<string, ProjectData> = {
     ],
     tools: ["Claude Code", "Codex"],
   },
+  "project-12": {
+    title: "Jarvis - Deep Research AI Agent",
+    client: "Personal Project",
+    date: "June 2026",
+    role: "AI-Native Developer & Product Designer",
+    tags: ["AI/ML", "Multi-Agent System", "Gemini", "Agentic Development", "Research Automation", "TypeScript"],
+    overview: "Jarvis is a self-directing deep research agent built on a multi-agent swarm architecture — a Lead Researcher, parallel expert workers, and an adversarial Review Board that loops until the output meets a zero-hallucination standard. Unlike RAG-based research tools that lose fidelity through chunking, every Jarvis expert holds its own full-context window, preserving tabular data, nuanced phrasing, and document structure intact.",
+    problemSpace: "Existing deep research tools (Perplexity, ChatGPT Deep Research) route queries through RAG pipelines that chunk source documents mid-sentence and mid-table — destroying the very structure needed to reason correctly. Users get plausible-sounding but structurally degraded answers. Meanwhile, research tasks that require synthesizing 10+ sources across PDFs, live web data, and specific URLs have no single agent that can stay in-context long enough to actually finish them.",
+    process: [
+      "Designed a multi-agent swarm where specialized persistent chat sessions — Web Expert, URL Expert, and one Document Expert per uploaded PDF — each hold their own full-context window. When a PDF Expert is briefed, the entire PDF is injected as inline base64 (not chunked), so table structures and cross-page references survive intact. This is the core differentiator that eliminates RAG signal loss.",
+      "Orchestrated a 9-phase research pipeline in code: intent classification → clarification UI → Lead Researcher planning → Advisor Review with a 6-axis scorecard → parallel expert execution → gap analysis loop → synthesis with <claim source='' quote=''> citation tags → Review Board audit → Lead arbitration (APPROVED / DEBATE / INCREMENTAL / REJECTED). Each loop iteration can trigger targeted follow-up without discarding prior results.",
+      "Built the full stack with Vite + React + TypeScript frontend, an Express proxy server that rewrites generateContent calls to streamGenerateContent + SSE to avoid serverless timeouts, and a Docker + Cloud Run deployment path. All structured AI responses go through a 4-strategy JSON parser (direct → strip fences → extract substring → balance brackets) to survive truncated model outputs.",
+    ],
+    jobToBeDone: "As a researcher or analyst who needs to synthesize information across PDFs, live web sources, and specific URLs — without trusting AI to make up citations — I want a multi-agent system that plans its own research, runs parallel queries, loops on gaps, and delivers a grounded report where every claim links back to a verified source quote, so that I can hand the output to a stakeholder without manually fact-checking it.",
+    features: [
+      "Multi-agent war room: Lead Researcher drafts the plan, an Advisor scores it on a 6-axis rubric, then parallel Web / URL / Document Experts execute in their own full-context sessions — no RAG, no chunk loss, tables and cross-references intact",
+      "Adversarial review loop: a Peer Review Board audits the synthesized report for completeness and hallucinations; the Lead Researcher then arbitrates — accepting, debating, requesting targeted follow-up, or restarting — until the output passes zero-trust verification",
+      "Clickable citation system: every fact in the final report is wrapped in <claim source='' quote=''> tags, rendered as inline citation chips that open a Source Sidebar showing the exact quoted excerpt highlighted in context",
+    ],
+    outcome: "A research agent that closes the gap between 'AI-assisted research' and 'research you can actually cite.' The multi-agent loop, full-context document loading, and adversarial review chain combine to produce structured reports grounded in verifiable quotes — not plausible paraphrases — making it viable for analyst, academic, and enterprise due-diligence workflows.",
+    images: [
+      "/images/jarvis/jarvis-hero.jpg",
+      "/images/jarvis/landing.gif",
+      "/images/jarvis/chat.gif",
+      "/images/jarvis/report.gif",
+    ],
+    tools: ["Claude Code", "Gemini"],
+  },
 }
 
 export const defaultProjectData: ProjectData = {

@@ -69,7 +69,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
                   <div>
                     <h2 className="text-2xl font-normal mb-4 text-primary">
-                      {(slug === 'project-10' || slug === 'project-11') ? 'AI-Native Development' : 'Research & Analytics'}
+                      {(slug === 'project-10' || slug === 'project-11' || slug === 'project-12') ? 'AI-Native Development' : 'Research & Analytics'}
                     </h2>
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
                       {project.process.map((step, index) => (
@@ -183,6 +183,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                       <div className="pt-6">
                         <PrimaryButton asChild className="w-full" rounded="full">
                           <Link href="https://github.com/kaixiangkh7/buy_or_rent" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                            <Github className="h-4 w-4" />
+                            View on GitHub
+                          </Link>
+                        </PrimaryButton>
+                      </div>
+                    )}
+                    {slug === 'project-12' && (
+                      <div className="pt-6">
+                        <PrimaryButton asChild className="w-full" rounded="full">
+                          <Link href="https://github.com/kaixiangkh7/jarvis-research-assistant" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                             <Github className="h-4 w-4" />
                             View on GitHub
                           </Link>
@@ -336,6 +346,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                         <div>
                           <p className="font-light group-hover:text-primary transition-colors duration-300">X Club - Luxury Spa & Dining Experience</p>
                           <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">Luxury Club, Membership Only</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <div className="h-px bg-border"></div>
+                    <Link href="/projects/project-12" className="block group hover:bg-gray-50 p-3 -m-3 rounded-lg transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <div className="w-16 h-16 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={getImagePath("/images/jarvis/jarvis-thumbnail.jpg")}
+                            alt="Jarvis"
+                            className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+                          />
+                        </div>
+                        <div>
+                          <p className="font-light group-hover:text-primary transition-colors duration-300">Jarvis - Deep Research AI Agent</p>
+                          <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-gray-600">AI/ML, Multi-Agent, Gemini</p>
                         </div>
                       </div>
                     </Link>

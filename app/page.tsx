@@ -126,6 +126,13 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-12">Things I've Built</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
+                title="Jarvis - Deep Research AI Agent"
+                description="A self-directing multi-agent research system where a Lead Researcher plans, parallel experts execute in full-context sessions (no RAG, no chunk loss), and an adversarial Review Board loops until every claim is grounded to a cited source quote."
+                image="/images/jarvis/jarvis-thumbnail.jpg"
+                tags={["AI/ML", "Multi-Agent System", "Gemini", "Agentic Development", "Research Automation"]}
+                link="/projects/project-12"
+              />
+              <ProjectCard
                 title="Tiny Handoff - AI Companion for Busy Parents"
                 description="Tiny is an AI companion you talk to like a friend — it listens, offers emotional support, automatically logs care events from your conversation, and surfaces sleep and feeding patterns. No forms. No extra logins. Just talk."
                 image="/images/tinyhandoff/tinyhandoff-thumbnail.jpg"
